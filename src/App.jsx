@@ -234,29 +234,42 @@ const POSTS = [
       },
       {
         type: "p",
-        text: "The best local option for students is **Aldi Talk**. It is a prepaid service from the Aldi supermarket chain. It is cheap (~10€ starter set), has no long contract, and uses the reliable O2 network."
+        text: "The best local option for students is **Aldi Talk**. It is a prepaid service from the Aldi supermarket chain. It is cheap (~10€ starter set), has no long contract, and uses the reliable O2 network. Why Aldi? Because every German city has an Aldi supermarket, and it's the most accessible option for newcomers."
       },
       {
         type: "ul",
         items: [
-          "**Where to buy:** Any 'Aldi Süd' or 'Aldi Nord' supermarket. There is usually one inside or very near major train stations and airports.",
-          "**How to register:** You cannot just insert the SIM and use it. German law requires ID verification. You must download the Aldi Talk app and do a 'Video Ident' call. You will need your passport and good lighting.",
-          "**Troubleshooting:** If the video call fails (bad connection), you can do 'PostIdent' at a post office, but this takes longer."
+          "**Where to buy:** Any 'Aldi Süd' or 'Aldi Nord' supermarket. There is usually one inside or very near major train stations and airports. Pro tip: Aldi is divided into North and South regions, but both Aldi Talk services work nationwide.",
+          "**How to register:** German law requires ID verification before you can use any mobile SIM. You must download the Aldi Talk app and do a 'Video Ident' call—this is a video call where you show your passport to verify who you are. You need good lighting and a clear photo of your passport.",
+          "**Troubleshooting:** If the video call fails (which happens with bad connection or unclear photos), you can do 'PostIdent' at any post office (Deutsche Post). They will verify you in person for a small fee (~10€).",
+          "**Cost breakdown:** The 10€ starter set includes your SIM and about 5€ credit. Monthly plans start at 8€ for calls/texts, or just use pay-as-you-go if you prefer flexibility."
         ]
       },
-      { type: "h2", text: "2. Essential Tools: Google Maps & DeepL" },
+      { type: "h2", text: "2. Essential Apps: Maps, Translator & Transport" },
       {
         type: "p",
-        text: "Before you leave the airport WiFi zone, ensure you have [Google Maps](https://www.google.com/maps) installed. It is excellent for public transport schedules in Germany. Also, download [DeepL](https://www.deepl.com). It is significantly better than Google Translate for German and will help you read signs and menus instantly. These are your best friends for the first week."
-      },
-      { type: "h2", text: "3. Transport: Do Not Take a Taxi" },
-      {
-        type: "p",
-        text: "A taxi from a major airport to the city center costs 50€–80€. A train ticket costs about 6€. In Germany, trains are safe, clean, and used by everyone. Do not waste your budget on a taxi."
+        text: "Before you leave the airport WiFi, download these three apps. They will save you hours of confusion:"
       },
       {
+        type: "ul",
+        items: [
+          "**Google Maps:** Works perfectly in Germany. It shows you real-time public transport schedules, train platforms, and walking times. It's 100% accurate.",
+          "**DeepL:** This is NOT Google Translate. DeepL is specifically trained on German and produces natural translations. Point your phone camera at a German sign or menu, and DeepL will translate it instantly. Free version works offline after download.",
+          "**DB Navigator (Deutsche Bahn):** This is the official German railway app. It shows you every bus, train, and metro option. It tells you which platform (Gleis) to go to, when the train departs, and if it's running late. You'll use this constantly."
+        ]
+      },
+      { type: "h2", text: "3. Getting From Airport to City: Transport vs Taxi" },
+      {
         type: "p",
-        text: "Your most important tool is the [DB Navigator App](https://www.bahn.de/service/mobile/db-navigator). Download it now. It is the bible of German travel. It tells you exactly which platform (Gleis) to stand on, if the train is late, and which ticket to buy. For long-term travel, consider the [Deutschlandticket](https://www.bahn.de/angebot/regio/deutschland-ticket) (49€-63€/month), which covers all local transport in the entire country."
+        text: "This is where many newcomers waste their first 50€–80€. A taxi from a major airport (Berlin, Munich, Frankfurt) to the city center costs between 50€ and 80€. A train ticket costs 6€–12€. In Germany, trains are safe, clean, and everyone uses them—including wealthy locals. Do not take a taxi unless there are extraordinary circumstances."
+      },
+      {
+        type: "p",
+        text: "**Here's exactly what to do:** Use the DB Navigator app (you just downloaded it). Type your airport name and your destination address. It will show you the cheapest and fastest route. Usually it's a regional train (S-Bahn) followed by a metro (U-Bahn) or bus. The app tells you which platform to go to and what time to leave. It's that simple."
+      },
+      {
+        type: "p",
+        text: "**About the Deutschlandticket:** This monthly pass costs 49€–63€ and covers ALL local transport nationwide (trains, buses, metros). It does NOT cover long-distance express trains (ICE/IC). But for getting around your city? Perfect. Consider buying one at the airport train station before you leave."
       },
       { type: "h2", text: "4. Your First Weekend (The Sunday Rule)" },
       {
@@ -318,43 +331,63 @@ const POSTS = [
     content: [
       {
         type: "p",
-        text: "Germany runs on paperwork. To function here, you need three things: A registered address (Anmeldung), a Bank Account, and a Tax ID. The problem is, they often require each other. Let's solve this."
+        text: "Germany runs on bureaucracy and paperwork. But it's not as chaotic as it seems—it's actually very organized once you understand the system. To function here, you need three main things: (1) A registered address (**Anmeldung**), (2) A German Bank Account (IBAN), and (3) A Tax ID. The catch? They often require each other. Let's untangle this."
       },
-      { type: "h2", text: "1. Banking: The Ultimate Comparison" },
+      { type: "h2", text: "1. Banking: Which Bank Should You Choose?" },
       {
         type: "p",
-        text: "You need a German IBAN to receive salary and pay rent. Here are your main options:"
+        text: "You need a German IBAN for two critical things: your employer needs it to pay your salary, and your landlord needs it to accept rent payments. But opening a bank account as a newcomer is tricky. Here's what you're up against:"
       },
       {
         type: "ul",
         items: [
-          "**Sparkasse / Volksbank (The Traditional Choice):** Physical branches everywhere and very safe. However, they are expensive (5-10€ monthly fees) and bureaucratic. They usually **require your Anmeldung paper** before they will open the account.",
-          "**Commerzbank / Deutsche Bank:** Solid reputation, but they often reject applications from newcomers who don't have a credit history (SCHUFA) yet.",
-          "**N26 (Online Bank):** Easy app and German IBAN, but verification can fail with certain non-EU passports.",
-          "**Revolut (The Strategic Winner):** You can open it in minutes using just your passport. You do **NOT** need the Anmeldung paper immediately (you can update it later). It gives you a valid IBAN instantly. Excellent English app."
+          "**Sparkasse / Volksbank (Traditional Banks):** These are the safest and most trusted. Physical branches in every neighborhood. BUT they charge monthly fees (5–10€) and often require your Anmeldung (registration) proof before opening an account. This creates a chicken-and-egg problem.",
+          "**Commerzbank / Deutsche Bank:** Large banks with solid reputations. Problem: They often check your SCHUFA (credit score). If you're new to Germany, you won't have any credit history. They might reject you.",
+          "**N26 (Online Bank):** Fast setup, German IBAN, no fees. Good if it works for your passport, but verification sometimes fails with non-EU documents.",
+          "**Revolut (Game Changer):** Opens in literally 10 minutes through an app using only your passport. Gives you a valid German IBAN immediately. Excellent English-language app. No Anmeldung needed upfront—you update it later. This is your best bet."
         ]
       },
       {
         type: "p",
-        text: "**My Recommendation:** Start with **Revolut**. Why? Because it breaks the 'Catch-22'. You can get your IBAN immediately, give it to your landlord to pay the deposit, and give it to your employer for your salary. This relieves the pressure. Later, once you have your registration paper, you can open a Sparkasse account if you really want a physical branch."
+        text: "**My honest recommendation:** Open Revolut first. Use it to establish your financial presence in Germany. Give the IBAN to your employer and landlord. Once you have your registration paper (Anmeldung), open a Sparkasse account if you want a physical bank for ATM withdrawals or backup. But Revolut alone is perfectly sufficient."
       },
       {
         type: "p",
-        text: "You can open a free account using my link here: [Open Revolut Account](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect). (This is a referral link, but I recommend it because it is truly the fastest, headache-free way to start)."
+        text: "You can open a free Revolut account using this link: [Open Revolut Account](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect). Full transparency: this is a referral link (I get a small bonus), but I genuinely recommend it because it solves the biggest headache for newcomers."
       },
-      { type: "h2", text: "2. The Anmeldung (City Registration)" },
+      { type: "h2", text: "2. Anmeldung: Your Most Important Piece of Paper" },
       {
         type: "p",
-        text: "Within 2 weeks of moving into your permanent room, you must go to the **Bürgeramt** (Citizen's Office). This is mandatory. If you don't do it, you are technically illegal and can be fined."
+        text: "**What is Anmeldung?** It's your official registration with the city. Once you register, you are legally documented as living at that address. This piece of paper unlocks everything else: tax ID, health insurance, voting rights. Without it, you're invisible to the German system."
       },
       {
         type: "p",
-        text: "**The Appointment Hack:** Appointments are hard to find. Search online for 'Bürgeramt Termin [Your City]'. Check the booking website at 7:00 AM or 8:00 AM sharp. That is when they release cancelled appointments for the same day. Do not wait for a perfect time slot—take whatever is available. You must bring your Passport and the 'Wohnungsgeberbestätigung'."
+        text: "**The Timeline:** Within 2 weeks of moving into your permanent address, you must go to the **Bürgeramt** (local citizen's office) and register. If you don't do this, you're technically in violation of German law and can face fines."
       },
-      { type: "h2", text: "3. Health Insurance (Krankenkasse)" },
       {
         type: "p",
-        text: "Health insurance is mandatory in Germany. As an employee/trainee, you are usually in the **Public System (GKV)**. The cost is around 16% of your gross salary, but your employer pays half (8%) and you pay half (8%). It is automatically deducted from your salary."
+        text: "**The Practical Problem:** Appointments are notoriously hard to get. Websites show no availability for months. But here's the hack that actually works: **Check the booking portal at 7:00 AM or 8:00 AM sharp**. That's when cancelled appointments from other people get released back into the system. You need lightning-fast fingers, but appointments appear. Be flexible about the date and time—take whatever is available."
+      },
+      {
+        type: "p",
+        text: "**What to Bring:** Your passport and the **Wohnungsgeberbestätigung** (landlord's confirmation that you moved in). If your landlord doesn't have this form, ask them to fill out this template: [Wohnungsgeberbestätigung PDF](https://www.wohnungsboerse.net/files/Wohnungsgeberbestaetigung_Muster.pdf)"
+      },
+      { type: "h2", text: "3. Health Insurance (Krankenkasse): It's Mandatory" },
+      {
+        type: "p",
+        text: "**Important:** Health insurance is not optional in Germany. It's legally required for everyone. As an employee or trainee, you're automatically enrolled in the **public health insurance system (GKV)**."
+      },
+      {
+        type: "p",
+        text: "**How much does it cost?** About 16% of your gross salary. But here's the good part: your employer pays half (8%) and you pay half (8%). So if you earn 2,000€ gross, you pay ~160€ for health insurance. It's automatically deducted from your salary—you don't need to do anything."
+      },
+      {
+        type: "p",
+        text: "**Which insurance company?** AOK, Techniker Krankenkasse (TK), and DAK-Gesundheit are the biggest. They all provide identical coverage—the choice is just about admin preferences. Ask your employer which one they recommend, or check their rates on [Check24](https://www.check24.de/gesetzliche-krankenversicherung/)."
+      },
+      {
+        type: "p",
+        text: "**What does it cover?** Everything essential: doctor visits, hospital stays, prescription medications, dental work (basics), mental health therapy, and more. Germany's healthcare is excellent."
       },
       {
         type: "p",
@@ -432,37 +465,87 @@ const POSTS = [
     summary: "Platform reviews (WG Gesucht), free furniture hacks (Kleinanzeigen), and the house rules that matter.",
     vibeCheck: "Flats are tight and expensive. But furnishing them cheap? That's doable. Here's how.",
     content: [
-      { type: "h2", text: "1. Finding a Place: WG Gesucht" },
+      { type: "h2", text: "1. Finding a Place: WG Gesucht & ImmobilienScout24" },
       {
         type: "p",
-        text: "If you don't have permanent housing yet, your best friend is [WG-Gesucht.de](https://www.wg-gesucht.de/). It is the biggest platform for shared flats (WGs) and small apartments. 'WG' means 'Wohngemeinschaft' (shared living). It is very common for students and young professionals."
+        text: "Finding housing in Germany is competitive. You need to act fast and know the platforms. **WG-Gesucht.de** is THE platform for shared flats (WGs) and student housing. 'WG' means **Wohngemeinschaft** (shared living community). It's how most young people in Germany live—usually 3-4 people sharing an apartment, each with their own room but shared kitchen and bathroom."
       },
       {
         type: "p",
-        text: "**Tip:** When writing a message to a landlord, be polite, state your profession (Nursing Scholar), and say you have a steady income. Landlords love stability. Beware of scams: **NEVER** transfer money via Western Union or to a foreign bank account before you have seen the apartment and signed the contract."
-      },
-      { type: "h2", text: "2. Furnishing for Free: Kleinanzeigen" },
-      {
-        type: "p",
-        text: "German apartments often come completely empty—sometimes even without a kitchen or lightbulbs! Do not spend thousands on new furniture at IKEA immediately. Use **Kleinanzeigen** (linked below). It is the German version of Craigslist or Gumtree."
+        text: "**Why WGs?** They're cheaper than solo apartments and faster to move into. Landlords prefer WGs because the risk is spread. But you need to understand: a WG is NOT a hotel. You'll have shared responsibility for cleaning, noise levels, and respecting housemates' schedules."
       },
       {
         type: "p",
-        text: "Search for the category **'Zu verschenken'** (to give away). People constantly give away sofas, tables, beds, and plates for free just because they don't want to carry them downstairs when moving out. You can furnish an entire room for 0€ if you are willing to pick things up."
-      },
-      { type: "h2", text: "3. The Deposit (Kaution)" },
-      {
-        type: "p",
-        text: "Landlords usually require a deposit of 2-3 'warm' rents. This money is yours. The landlord must put it in a separate account. Never pay this in cash without a receipt. It protects the landlord against damages. You get it back when you move out, provided you didn't break anything."
-      },
-      { type: "h2", text: "4. House Rules: Ruhezeit & Trash" },
-      {
-        type: "p",
-        text: "Once you have the flat, keep it! **Quiet hours (Ruhezeit)** are strict: 22:00 to 06:00. No loud music, no drilling, no vacuuming. **Sundays are quiet all day.** Breaking this rule is the fastest way to get in trouble with neighbors."
+        text: "**How to write a good message:** Landlords receive 50+ inquiries per listing. Stand out by being genuine and professional. Say: your name, your profession/field, your start date, that you have steady income or are employed, and ask to view the apartment. DO NOT include personal stories unless asked. Keep it short."
       },
       {
         type: "p",
-        text: "Trash separation is mandatory. Blue (Paper), Yellow (Packaging), Brown (Bio), Black (Rest). If you mix them, the bin might not be emptied, and the building management will be angry."
+        text: "**Red flags—NEVER do this:** No transfers to foreign bank accounts before seeing the apartment. No 'holding deposits' without a contract. No 'Video viewings only'—always visit in person. If it seems too cheap or easy, it's a scam."
+      },
+      {
+        type: "p",
+        text: "**For solo apartments:** Use [ImmobilienScout24.de](https://www.immobilienscout24.de/) (expensive but most listings) or [Kleinanzeigen](https://www.kleinanzeigen.de/) (often cheaper, sometimes sketchy)."
+      },
+      { type: "h2", text: "2. Furnishing for Free or Very Cheap: Kleinanzeigen" },
+      {
+        type: "p",
+        text: "Here's a shock: most German apartments come **completely empty**. No furniture, no kitchen, no curtains, sometimes not even lightbulbs. This terrifies newcomers who think they need to spend 5,000€ on IKEA furniture. You don't."
+      },
+      {
+        type: "p",
+        text: "**The Secret:** Use [Kleinanzeigen.de](https://www.kleinanzeigen.de/). It's Germany's equivalent of Craigslist. But here's the magic: search for the category **'Zu verschenken'** (to give away). Germans constantly throw away perfectly good furniture when moving. Sofas, beds, tables, dishes—all free. Pick-up yourself to save even more."
+      },
+      {
+        type: "p",
+        text: "**How it works:** Create a free account on Kleinanzeigen. Search for furniture category, filter by 'Zu verschenken'. Message the poster saying you'll pick it up THIS WEEK (Germans like speed). Many people will say yes just because they want it gone."
+      },
+      {
+        type: "p",
+        text: "**Reality check:** You might need to spend 200–500€ on a decent bed or sofa—your health matters. But 90% of everything else comes free. And for new items, search 'Gebraucht' (used) first. Germans are meticulous about used stuff; a 'used' sofa often looks brand new."
+      },
+      { type: "h2", text: "3. The Deposit (Kaution): Your Safety Net" },
+      {
+        type: "p",
+        text: "German landlords usually require a deposit of **2–3 months' rent**. This is normal and legal. **Important:** This deposit IS YOUR MONEY. The landlord must place it in a separate, interest-bearing account (not mixed with their personal money). Always get a receipt."
+      },
+      {
+        type: "p",
+        text: "**What 'warm rent' means:** German rent is divided into 'cold' (just the apartment) and 'warm' (apartment + utilities like heating, water, garbage). Deposits are calculated on warm rent, so they include utilities costs."
+      },
+      {
+        type: "p",
+        text: "**When you move out:** You get the deposit back, minus deductions for actual damages (not normal wear and tear). The landlord must return it within 1 month of you moving out. If they don't, or if they make unfair deductions, you can pursue them in small claims court. Keep your receipts and move-in photos."
+      },
+      { type: "h2", text: "4. House Rules: Quiet Hours & Trash Separation" },
+      {
+        type: "p",
+        text: "Germany takes noise seriously. **Ruhezeit** (quiet hours) are legally enforced in most apartments:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Weekdays:** 22:00 (10 PM) to 06:00 (6 AM)—no loud music, drilling, vacuuming, or parties.",
+          "**Sundays & holidays:** Quiet ALL DAY. This is a cultural thing. Germans use Sundays for rest, seriously.",
+          "**Violation:** If neighbors complain, landlord might fine you or terminate your contract. Repeated violations = eviction."
+        ]
+      },
+      {
+        type: "p",
+        text: "**Trash separation is not optional.** Germany is obsessive about recycling. Your building will have color-coded bins:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Blue:** Paper and cardboard",
+          "**Yellow/Orange:** Packaging (plastics, aluminum, metal cans)",
+          "**Brown/Green:** Organic waste (food scraps, garden waste)",
+          "**Black/Grey:** Residual waste (everything else)",
+          "**Clear glass/Colored glass:** Separate glass collection (not always available)"
+        ]
+      },
+      {
+        type: "p",
+        text: "**Why does this matter?** If you put trash in the wrong bin and it gets reported, the building management can issue fines. Plus, Germans will judge you silently but intensely. Use [Mülltrennung Wirkt](https://www.muelltrennung-wirkt.de/) if you're ever unsure where something goes."
       }
     ],
     goldenRule: "Use 'Zu verschenken' on Kleinanzeigen to save thousands of Euros on furniture.",
@@ -740,9 +823,7 @@ const RESOURCE_CATEGORIES = [
 ];
 
 const RESOURCES = [
-  // Populate from POSTS data to avoid duplication in logic if needed, 
-  // but keeping separate for clarity as requested.
-  // (Truncated for brevity, full list in logic below)
+  // === CORE ESSENTIALS ===
   { id: "r1", title: "OmniCalculator", url: "https://www.omnicalculator.com/de/gesundheit/dosierung", type: "Tool", category: "Nursing & Math", tags: ["math"], source: "tool" },
   { id: "r2", title: "Revolut", url: LINKS.revolutReferral, type: "Tool", category: "Money & Banking", tags: ["bank"], source: "referral" },
   { id: "r3", title: "DB Navigator", url: "https://www.bahn.de/service/mobile/db-navigator", type: "App", category: "Arrival & Setup", tags: ["transport"], source: "official" },
@@ -751,29 +832,58 @@ const RESOURCES = [
   { id: "r6", title: "Ipso Care", url: "https://ipso-care.com/", type: "Website", category: "Health & Social", tags: ["health"], source: "ngo" },
   { id: "r7", title: "Dr. Azubi", url: "https://jugend.dgb.de/ausbildung/beratung/dr-azubi", type: "Website", category: "Rights & Legal", tags: ["rights"], source: "ngo" },
   
-  // === NURSING SCHOLARS RESOURCES ===
+  // === ARRIVAL & SETUP ===
+  { id: "r15", title: "Handbook Germany - Official Guide", url: "https://handbookgermany.de/en/", type: "Website", category: "Arrival & Setup", tags: ["arrival", "official"], source: "official" },
+  { id: "r17", title: "Integreat - Local Information App", url: "https://integreat.app", type: "App", category: "Arrival & Setup", tags: ["local-info", "languages"], source: "tool" },
+  { id: "r28", title: "Make It In Germany - Official Portal", url: "https://www.make-it-in-germany.com/en/", type: "Website", category: "Arrival & Setup", tags: ["visa", "official"], source: "official" },
+  { id: "r29", title: "Google Maps Germany", url: "https://www.google.com/maps", type: "App", category: "Arrival & Setup", tags: ["navigation"], source: "tool" },
+  
+  // === MONEY & BANKING ===
+  { id: "r19", title: "Too Good To Go - Food App", url: "https://www.toogoodtogo.com/de/de", type: "App", category: "Money & Banking", tags: ["food", "savings"], source: "tool" },
+  { id: "r27", title: "Check24 - Health Insurance Comparison", url: "https://www.check24.de/gesetzliche-krankenversicherung/", type: "Website", category: "Money & Banking", tags: ["insurance", "health"], source: "tool" },
+  { id: "r30", title: "Sparkasse Bank Finder", url: "https://www.sparkasse.de/de/unsere-filialen.html", type: "Website", category: "Money & Banking", tags: ["banking", "official"], source: "official" },
+  { id: "r31", title: "AOK Health Insurance", url: "https://www.aok.de/", type: "Website", category: "Money & Banking", tags: ["insurance", "official"], source: "official" },
+  { id: "r32", title: "Bürgeramt Finder - Address Registration", url: "https://service.berlin.de/dienstleistung/120686/", type: "Website", category: "Money & Banking", tags: ["registration", "official"], source: "official" },
+  { id: "r33", title: "Finanzamt - Tax Authority", url: "https://www.finanzamt.de/", type: "Website", category: "Money & Banking", tags: ["taxes", "official"], source: "official" },
+  
+  // === HOUSING ===
+  { id: "r25", title: "WG Gesucht - Flat Sharing Platform", url: "https://www.wg-gesucht.de/", type: "Website", category: "Housing", tags: ["housing", "flatshare"], source: "tool" },
+  { id: "r26", title: "Kleinanzeigen - Free Classifieds", url: "https://www.kleinanzeigen.de/", type: "Website", category: "Housing", tags: ["furniture", "free"], source: "tool" },
+  { id: "r34", title: "ImmobilienScout24 - Apartment Listings", url: "https://www.immobilienscout24.de/", type: "Website", category: "Housing", tags: ["housing", "apartments"], source: "tool" },
+  { id: "r35", title: "MieterverbanD - Tenant Union", url: "https://www.mieterbund.de/", type: "Website", category: "Housing", tags: ["tenant-rights"], source: "ngo" },
+  { id: "r36", title: "Deutschlandticket - Transport Pass", url: "https://www.bahn.de/angebot/regio/deutschland-ticket", type: "Website", category: "Housing", tags: ["transport"], source: "official" },
+  
+  // === PROFESSIONAL DEVELOPMENT & LANGUAGE ===
   { id: "r8", title: "DocCheck Flexikon", url: "https://flexikon.doccheck.com", type: "Website", category: "Nursing & Math", tags: ["nursing", "reference"], source: "learning" },
   { id: "r9", title: "PflegeTube (YouTube Channel)", url: "https://www.youtube.com/user/PflegeTube", type: "Video", category: "Nursing & Math", tags: ["nursing", "video"], source: "video" },
   { id: "r10", title: "Thieme Online Store - Medical Books", url: "https://shop.thieme.de", type: "Website", category: "Nursing & Math", tags: ["nursing", "textbooks"], source: "tool" },
   { id: "r11", title: "ResearchGate - Academic Papers", url: "https://www.researchgate.net", type: "Website", category: "Nursing & Math", tags: ["nursing", "research"], source: "learning" },
   { id: "r12", title: "Pflege Heute - Nursing Textbook Reference", url: "https://www.elsevier.de/de/buch/pflege-heute", type: "Website", category: "Nursing & Math", tags: ["nursing", "textbooks"], source: "learning" },
   { id: "r13", title: "Dict.cc - Offline Dictionary", url: "https://www.dict.cc", type: "Tool", category: "Nursing & Math", tags: ["language", "medical"], source: "tool" },
-  
-  // === INTERNATIONAL STUDENTS RESOURCES ===
-  { id: "r14", title: "DAAD - German Academic Exchange Service", url: "https://www.daad.de/en/", type: "Website", category: "Apps & Tools", tags: ["study", "scholarships"], source: "official" },
-  { id: "r15", title: "Handbook Germany - Official Guide", url: "https://handbookgermany.de/en/", type: "Website", category: "Arrival & Setup", tags: ["arrival", "official"], source: "official" },
-  { id: "r16", title: "Together in Germany - Community", url: "https://together-in-germany.org/", type: "Website", category: "Health & Social", tags: ["community", "social"], source: "ngo" },
-  { id: "r17", title: "Integreat - Local Information App", url: "https://integreat.app", type: "App", category: "Arrival & Setup", tags: ["local-info", "languages"], source: "tool" },
   { id: "r18", title: "DeepL Translator", url: "https://www.deepl.com", type: "Tool", category: "Apps & Tools", tags: ["language", "translation"], source: "tool" },
-  { id: "r19", title: "Too Good To Go - Food App", url: "https://www.toogoodtogo.com/de/de", type: "App", category: "Money & Banking", tags: ["food", "savings"], source: "tool" },
+  { id: "r37", title: "Duolingo - German Language Learning", url: "https://www.duolingo.com/", type: "App", category: "Apps & Tools", tags: ["language"], source: "tool" },
+  { id: "r38", title: "BBC Learning English (German)", url: "https://www.bbc.co.uk/learning/english/", type: "Website", category: "Apps & Tools", tags: ["language"], source: "learning" },
+  { id: "r39", title: "VHS (Volkshochschule) - Language Courses", url: "https://www.vhsonline.de/", type: "Website", category: "Apps & Tools", tags: ["language", "courses"], source: "official" },
+  
+  // === RIGHTS & LEGAL ===
   { id: "r20", title: "Faire Integration - Worker Rights", url: "https://www.faire-integration.de/", type: "Website", category: "Rights & Legal", tags: ["rights", "workers"], source: "ngo" },
+  { id: "r40", title: "Arbeitsagentur - Employment Agency", url: "https://www.arbeitsagentur.de/", type: "Website", category: "Rights & Legal", tags: ["employment", "official"], source: "official" },
+  { id: "r41", title: "IG Metall - Trade Union", url: "https://www.igmetall.de/", type: "Website", category: "Rights & Legal", tags: ["workers", "union"], source: "ngo" },
+  { id: "r42", title: "Betriebsrat Info - Works Council", url: "https://www.dgb.de/themen/++co++a51d7df8-5d32-11eb-a38c-001a4a160123", type: "Website", category: "Rights & Legal", tags: ["rights"], source: "official" },
+  
+  // === HEALTH & SOCIAL ===
   { id: "r21", title: "TelefonSeelsorge - Crisis Hotline", url: "https://www.telefonseelsorge.de/", type: "Website", category: "Health & Social", tags: ["mental-health", "crisis"], source: "official" },
   { id: "r22", title: "DOSB - Sports Clubs Finder", url: "https://bewegt.dosb.de/", type: "Website", category: "Health & Social", tags: ["sports", "clubs", "social"], source: "official" },
   { id: "r23", title: "Meetup - Events & Groups", url: "https://www.meetup.com/de", type: "Website", category: "Health & Social", tags: ["social", "events"], source: "tool" },
   { id: "r24", title: "Eventbrite - Events in Germany", url: "https://www.eventbrite.de", type: "Website", category: "Health & Social", tags: ["events", "social"], source: "tool" },
-  { id: "r25", title: "WG Gesucht - Flat Sharing Platform", url: "https://www.wg-gesucht.de/", type: "Website", category: "Housing", tags: ["housing", "flatshare"], source: "tool" },
-  { id: "r26", title: "Kleinanzeigen - Free Classifieds", url: "https://www.kleinanzeigen.de/", type: "Website", category: "Housing", tags: ["furniture", "free"], source: "tool" },
-  { id: "r27", title: "Check24 - Health Insurance Comparison", url: "https://www.check24.de/gesetzliche-krankenversicherung/", type: "Website", category: "Money & Banking", tags: ["insurance", "health"], source: "tool" },
+  { id: "r16", title: "Together in Germany - Community", url: "https://together-in-germany.org/", type: "Website", category: "Health & Social", tags: ["community", "social"], source: "ngo" },
+  { id: "r43", title: "ProAsyl - Refugee Support", url: "https://www.proasyl.de/en/", type: "Website", category: "Health & Social", tags: ["support", "refugees"], source: "ngo" },
+  { id: "r44", title: "Malteser International - Medical Support", url: "https://www.malteser.de/", type: "Website", category: "Health & Social", tags: ["medical", "ngo"], source: "ngo" },
+  
+  // === STUDY & SCHOLARSHIPS ===
+  { id: "r14", title: "DAAD - German Academic Exchange Service", url: "https://www.daad.de/en/", type: "Website", category: "Apps & Tools", tags: ["study", "scholarships"], source: "official" },
+  { id: "r45", title: "Deutsches Studentenwerk - Student Services", url: "https://www.studentenwerke.de/", type: "Website", category: "Apps & Tools", tags: ["students", "official"], source: "official" },
+  { id: "r46", title: "BafÖG - Education Grants", url: "https://www.bafög.de/", type: "Website", category: "Apps & Tools", tags: ["funding", "official"], source: "official" },
 ];
 
 // =======================
