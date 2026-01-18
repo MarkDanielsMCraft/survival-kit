@@ -766,14 +766,23 @@ const Header = ({ emergencyMode, setEmergencyMode }) => (
         </div>
       </div>
       
-      <a
-        href={LINKS.buyMeACoffee}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wide bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-white hover:from-amber-300 hover:via-orange-300 hover:to-rose-300 transition-all shadow-lg shadow-orange-400/40 hover:shadow-xl hover:shadow-orange-400/60 hover:scale-105 active:scale-95 animate-coffee-pulse"
-      >
-        Buy Me A ☕️
-      </a>
+      <div className="flex items-center gap-3">
+        <a
+          href={LINKS.buyMeACoffee}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wide bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-white hover:from-amber-300 hover:via-orange-300 hover:to-rose-300 transition-all shadow-lg shadow-orange-400/40 hover:shadow-xl hover:shadow-orange-400/60 hover:scale-105 active:scale-95 animate-coffee-pulse"
+        >
+          Buy Me A ☕️
+        </a>
+        <button 
+          onClick={() => setEmergencyMode(!emergencyMode)}
+          className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${emergencyMode ? "bg-red-600 text-white shadow-red-500/50 shadow-lg animate-pulse" : "bg-red-50 text-red-600 border border-red-100 hover:bg-red-100"}`}
+        >
+          <Siren size={14} />
+          {emergencyMode ? "Close Emergency" : "Emergency"}
+        </button>
+      </div>
     </div>
     
     {/* Emergency Overlay */}
