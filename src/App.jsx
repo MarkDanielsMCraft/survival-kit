@@ -775,14 +775,18 @@ const Header = ({ emergencyMode, setEmergencyMode, isPostDetail = false }) => (
       </div>
       
       <div className="flex items-center gap-3">
-        <a
-          href={LINKS.buyMeACoffee}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wide bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-white hover:from-amber-300 hover:via-orange-300 hover:to-rose-300 transition-all shadow-lg shadow-orange-400/40 hover:shadow-xl hover:shadow-orange-400/60 hover:scale-105 active:scale-95 animate-coffee-pulse"
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            if (window.bmcWalletButton) {
+              window.bmcWalletButton.open();
+            }
+          }}
+          className="flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold text-amber-600 bg-amber-50 border border-amber-200 hover:bg-amber-100 hover:border-amber-300 transition-all hover:shadow-md"
+          title="Support this project"
         >
-          Buy Me A Coffee☕️
-        </a>
+          ☕
+        </button>
         <button 
           onClick={() => setEmergencyMode(!emergencyMode)}
           className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${emergencyMode ? "bg-red-600 text-white shadow-red-500/50 shadow-lg animate-pulse" : "bg-red-50 text-red-600 border border-red-100 hover:bg-red-100"}`}
@@ -1466,6 +1470,23 @@ export default function App() {
 
             <footer className="text-center py-12 text-slate-400 text-sm font-medium border-t border-slate-200/50 glass-card">
               <p>Made with ❤️ for future colleagues.</p>
+              
+              {/* Buy Me A Coffee Button - Prominent */}
+              <div className="my-6 py-6 border-y border-slate-200/50">
+                <p className="text-xs font-bold text-slate-500 mb-3 uppercase tracking-wider">Like this guide? Support the author</p>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (window.bmcWalletButton) {
+                      window.bmcWalletButton.open();
+                    }
+                  }}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-white font-black uppercase tracking-wide text-sm hover:from-amber-300 hover:via-orange-300 hover:to-rose-300 transition-all shadow-lg shadow-orange-400/40 hover:shadow-xl hover:shadow-orange-400/60 hover:scale-105 active:scale-95"
+                >
+                  ☕ Buy Me A Coffee
+                </button>
+              </div>
+              
               <p className="mt-2 text-xs opacity-70">
                 Unofficial Guide • Verified {META.lastUpdatedDate}
               </p>
@@ -1475,9 +1496,6 @@ export default function App() {
                 </a>
                 <a href="#" className="hover:underline">
                   Datenschutz
-                </a>
-                <a href={LINKS.buyMeACoffee} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  Buy Me a Coffee
                 </a>
               </div>
             </footer>
