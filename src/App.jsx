@@ -153,6 +153,20 @@ const styles = `
     50% { transform: translateY(-5px); } 
   }
 
+  .animate-coffee-pulse {
+    animation: coffeePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes coffeePulse {
+    0%, 100% { 
+      box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.4);
+      transform: scale(1);
+    }
+    50% { 
+      box-shadow: 0 20px 25px -5px rgba(249, 115, 22, 0.6);
+      transform: scale(1.05);
+    }
+  }
+
   .fade-in-up {
     animation: fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) forwards;
     opacity: 0;
@@ -757,7 +771,7 @@ const Header = ({ emergencyMode, setEmergencyMode }) => (
           href={LINKS.buyMeACoffee}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wide bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-white hover:from-amber-300 hover:via-orange-300 hover:to-rose-300 transition-all shadow-lg shadow-orange-400/40 hover:shadow-xl hover:shadow-orange-400/60 hover:scale-105 active:scale-95"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wide bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-white hover:from-amber-300 hover:via-orange-300 hover:to-rose-300 transition-all shadow-lg shadow-orange-400/40 hover:shadow-xl hover:shadow-orange-400/60 hover:scale-105 active:scale-95 animate-coffee-pulse"
         >
           ☕ Support
         </a>
