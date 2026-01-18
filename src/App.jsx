@@ -240,9 +240,9 @@ const POSTS = [
         type: "ul",
         items: [
           "**Where to buy:** Any 'Aldi Süd' or 'Aldi Nord' supermarket. There is usually one inside or very near major train stations and airports. Pro tip: Aldi is divided into North and South regions, but both Aldi Talk services work nationwide.",
-          "**How to register:** German law requires ID verification before you can use any mobile SIM. You must download the Aldi Talk app and do a 'Video Ident' call—this is a video call where you show your passport to verify who you are. You need good lighting and a clear photo of your passport.",
+          "**How to register:** German law requires ID verification before you can use any mobile SIM. You can download the Aldi Talk app and do a 'Video Ident' call—this is a video call where you show your passport to verify who you are. However, you can also finish all this verification withing a webbrowser such as chrome etc. You need good lighting and a clear photo of your passport.",
           "**Troubleshooting:** If the video call fails (which happens with bad connection or unclear photos), you can do 'PostIdent' at any post office (Deutsche Post). They will verify you in person for a small fee (~10€).",
-          "**Cost breakdown:** The 10€ starter set includes your SIM and about 5€ credit. Monthly plans start at 8€ for calls/texts, or just use pay-as-you-go if you prefer flexibility."
+          "**Cost breakdown:** The 10€ starter set includes your SIM and about 10€ credit. Monthly plans start at 8.99€, the unlimited option is about 9.99€ as of 18 Jan 2026."
         ]
       },
       { type: "h2", text: "2. Essential Apps: Maps, Translator & Transport" },
@@ -253,23 +253,23 @@ const POSTS = [
       {
         type: "ul",
         items: [
-          "**Google Maps:** Works perfectly in Germany. It shows you real-time public transport schedules, train platforms, and walking times. It's 100% accurate.",
+          "**Google Maps:** Works perfectly in Germany. It shows you real-time public transport schedules, train platforms, and walking times. It's 100% accurate. However, this seems confusing to many new comers! Just type your destination address, and it will show you exactly how to get there using buses, trains, or walking.",
           "**DeepL:** This is NOT Google Translate. DeepL is specifically trained on German and produces natural translations. Point your phone camera at a German sign or menu, and DeepL will translate it instantly. Free version works offline after download.",
-          "**DB Navigator (Deutsche Bahn):** This is the official German railway app. It shows you every bus, train, and metro option. It tells you which platform (Gleis) to go to, when the train departs, and if it's running late. You'll use this constantly."
+          "**DB Navigator (Deutsche Bahn):** This is the official German railway app. It shows you every bus, train, and metro option. It tells you which platform (Gleis) to go to, when the train departs, and if it's running late. You'll use this constantly. You can also buy tickets directly in the app."
         ]
       },
       { type: "h2", text: "3. Getting From Airport to City: Transport vs Taxi" },
       {
         type: "p",
-        text: "This is where many newcomers waste their first 50€–80€. A taxi from a major airport (Berlin, Munich, Frankfurt) to the city center costs between 50€ and 80€. A train ticket costs 6€–12€. In Germany, trains are safe, clean, and everyone uses them—including wealthy locals. Do not take a taxi unless there are extraordinary circumstances."
+        text: "This is where many newcomers waste their first 50€–80€. A taxi from a major airport (Berlin, Munich, Frankfurt) to the city center costs between 50€ and 80€ approximately. A train ticket costs about 6€–12€. In Germany, trains are safe, clean, and everyone uses them—including wealthy locals. Do not take a taxi unless there are extraordinary circumstances."
       },
       {
         type: "p",
-        text: "**Here's exactly what to do:** Use the DB Navigator app (you just downloaded it). Type your airport name and your destination address. It will show you the cheapest and fastest route. Usually it's a regional train (S-Bahn) followed by a metro (U-Bahn) or bus. The app tells you which platform to go to and what time to leave. It's that simple."
+        text: "**Here's exactly what to do:** Use the DB Navigator app (you just downloaded it). Type your airport name and your destination address. It will show you the cheapest and fastest route. Usually it's a regional train (S-Bahn) followed by a metro (U-Bahn) or bus. The app tells you which platform to go to and what time to leave. It's that simple. If this seems confusing, switch to **Google Maps** and do the same search there."
       },
       {
         type: "p",
-        text: "**About the Deutschlandticket:** This monthly pass costs 49€–63€ and covers ALL local transport nationwide (trains, buses, metros). It does NOT cover long-distance express trains (ICE/IC). But for getting around your city? Perfect. Consider buying one at the airport train station before you leave."
+        text: "**About the Deutschlandticket:** This monthly pass costs 63€(as of 18 Jan 2026) and covers ALL local transport nationwide (trains, buses, metros). It does NOT cover long-distance express trains (ICE/IC). But for getting around your city? Perfect. Consider buying one at the airport train station before you leave."
       },
       { type: "h2", text: "4. Your First Weekend (The Sunday Rule)" },
       {
@@ -278,12 +278,12 @@ const POSTS = [
       },
       {
         type: "p",
-        text: "**The Loophole:** Supermarkets inside big train stations (Hauptbahnhof) and airports are allowed to stay open on Sundays. If you land on Sunday, buy bread, water, and cheese *at the airport supermarket* (usually Rewe or Edeka) before you leave the terminal."
+        text: "**The Loophole:** Supermarkets inside big train stations (Hauptbahnhof) and airports are allowed to stay open on Sundays. If you land on Sunday, buy bread, water, juice etc *at the airport supermarket* (usually Rewe or Edeka) before you leave the terminal."
       },
       { type: "h2", text: "5. The Golden Paper: Wohnungsgeberbestätigung" },
       {
         type: "p",
-        text: "When you arrive at your housing, ask your landlord or host for the **Wohnungsgeberbestätigung** (Landlord Confirmation). This is a single sheet of paper that confirms you moved in. You **cannot** register your address at the city office without this specific paper. Your rental contract is *not* enough. I have added a [PDF Template](https://www.wohnungsboerse.net/files/Wohnungsgeberbestaetigung_Muster.pdf) below—if they don't have one, print this and make them sign it."
+        text: "When you arrive at your housing, ask your landlord or host for the **Wohnungsgeberbestätigung** (Landlord Confirmation). This is a single sheet of paper that confirms you moved in. You **cannot** register your address at the city office without this specific paper. Your rental contract is *not* enough. I have added a [PDF Template](https://formular-service.augsburg.de/intelliform/forms/stadt_augsburg/extern/330/extern/330/meldewesen/wohnungsgeberbestaetigung/download;jsessionid=uZF3OT69kpWC24HWyAC_aL-HL-MeLo73RHTISBvd.IF0) below—if they don't have one, print this and make them sign it."
       }
     ],
     goldenRule: "Do NOT sign a 24-month contract at the airport. Buy a prepaid SIM.",
@@ -296,7 +296,7 @@ const POSTS = [
       {
         title: "Get Internet (Aldi Talk)",
         text: "Buy starter set at Aldi (~10€).",
-        action: "Register via App (Video Ident).",
+        action: "Register via App or web browser(Video Ident).",
         readMore: [{ title: "Aldi Talk Registration Guide", url: "https://www.alditalk.de/registrierung", source: "official" }],
       },
       {
@@ -310,8 +310,8 @@ const POSTS = [
       { title: "Integreat App (Local Info)", url: "https://integreat.app", source: "tool" },
       { title: "DeepL Translator", url: "https://www.deepl.com", source: "tool" },
     ],
-    downloads: [{ title: "Wohnungsgeberbestätigung Template (PDF)", url: "https://www.wohnungsboerse.net/files/Wohnungsgeberbestaetigung_Muster.pdf" }],
-    videos: [{ title: "How to buy a train ticket in Germany", url: "https://www.youtube.com/results?search_query=how+to+use+db+navigator+germany" }],
+    downloads: [{ title: "Wohnungsgeberbestätigung Template (PDF)", url: "https://formular-service.augsburg.de/intelliform/forms/stadt_augsburg/extern/330/extern/330/meldewesen/wohnungsgeberbestaetigung/download;jsessionid=uZF3OT69kpWC24HWyAC_aL-HL-MeLo73RHTISBvd.IF0" }],
+    videos: [{ title: "How to buy a train ticket in Germany", url: "https://youtu.be/q1Qpa07wPb0?si=p_imqa6j9tq6Xz0z" }],
     tags: ["arrival", "internet", "transport", "safety"],
   },
 
@@ -331,7 +331,11 @@ const POSTS = [
     content: [
       {
         type: "p",
-        text: "Germany runs on bureaucracy and paperwork. But it's not as chaotic as it seems—it's actually very organized once you understand the system. To function here, you need three main things: (1) A registered address (**Anmeldung**), (2) A German Bank Account (IBAN), and (3) A Tax ID. The catch? They often require each other. Let's untangle this."
+        text: "Germany runs on bureaucracy and paperwork. But it's not as chaotic as it seems—it's actually very organized once you understand the system. To function here, you need three main things: (1) A registered address (**Anmeldung**), (2) A German Bank Account (IBAN), and (3) A Tax ID. The catch? They often require each other."
+      },
+      {
+        type: "p",
+        text: "**⚠️ Important Disclaimer:** Laws and procedures change frequently. Always verify the current requirements on the [official Make It In Germany portal](https://www.make-it-in-germany.com/en/) and check with your local Bürgeramt (city office) for your specific city's requirements. This guide is current as of January 2026."
       },
       { type: "h2", text: "1. Banking: Which Bank Should You Choose?" },
       {
@@ -349,49 +353,53 @@ const POSTS = [
       },
       {
         type: "p",
-        text: "**My honest recommendation:** Open Revolut first. Use it to establish your financial presence in Germany. Give the IBAN to your employer and landlord. Once you have your registration paper (Anmeldung), open a Sparkasse account if you want a physical bank for ATM withdrawals or backup. But Revolut alone is perfectly sufficient."
+        text: "**My honest recommendation:** Open Revolut first. Use it to establish your financial presence in Germany. Give the IBAN to your employer and landlord(**if required**, never share your IBAN/bank details anyhow!). Once you have your registration paper (Anmeldung), open a Sparkasse or Volksbank account if you want a physical bank for ATM withdrawals or backup. But Revolut alone is perfectly sufficient."
       },
       {
         type: "p",
-        text: "You can open a free Revolut account using this link: [Open Revolut Account](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect). Full transparency: this is a referral link (I get a small bonus), but I genuinely recommend it because it solves the biggest headache for newcomers."
+        text: "You can open a free Revolut account using this link: [Open Revolut Account](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect). Full transparency: this is a referral link (I might get a small bonus), but I genuinely recommend it because it solves the biggest headache for newcomers. You only need your German phone number, address(where you are currently living), and passport to get started. You'll need to do a video ID verification as well. After verifying your account, you can order for a phyical bank card(it's free), you only pay around 7€ for shipping."
       },
       { type: "h2", text: "2. Anmeldung: Your Most Important Piece of Paper" },
       {
         type: "p",
-        text: "**What is Anmeldung?** It's your official registration with the city. Once you register, you are legally documented as living at that address. This piece of paper unlocks everything else: tax ID, health insurance, voting rights. Without it, you're invisible to the German system."
+        text: "**What is Anmeldung?** It's your official registration with the city. Once you register at your local [Bürgeramt](https://service.berlin.de/dienstleistung/120686/) (citizen's office), you are legally documented as living at that address. This piece of paper unlocks everything: tax ID, health insurance, voting rights, and most job contracts. Without it, you're invisible to the German system."
       },
       {
         type: "p",
-        text: "**The Timeline:** Within 2 weeks of moving into your permanent address, you must go to the **Bürgeramt** (local citizen's office) and register. If you don't do this, you're technically in violation of German law and can face fines."
+        text: "**The Timeline:** Within 2 weeks of moving into your permanent address, you must register. If you don't do this, you're technically in violation of German law and can face fines. Check your city's website for the deadline in your specific city."
       },
       {
         type: "p",
-        text: "**The Practical Problem:** Appointments are notoriously hard to get. Websites show no availability for months. But here's the hack that actually works: **Check the booking portal at 7:00 AM or 8:00 AM sharp**. That's when cancelled appointments from other people get released back into the system. You need lightning-fast fingers, but appointments appear. Be flexible about the date and time—take whatever is available."
+        text: "**The Practical Problem:** Appointments are notoriously hard to get. Websites show no availability for months. But here's the hack that actually works: **Check the booking portal at 7:00 AM or 8:00 AM sharp**. That's when cancelled appointments get released back into the system. Be flexible about the date and time—take whatever is available."
       },
       {
         type: "p",
-        text: "**What to Bring:** Your passport and the **Wohnungsgeberbestätigung** (landlord's confirmation that you moved in). If your landlord doesn't have this form, ask them to fill out this template: [Wohnungsgeberbestätigung PDF](https://www.wohnungsboerse.net/files/Wohnungsgeberbestaetigung_Muster.pdf)"
+        text: "**What to Bring:** Your passport and the [**Wohnungsgeberbestätigung**](https://www.wohnungsboerse.net/files/Wohnungsgeberbestaetigung_Muster.pdf) (landlord's confirmation that you moved in). If your landlord doesn't have this form, use this official template and ask them to fill it out and sign it."
+      },
+      {
+        type: "p",
+        text: "**Official Info:** [Check your city's Bürgeramt page](https://service.berlin.de/dienstleistung/120686/) for exact procedures and appointment booking links. Each city might have slightly different requirements, so verify locally."
       },
       { type: "h2", text: "3. Health Insurance (Krankenkasse): It's Mandatory" },
       {
         type: "p",
-        text: "**Important:** Health insurance is not optional in Germany. It's legally required for everyone. As an employee or trainee, you're automatically enrolled in the **public health insurance system (GKV)**."
+        text: "**Important:** Health insurance is not optional in Germany. It's legally required for everyone. As an employee or trainee, you're automatically enrolled in the **public health insurance system (GKV)**. [Verify this on the official government site](https://www.make-it-in-germany.com/en/manage-life/social-security/health-insurance/)."
       },
       {
         type: "p",
-        text: "**How much does it cost?** About 16% of your gross salary. But here's the good part: your employer pays half (8%) and you pay half (8%). So if you earn 2,000€ gross, you pay ~160€ for health insurance. It's automatically deducted from your salary—you don't need to do anything."
+        text: "**How much does it cost?** Approximately 16% of your gross salary. But here's the good part: your employer pays half (8%) and you pay half (8%). So if you earn 2,000€ gross, you contribute ~160€ for health insurance—your employer contributes another 160€. It's automatically deducted from your salary by your employer."
       },
       {
         type: "p",
-        text: "**Which insurance company?** AOK, Techniker Krankenkasse (TK), and DAK-Gesundheit are the biggest. They all provide identical coverage—the choice is just about admin preferences. Ask your employer which one they recommend, or check their rates on [Check24](https://www.check24.de/gesetzliche-krankenversicherung/)."
+        text: "**Which company should you choose?** The major providers are [AOK](https://www.aok.de/), [Techniker Krankenkasse (TK)](https://www.tk.de/), and [DAK-Gesundheit](https://www.dak.de/). All provide identical basic coverage (required by law). The differences are in small 'extras' like dental cleaning or preventive programs. **TK is often recommended for English speakers** because they have good international support. **Compare options on [Check24](https://www.check24.de/gesetzliche-krankenversicherung/) or [Getsafe](https://www.getsafe.de/)**."
       },
       {
         type: "p",
-        text: "**What does it cover?** Everything essential: doctor visits, hospital stays, prescription medications, dental work (basics), mental health therapy, and more. Germany's healthcare is excellent."
+        text: "**What's actually covered?** All public insurance covers: doctor visits, hospital stays, prescription medications, emergency care, mental health therapy, preventive check-ups, and basic dental work. [See the full official list here](https://www.barmer.de/leistungen/alle-leistungen). Germany's healthcare system is ranked among the best in the world."
       },
       {
         type: "p",
-        text: "You can choose your provider. **AOK**, **TK** (Techniker Krankenkasse), and **Barmer** are the biggest. They all cover the exact same basic things (doctors, hospitals, surgeries), but differ in small extras (dental cleaning, travel vaccinations). **TK** is often recommended for internationals because they have good English support."
+        text: "**⚠️ VERIFY:** Always check the official [German government health insurance page](https://www.make-it-in-germany.com/en/manage-life/social-security/health-insurance/) for the most current information, as laws can change."
       },
       { type: "h2", text: "4. The Tax ID (Steuer-ID)" },
       {
@@ -408,9 +416,9 @@ const POSTS = [
         action: "Download app and verify identity.",
         readMore: [
           {
-            title: "Open Revolut Account (Referral)",
+            title: "Open Revolut Account",
             url: LINKS.revolutReferral,
-            source: "referral",
+            source: "banking",
           },
         ],
       },
@@ -428,8 +436,9 @@ const POSTS = [
       },
       {
         title: "Health Insurance",
-        text: "Choose a public insurer (AOK, TK, Barmer).",
-        action: "Register online or ask your employer for help.",
+        url: "https://www.tk.de/en/health-insurance-in-germany/basic-information-german-health-system/german-health-insurance-system-2169412?tkcm=ab",
+        text: "Choose a public insurer (AOK, TK, Barmer). I personally use TK(link above).",
+        action: "Register online or visit local branch.",
         readMore: [
           {
             title: "Health Insurance Comparison",
@@ -447,7 +456,7 @@ const POSTS = [
       },
     ],
     downloads: [{ title: "Anmeldung Documents Checklist (PDF)", url: null }],
-    videos: [{ title: "How to fill out the Anmeldung Form", url: "https://www.youtube.com/results?search_query=anmeldung+formular+ausf%C3%BCllen+englisch" }],
+    videos: [{ title: "How to fill out the Anmeldung Form", url: "https://youtu.be/1TuG6EzbVbE?si=exzIKp-pqleql-DE" }],
     tags: ["money", "banking", "revolut", "tax", "insurance"],
   },
 
@@ -572,7 +581,7 @@ const POSTS = [
     ],
     readMore: [{ title: "Rundfunkbeitrag (TV Tax)", url: "https://www.rundfunkbeitrag.de/welcome/index_ger.html", source: "official" }],
     downloads: [{ title: "Trash cheat sheet (PDF)", url: null }],
-    videos: [{ title: "How to separate trash in Germany", url: "https://www.youtube.com/results?search_query=german+trash+separation+english" }],
+    videos: [{ title: "How to separate trash in Germany", url: "https://youtu.be/KfHrq-8tG-g?si=EFwO0ykE9TdgNO94" }],
     tags: ["housing", "trash", "rules", "furniture"],
   },
 
@@ -658,7 +667,7 @@ const POSTS = [
     ],
     readMore: [],
     downloads: [{ title: "Medical Math Worksheet (PDF)", url: null }],
-    videos: [{ title: "PflegeTube Channel", url: "https://www.youtube.com/user/PflegeTube" }],
+    videos: [{ title: "PflegeTube Channel", url: "https://youtube.com/@pflegetube?si=V4ECJ1kuFPQjq2hT" }],
     tags: ["nursing", "books", "research", "study"],
   },
 
@@ -836,7 +845,7 @@ const RESOURCES = [
   { id: "r15", title: "Handbook Germany - Official Guide", url: "https://handbookgermany.de/en/", type: "Website", category: "Arrival & Setup", tags: ["arrival", "official"], source: "official" },
   { id: "r17", title: "Integreat - Local Information App", url: "https://integreat.app", type: "App", category: "Arrival & Setup", tags: ["local-info", "languages"], source: "tool" },
   { id: "r28", title: "Make It In Germany - Official Portal", url: "https://www.make-it-in-germany.com/en/", type: "Website", category: "Arrival & Setup", tags: ["visa", "official"], source: "official" },
-  { id: "r29", title: "Google Maps Germany", url: "https://www.google.com/maps", type: "App", category: "Arrival & Setup", tags: ["navigation"], source: "tool" },
+  { id: "r29", title: "Google Maps Germany", url: "maps.google.com", type: "App", category: "Arrival & Setup", tags: ["navigation"], source: "tool" },
   
   // === MONEY & BANKING ===
   { id: "r19", title: "Too Good To Go - Food App", url: "https://www.toogoodtogo.com/de/de", type: "App", category: "Money & Banking", tags: ["food", "savings"], source: "tool" },

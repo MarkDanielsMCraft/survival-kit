@@ -253,7 +253,7 @@ If this guide has genuinely helped you navigate life in Germany, consider suppor
 
 <div align="center">
   
-**[👉 Support the Author on Buy Me a Coffee](https://www.buymeacoffee.com/MarkDanielsMCraft)**
+**[👉Buy Me a Coffee](https://www.buymeacoffee.com/MarkDanielsMCraft)**
 
 *Your coffee helps fund more guides, updates, and resources for the international community in Germany*
 
