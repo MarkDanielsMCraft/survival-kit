@@ -42,6 +42,7 @@ export const RESOURCES = [
   { id: "r34", title: "ImmobilienScout24 - Apartment Listings", url: "https://www.immobilienscout24.de/", type: "Website", category: "Housing", tags: ["housing", "apartments"], source: "tool" },
   { id: "r35", title: "MieterverbanD - Tenant Union", url: "https://www.mieterbund.de/", type: "Website", category: "Housing", tags: ["tenant-rights"], source: "ngo" },
   { id: "r36", title: "Deutschlandticket - Transport Pass", url: "https://www.bahn.de/angebot/regio/deutschland-ticket", type: "Website", category: "Housing", tags: ["transport"], source: "official" },
+  { id: "r47", title: "Mentor Language Academy - Nursing Accommodation Guide", url: "https://mentoralanguageacademy.com/blog/a-guide-for-comfortable-accommodation-during-nursing-ausbildung-in-germany/", type: "Website", category: "Housing", tags: ["nursing", "accommodation", "ausbildung"], source: "learning" },
   
   // === PROFESSIONAL DEVELOPMENT & LANGUAGE ===
   { id: "r8", title: "DocCheck Flexikon", url: "https://flexikon.doccheck.com", type: "Website", category: "Nursing & Math", tags: ["nursing", "reference"], source: "learning" },

@@ -1513,5 +1513,387 @@ export const POSTS = [
     downloads: [{ title: "Emergency Numbers Cheatsheet", url: null }],
     videos: [{ title: "What to Do in an Accident (German)", url: "https://youtu.be/example123" }],
     tags: ["emergency", "accident", "police", "theft", "safety"],
-  }
+  },
+
+  {
+    slug: "accommodation-nursing-ausbildung",
+    title: "Accommodation for Nursing Trainees: Your Complete Guide",
+    subtitle: "Finding comfortable housing and understanding your options as a nursing student",
+    stage: "Settling In",
+    readTime: "14 min",
+    icon: <HomeIcon size={24} />,
+    color: "from-cyan-500 to-blue-500",
+    shadow: "shadow-cyan-500/20",
+    accent: "text-cyan-600",
+    verified: "2026-01-19",
+    summary: "Nursing Ausbildung requires stability. Explore your accommodation options, understand costs, and know what to expect when living in Germany as a trainee.",
+    vibeCheck: "Nursing school is intense. Your living situation should be stable, affordable, and not stressful. Let's get that right from day one.",
+    content: [
+      {
+        type: "p",
+        text: "As a nursing trainee (Pflegefachmann/Pflegefachfrau) in Germany, your accommodation choice directly impacts your success. You're balancing 37.5-40 hours/week of clinical training, theory classes, and studying. Your home needs to be a place where you can rest and recover. This guide covers your options, realistic costs, and what to actually expect."
+      },
+      {
+        type: "p",
+        text: "**⚠️ Verification Note:** All information current as of January 2026. Costs and regulations may vary by city and change seasonally. Always verify locally with your employer or training provider."
+      },
+      { type: "h2", text: "1. Types of Accommodation Available" },
+      {
+        type: "p",
+        text: "You have several options. Each has pros and cons. Choose based on your budget, comfort level, and what your employer offers."
+      },
+      {
+        type: "ul",
+        items: [
+          "**Student Residence Halls (Studentenheim/Wohnheim):** Run by universities or student services (Deutsches Studentenwerk). Usually affordable (€150-300/month) but limited availability and can feel institutional. Shared facilities. BEST FOR: Budget-conscious students who don't mind communal living.",
+          "**Shared Apartments (WG - Wohngemeinschaft):** 3-4 people sharing an apartment, each with private room, shared kitchen/bathroom. €250-500/month depending on city and room size. Most common for nursing students. BEST FOR: Those wanting independence + affordability.",
+          "**Private Studio/1-Bedroom Apartment:** Fully yours. €400-800+/month. More expensive, but total privacy and control. BEST FOR: Those with stable income or employer support.",
+          "**Host Family (Gastfamilie):** Live with a German family. €300-500/month including meals. Good for cultural immersion, but less independence. BEST FOR: Those wanting to improve German language rapidly.",
+          "**Employer-Sponsored Housing:** Some hospitals/care facilities offer discounted or free housing for trainees. Ask your employer explicitly—this is gold if available."
+        ]
+      },
+      { type: "h2", text: "2. Cost Breakdown by City Size" },
+      {
+        type: "p",
+        text: "Germany varies drastically by city. Berlin is affordable; Munich costs 30% more. Here's realistic pricing as of January 2026:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Small Cities (< 200k people):** WG room €200-350/month, private studio €300-500/month",
+          "**Medium Cities (200k-1M):** WG room €300-450/month, private studio €450-700/month",
+          "**Large Cities (Berlin, Munich, Hamburg):** WG room €350-550/month, private studio €600-900/month",
+          "**Additional Costs:** Utilities (Nebenkosten) €80-150/month, internet €20-40/month, Germany charges Rundfunkbeitrag (TV/radio fee) €18.36/month whether you watch TV or not (shared apartments count as one unit)"
+        ]
+      },
+      {
+        type: "p",
+        text: "**Realistic Monthly Budget for a Nursing Trainee:**"
+      },
+      {
+        type: "ul",
+        items: [
+          "Rent (WG): €350",
+          "Utilities & internet: €100",
+          "Food: €60-100",
+          "Transport (Deutschlandticket): €63",
+          "Extras (cleaning supplies, toiletries, etc.): €40",
+          "**Total:** €613-713/month (very modest, but doable on trainee salary)"
+        ]
+      },
+      { type: "h2", text: "3. How to Find Accommodation" },
+      {
+        type: "p",
+        text: "The same platforms used everywhere in Germany apply to nursing students. Move fast—good apartments are claimed within hours."
+      },
+      {
+        type: "ul",
+        items: [
+          "**WG Gesucht (www.wg-gesucht.de):** THE platform for shared apartments. Create account, filter by city and price range, apply to listings. Write professional, concise messages. Most rooms go within 24-48 hours.",
+          "**Kleinanzeigen (www.kleinanzeigen.de):** For private apartments and also WG rooms. Less curated than WG Gesucht, so scams exist. NEVER transfer money before seeing apartment in person.",
+          "**ImmobilienScout24 (www.immobilienscout24.de):** For larger, more 'official' listings. Good for private apartments, often more expensive.",
+          "**University Housing Office:** Contact your nursing school's international office. Many schools have lists of recommended housing or partnerships with landlords.",
+          "**Facebook Groups:** Search '[Your City Name] + Wohnung suchen' or '[Your City] + housing'. Many locals post here, sometimes bypassing platforms.",
+          "**Direct Contact:** Ask your employer (hospital, care facility) if they have relationships with landlords or housing programs for trainees."
+        ]
+      },
+      { type: "h2", text: "4. What to Look For (Red Flags & Green Flags)" },
+      {
+        type: "p",
+        text: "After you find a potential apartment, evaluate it critically. Some questions to ask:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Green Flags:** Landlord provides written contract, deposit held in separate bank account (not their personal account), utilities costs are clear, you get to visit/view in person before paying, quiet neighborhood, close to public transport",
+          "**Red Flags:** 'Too cheap' listings, demands money transfer before viewing, refuses to provide written contract, deposit 'held in their account', vague about utilities costs, requires long-term commitment (24+ months) without flexibility",
+          "**Questions to Ask:** When can I move in? When is rent due each month? What's included in utilities? What happens if equipment breaks? How much notice for landlord to enter? What's the process for getting deposit back?"
+        ]
+      },
+      { type: "h2", text: "5. The Rental Contract (Mietvertrag)" },
+      {
+        type: "p",
+        text: "ALWAYS get a written rental contract. Verbal agreements don't exist in Germany. Your contract should specify:"
+      },
+      {
+        type: "ul",
+        items: [
+          "Monthly rent amount (cold and warm)",
+          "Deposit amount and where it's held",
+          "Notice period for ending lease (usually 3 months)",
+          "What utilities are included",
+          "House rules (quiet hours, trash separation, etc.)",
+          "How long the lease is (fixed-term or open-ended)",
+          "Condition of apartment at move-in (photos + checklist)"
+        ]
+      },
+      {
+        type: "p",
+        text: "**ALWAYS read before signing.** If something seems unfair, ask questions or contact [Faire Integration](https://www.faire-integration.de/) (free legal advice). German landlords often include clauses that aren't legal—informed tenants can negotiate."
+      },
+      { type: "h2", text: "6. Move-In & Move-Out Essentials" },
+      {
+        type: "p",
+        text: "When you move in, take photos of EVERY room. Document any existing damage. Have landlord sign off on this 'condition report' (Übergabeprotokoll). This protects your deposit when you leave."
+      },
+      {
+        type: "p",
+        text: "When you move out: Schedule final walkthrough with landlord, repair any damage YOU caused (normal wear-and-tear doesn't count), clean thoroughly, and give the required notice (usually 3 months). Landlord must return your deposit within 1 month. If they don't, or deduct unfairly, you can pursue them in small claims court (Amtsgericht)."
+      },
+      { type: "h2", text: "7. Special Considerations for Nursing Trainees" },
+      {
+        type: "p",
+        text: "Your situation is unique. You're working irregular shifts, often including nights and weekends."
+      },
+      {
+        type: "ul",
+        items: [
+          "**Shift Work Tip:** If you work nights, your roommates (in a WG) need to respect that you sleep during the day. Discuss this upfront. A quiet WG is essential.",
+          "**Employer Housing Programs:** Many large hospital groups (Charité in Berlin, Munich Clinics, etc.) offer subsidized housing for trainees. Ask HR specifically: 'Gibt es ein Wohnungsprogramm für Auszubildende?' (Is there a housing program for trainees?)",
+          "**Proximity to Training Site:** Don't choose based purely on price. Consider commute time. 45+ minutes each way will exhaust you during 12-hour shifts.",
+          "**Emergency Backup:** Tell your landlord/roommates about your shift schedule. In emergencies (illness, injury), you need support nearby."
+        ]
+      },
+      { type: "h2", text: "8. Legal Tenant Rights in Germany" },
+      {
+        type: "p",
+        text: "Germany protects renters. You have strong legal rights as a tenant:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Rent Control:** Landlord cannot raise rent more than 20% every 3 years, or 3 euros per sqm per month per year (whichever is lower)",
+          "**Repairs:** Landlord must repair damage within 'reasonable time' (usually 1-2 weeks for urgent issues, 4-6 weeks for non-urgent)",
+          "**Notice Period:** After probation period, landlord needs 3 months' notice to end your lease (valid for ordinary termination only)",
+          "**Unlawful Termination:** Landlord cannot terminate just to raise rent. Termination needs legal grounds (serious damage, repeated rent non-payment, etc.)"
+        ]
+      },
+      {
+        type: "p",
+        text: "**Get Help:** If landlord violates these, contact [MieterverbandE](https://www.mieterbund.de/) (tenant union, €5-10/month membership) or [Faire Integration](https://www.faire-integration.de/) (free)."
+      }
+    ],
+    goldenRule: "Choose accommodation close to your workplace, with clear contract, and don't rush. Bad housing = bad training performance. Take your time.",
+    steps: [
+      {
+        title: "Set Your Budget",
+        text: "Calculate what you can afford from trainee salary.",
+        action: "Aim for €350-450/month including utilities.",
+        readMore: [
+          {
+            title: "Average Trainee Salary Germany",
+            url: "https://www.arbeitsagentur.de/",
+            source: "official",
+          },
+        ],
+      },
+      {
+        title: "Search Platforms",
+        text: "Create profiles on WG Gesucht and Kleinanzeigen.",
+        action: "Set up alerts for your city.",
+        readMore: [
+          { title: "WG Gesucht", url: "https://www.wg-gesucht.de/", source: "tool" },
+          { title: "Kleinanzeigen", url: "https://www.kleinanzeigen.de/", source: "tool" },
+        ],
+      },
+      {
+        title: "Evaluate & Visit",
+        text: "Never transfer money without viewing apartment in person.",
+        action: "Take photos, check contract before signing.",
+        readMore: [
+          { title: "Tenant Rights Guide", url: "https://www.mieterbund.de/", source: "ngo" },
+        ],
+      },
+      {
+        title: "Document Move-In",
+        text: "Take photos of condition, get landlord signature.",
+        action: "Keep photos & contract filed away.",
+        readMore: [],
+      },
+    ],
+    readMore: [
+      { title: "Deutsches Studentenwerk (Student Housing)", url: "https://www.studentenwerke.de/", source: "official" },
+      { title: "Tenant Rights (MieterverbandE)", url: "https://www.mieterbund.de/", source: "ngo" },
+      { title: "Faire Integration (Legal Advice)", url: "https://www.faire-integration.de/", source: "ngo" },
+    ],
+    downloads: [{ title: "Rental Contract Checklist (PDF)", url: null }],
+    videos: [{ title: "How to find an apartment in Germany (YouTube)", url: "https://youtu.be/search?q=wohnung+finden+deutschland" }],
+    tags: ["accommodation", "housing", "nursing", "ausbildung", "contract", "costs"],
+  },
+
+  {
+    slug: "wg-roommate-culture",
+    title: "Living in a WG: Mastering Shared Apartment Culture",
+    subtitle: "Everything you need to know about German roommate dynamics and house rules",
+    stage: "Settling In",
+    readTime: "11 min",
+    icon: <Users size={24} />,
+    color: "from-indigo-500 to-purple-600",
+    shadow: "shadow-indigo-500/20",
+    accent: "text-indigo-600",
+    verified: "2026-01-19",
+    summary: "WG (shared apartment) living is normal in Germany. Learn the unwritten rules, communication norms, and how to avoid conflicts with roommates.",
+    vibeCheck: "Germans communicate directly. Conflict often happens because people DON'T communicate. Learn the norms and you'll be fine.",
+    content: [
+      {
+        type: "p",
+        text: "Most young people in Germany live in a WG (Wohngemeinschaft = shared apartment). It's affordable, quick to find, and the default for students and young professionals. But WG culture has unwritten rules. Break them, and you'll be silently hated by your roommates. Follow them, and you'll have a stable home and probably some decent friends."
+      },
+      { type: "h2", text: "1. What Is a WG? How It Works" },
+      {
+        type: "p",
+        text: "A typical WG has 3-4 people, each with a private bedroom, sharing kitchen, bathroom(s), and common areas. Everyone is on the same lease (usually), or sometimes each person has their own separate contract. Everyone pays rent separately. It's NOT communal living in the hippie sense—it's practical roommate-sharing."
+      },
+      {
+        type: "p",
+        text: "**Important:** You're not required to be friends with your roommates. You're required to be respectful, quiet, and clean. Friendships sometimes happen, but don't expect it."
+      },
+      { type: "h2", text: "2. The Unwritten Rules (This Is Critical)" },
+      {
+        type: "p",
+        text: "These aren't written down, but breaking them causes resentment:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Quiet Hours:** 22:00 (10 PM) - 06:00 (6 AM) on weekdays, ALL DAY on Sundays and holidays. This is legally enforced. No loud music, no parties, no vacuuming at midnight. Sleep is sacred in German culture.",
+          "**Kitchen Cleanliness:** Clean your dishes IMMEDIATELY after use. Leave the kitchen clean. Don't leave your food in the fridge for weeks. Shared kitchens get messy quickly—preventing it beats fighting over who's responsible.",
+          "**Bathroom Time:** Mornings can be bottlenecks. Showers shouldn't exceed 15-20 minutes if multiple people need to use it. Don't hog the shower during peak hours.",
+          "**Respect Private Space:** Your roommates' rooms are off-limits. Don't enter without invitation. Don't borrow their things without asking. Ever.",
+          "**Bathroom Sharing:** Your cleaning supplies and toiletries belong to you. Share basic things (toilet paper, soap) but keep your personal stuff separate. Don't assume others will replace your stuff.",
+          "**Rent & Utilities:** Pay on time, always. Set up automatic payments (Dauerauftrag) if possible. Late payments damage trust immediately."
+        ]
+      },
+      { type: "h2", text: "3. Communication: The German Way" },
+      {
+        type: "p",
+        text: "Germans communicate **directly**. This feels blunt to many cultures, but it's efficient. Problems get solved quickly because people say what they mean."
+      },
+      {
+        type: "p",
+        text: "**Example Problem:** Your roommate leaves dishes in the sink. Instead of being passive-aggressive or avoiding conflict, you say: 'Hey, I've noticed there are dishes in the sink. Can we agree that everyone cleans their dishes immediately? It's getting annoying.' This is not rude—it's professional."
+      },
+      {
+        type: "p",
+        text: "**What NOT to do:** Don't clean their dishes silently and then be angry. Don't gossip with other roommates about the 'problem roommate'. Don't leave passive-aggressive notes. Talk directly, one-on-one, calmly."
+      },
+      { type: "h2", text: "4. WG Meetings (Regularly Scheduled)" },
+      {
+        type: "p",
+        text: "Many WGs have a monthly or bi-weekly 'WG-Sitzung' (WG meeting) where everyone sits down to discuss shared costs, problems, and schedule. If your WG does this, take it seriously. This is where conflicts get resolved before they blow up."
+      },
+      {
+        type: "ul",
+        items: [
+          "**Typical Topics:** Who's cleaning this week? Do we need to buy new toilet paper/cleaning supplies? Has anyone noticed a problem? Do we need to adjust house rules?",
+          "**Duration:** Usually 30-60 minutes. People stay on topic and wrap up efficiently.",
+          "**Don't Skip:** It's disrespectful to skip regular meetings. Your input matters."
+        ]
+      },
+      { type: "h2", text: "5. Shared Costs (Cleaning, Supplies, Utilities)" },
+      {
+        type: "p",
+        text: "Who pays for what? This varies, but here's what's typical:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Rent:** Everyone pays to landlord separately (or same amount if joint lease)",
+          "**Utilities (Strom, Gas, Wasser):** Split equally every month. Someone collects and settles the bill.",
+          "**Internet:** Usually split equally (~€5-10/person)",
+          "**Shared Supplies:** Toilet paper, dish soap, cleaning supplies. Usually buy collectively and split cost. Some WGs use an 'Kasse' (collective fund) where everyone chips in €5-10/month and one person buys everything.",
+          "**Trash/Recycling:** Landlord usually covers. But YOU split cost of extra trash bags or recycling bins if needed."
+        ]
+      },
+      { type: "h2", text: "6. Dealing With Difficult Roommates" },
+      {
+        type: "p",
+        text: "Not every WG is harmonious. If you have a genuinely problematic roommate:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Document Issues:** Keep a record of problems (dates, what happened). This matters if legal action becomes necessary.",
+          "**Talk to Them First:** Be direct. Most problems are resolved with one honest conversation.",
+          "**Involve Other Roommates:** If the problem affects everyone, discuss it as a group at the next WG meeting.",
+          "**Contact Landlord (Last Resort):** If someone violates lease (excessive noise, damaging property, refusing to pay), inform the landlord. They can take action.",
+          "**Exit:** If it's truly unbearable, you can usually give 3 months' notice to leave (check your lease). Don't stay miserable for months."
+        ]
+      },
+      { type: "h2", text: "7. Your First Week in a WG: What to Do" },
+      {
+        type: "p",
+        text: "When you move in, take initiative:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Introduce Yourself Properly:** Knock on each roommate's door, introduce yourself, exchange phone numbers. Ask about their schedules, routines, and any house rules they want to highlight.",
+          "**Attend the Next WG Meeting (if scheduled):** Listen, don't dominate. Understand existing house rules and shared costs.",
+          "**Ask About Cleaning Schedule:** When does each person clean common areas? What's the rotating schedule?",
+          "**Find Out Payment Methods:** How are utilities split? Do you pay someone directly, or does the landlord collect?",
+          "**Respect Quiet Hours Immediately:** Show respect from day one. Don't be the 'loud new person'."
+        ]
+      },
+      { type: "h2", text: "8. Special Considerations for Nursing Trainees in a WG" },
+      {
+        type: "p",
+        text: "Your schedule is unusual. Communicate this clearly to roommates:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**Night Shifts:** Tell them you'll be sleeping during the day. Ask them to be extra quiet during your sleep hours (e.g., no heavy cleaning, no guests). Compromise is key.",
+          "**Early Mornings:** Some shifts start at 06:00 or earlier. Roommates need to know you'll be showering before dawn.",
+          "**Irregular Schedule:** Share your monthly roster (if possible) so they know when to expect you.",
+          "**Exhaustion:** On heavy shift days, you might need to retreat to your room immediately. This is okay and normal.",
+          "**Compensation:** Consider doing some WG tasks differently—maybe you handle trash more often because your shifts align with trash day, for example."
+        ]
+      }
+    ],
+    goldenRule: "Direct communication prevents 90% of WG problems. If something bothers you, speak up kindly but clearly. Germans respect this.",
+    steps: [
+      {
+        title: "Learn the Unwritten Rules",
+        text: "Quiet hours 22:00-06:00. Clean dishes immediately. Respect private space.",
+        action: "Ask roommates about any additional house rules.",
+        readMore: [
+          {
+            title: "German Quiet Hours (Ruhezeit) Laws",
+            url: "https://www.make-it-in-germany.com/en/manage-life/social-security/",
+            source: "official",
+          },
+        ],
+      },
+      {
+        title: "Introduce Yourself Properly",
+        text: "Knock on each roommate's door, exchange numbers.",
+        action: "Ask about their schedules & routines.",
+        readMore: [],
+      },
+      {
+        title: "Clarify Costs & Responsibilities",
+        text: "Utilities? Cleaning? Supplies? Who pays for what?",
+        action: "Get details in writing or note them down.",
+        readMore: [],
+      },
+      {
+        title: "Communicate Your Schedule",
+        text: "Share your nursing shift pattern.",
+        action: "Let roommates know sleep hours.",
+        readMore: [],
+      },
+    ],
+    readMore: [
+      { title: "Conflict Resolution Resources", url: "https://www.wg-gesucht.de/", source: "tool" },
+    ],
+    downloads: [{ title: "WG House Rules Template (PDF)", url: null }],
+    videos: [
+      {
+        title: "How to live in a German WG (YouTube)",
+        url: "https://youtu.be/search?q=WG+Wohnung+kultur+deutschland"
+      }
+    ],
+    tags: ["wg", "roommates", "shared-apartment", "culture", "rules", "communication"],
+  },
 ];

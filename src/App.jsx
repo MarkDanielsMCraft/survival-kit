@@ -14,6 +14,7 @@ export default function App() {
   const [view, setView] = useState("posts"); // "posts" | "library"
   const [activeSlug, setActiveSlug] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedStage, setSelectedStage] = useState(null);
   const [emergencyMode, setEmergencyMode] = useState(false);
   const [progress, setProgress] = useState(() => {
     try {
@@ -51,9 +52,18 @@ export default function App() {
   const activePost = POSTS.find((p) => p.slug === activeSlug);
 
   const filteredPosts = useMemo(() => {
+    let posts = POSTS;
+    
+    // Filter by stage
+    if (selectedStage) {
+      posts = posts.filter((p) => p.stage === selectedStage);
+    }
+    
+    // Filter by search term
     const q = searchTerm.trim().toLowerCase();
-    if (!q) return POSTS;
-    return POSTS.filter((p) => {
+    if (!q) return posts;
+    
+    return posts.filter((p) => {
       const inTitle = (p.title || "").toLowerCase().includes(q);
       const inSummary = (p.summary || "").toLowerCase().includes(q);
       const inSteps = (p.steps || []).some(
@@ -64,7 +74,7 @@ export default function App() {
       const inTags = (p.tags || []).some((t) => String(t).toLowerCase().includes(q));
       return inTitle || inSummary || inSteps || inTags;
     });
-  }, [searchTerm]);
+  }, [searchTerm, selectedStage]);
 
   const postProgress = (post) => {
     const total = post.steps.length;
@@ -97,6 +107,8 @@ export default function App() {
               setView={setView}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
+              selectedStage={selectedStage}
+              setSelectedStage={setSelectedStage}
             />
 
             <main className="max-w-6xl mx-auto px-6 py-8 pb-32">

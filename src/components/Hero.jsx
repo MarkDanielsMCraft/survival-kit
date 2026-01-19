@@ -1,7 +1,8 @@
 import { Search, Grid, List, Info } from "lucide-react";
 import { META } from '../constants/config';
+import { CategoryFilter } from './CategoryFilter';
 
-export const Hero = ({ view, setView, searchTerm, setSearchTerm }) => (
+export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, setSelectedStage }) => (
   <div className="relative pt-12 pb-10 px-6 text-center overflow-hidden">
     <div className="max-w-3xl mx-auto relative z-10 animate-float">
       <h2 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-5 tracking-tight leading-tight">
@@ -63,6 +64,11 @@ export const Hero = ({ view, setView, searchTerm, setSearchTerm }) => (
           />
         </div>
       </div>
+
+      {/* CATEGORY FILTER */}
+      {view === "posts" && (
+        <CategoryFilter selectedStage={selectedStage} setSelectedStage={setSelectedStage} />
+      )}
 
       {view === "posts" && (
         <div className="max-w-2xl mx-auto bg-white/80 border border-slate-200/60 rounded-2xl p-4 text-left shadow-sm backdrop-blur-sm">
