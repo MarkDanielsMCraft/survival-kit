@@ -8,6 +8,11 @@ export const styles = `
     overflow: hidden;
   }
 
+  .hero-photo.mesh-bg {
+    background-color: transparent;
+    background-image: none;
+  }
+
   .hero-photo::before {
     content: "";
     position: fixed;
@@ -15,7 +20,7 @@ export const styles = `
     background-image: url('https://images.unsplash.com/photo-1473889006385-9c10fc6c2c87?w=2000&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    opacity: 0.22;
+    opacity: 0.35;
     z-index: -2;
     pointer-events: none;
   }
@@ -24,7 +29,7 @@ export const styles = `
     content: "";
     position: fixed;
     inset: 0;
-    background: linear-gradient(180deg, rgba(248,250,252,0.9), rgba(248,250,252,0.94));
+    background: linear-gradient(180deg, rgba(248,250,252,0.86), rgba(248,250,252,0.9));
     z-index: -1;
     pointer-events: none;
   }
@@ -99,4 +104,28 @@ export const styles = `
   .prose a { color: #4f46e5; text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
   .prose a:hover { color: #4338ca; }
   .prose strong { color: #0f172a; font-weight: 700; }
+
+  .article-hero {
+    background: radial-gradient(circle at 20% 20%, rgba(99,102,241,0.12), transparent 35%),
+                radial-gradient(circle at 80% 0%, rgba(56,189,248,0.1), transparent 35%),
+                #0f172a;
+  }
+
+  .meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .content-block h2:not(:first-child) {
+    margin-top: 2.25rem;
+  }
 `;

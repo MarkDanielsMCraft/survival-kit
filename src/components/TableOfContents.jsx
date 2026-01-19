@@ -26,7 +26,7 @@ export const TableOfContents = ({ post }) => {
   };
 
   return (
-    <div className="glass-card sticky top-[140px] z-40 rounded-2xl sm:rounded-3xl border border-white/20 backdrop-blur-xl mb-6 overflow-hidden">
+    <div className="glass-card rounded-2xl sm:rounded-3xl border border-white/20 backdrop-blur-xl overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between hover:bg-white/50 transition-colors text-left"

@@ -1,58 +1,56 @@
-import { ChevronUp, ChevronDown } from "lucide-react";
-import { POSTS } from '../data/posts';
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { POSTS } from "../data/posts";
 
 export const PostNavigation = ({ currentPost }) => {
   const currentIndex = POSTS.findIndex((p) => p.slug === currentPost.slug);
   const prevPost = currentIndex > 0 ? POSTS[currentIndex - 1] : null;
   const nextPost = currentIndex < POSTS.length - 1 ? POSTS[currentIndex + 1] : null;
 
-  const handleNavigate = (post, onBack, setView, setActiveSlug) => {
-    setActiveSlug(post.slug);
+  const goTo = (post) => {
+    window.location.hash = `post-${post.slug}`;
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  return (
-    <div className="space-y-3 sm:space-y-4">
-      {prevPost && (
-        <a
-          href={`#post-${prevPost.slug}`}
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.hash = `post-${prevPost.slug}`;
-            window.scrollTo(0, 0);
-          }}
-          className="group block p-3 sm:p-4 bg-white border border-slate-100 rounded-xl sm:rounded-2xl hover:shadow-lg hover:border-slate-200 transition-all hover:-translate-y-0.5"
-        >
-          <div className="flex items-center gap-2 text-xs uppercase font-bold text-slate-400 mb-2">
-            <ChevronUp size={14} />
-            <span>Previous Post</span>
-          </div>
-          <h3 className="font-bold text-sm sm:text-base text-slate-900 group-hover:text-slate-600 transition-colors line-clamp-2">
-            {prevPost.title}
-          </h3>
-          <p className="text-xs text-slate-500 mt-1">{prevPost.stage}</p>
-        </a>
-      )}
+  if (!prevPost && !nextPost) return null;
 
-      {nextPost && (
-        <a
-          href={`#post-${nextPost.slug}`}
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.hash = `post-${nextPost.slug}`;
-            window.scrollTo(0, 0);
-          }}
-          className="group block p-3 sm:p-4 bg-white border border-slate-100 rounded-xl sm:rounded-2xl hover:shadow-lg hover:border-slate-200 transition-all hover:-translate-y-0.5"
-        >
-          <div className="flex items-center gap-2 text-xs uppercase font-bold text-slate-400 mb-2">
-            <span>Next Post</span>
-            <ChevronDown size={14} />
-          </div>
-          <h3 className="font-bold text-sm sm:text-base text-slate-900 group-hover:text-slate-600 transition-colors line-clamp-2">
-            {nextPost.title}
-          </h3>
-          <p className="text-xs text-slate-500 mt-1">{nextPost.stage}</p>
-        </a>
-      )}
+  return (
+    <div className="bg-white/80 border border-slate-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-sm">
+      <div className="flex flex-col sm:flex-row items-stretch gap-3 sm:gap-4">
+        {prevPost ? (
+          <button
+            onClick={() => goTo(prevPost)}
+            className="flex-1 inline-flex items-center gap-3 px-3 sm:px-4 py-3 rounded-xl border border-slate-200 text-left hover:border-indigo-100 hover:bg-indigo-50/70 transition"
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-500">
+              <ChevronLeft size={18} />
+            </span>
+            <div className="min-w-0">
+              <p className="text-[11px] font-bold uppercase tracking-wide text-slate-400">Previous</p>
+              <p className="font-semibold text-slate-800 line-clamp-2 text-sm sm:text-base">{prevPost.title}</p>
+            </div>
+          </button>
+        ) : (
+          <div className="flex-1" />
+        )}
+
+        {nextPost ? (
+          <button
+            onClick={() => goTo(nextPost)}
+            className="flex-1 inline-flex items-center gap-3 px-3 sm:px-4 py-3 rounded-xl border border-slate-200 text-left hover:border-indigo-100 hover:bg-indigo-50/70 transition"
+          >
+            <div className="min-w-0 flex-1">
+              <p className="text-[11px] font-bold uppercase tracking-wide text-slate-400">Next</p>
+              <p className="font-semibold text-slate-800 line-clamp-2 text-sm sm:text-base">{nextPost.title}</p>
+            </div>
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-500">
+              <ChevronRight size={18} />
+            </span>
+          </button>
+        ) : (
+          <div className="flex-1" />
+        )}
+      </div>
     </div>
   );
 };
