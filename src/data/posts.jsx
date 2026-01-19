@@ -71,7 +71,7 @@ export const POSTS = [
           "**Where to buy:** Any 'Aldi Süd' or 'Aldi Nord' supermarket. There is usually one inside or very near major train stations and airports. Pro tip: Aldi is divided into North and South regions, but both Aldi Talk services work nationwide.",
           "**How to register:** German law requires ID verification before you can use any mobile SIM. You can download the Aldi Talk app and do a 'Video Ident' call—this is a video call where you show your passport to verify who you are. However, you can also finish all this verification withing a webbrowser such as chrome etc. You need good lighting and a clear photo of your passport.",
           "**Troubleshooting:** If the video call fails (which happens with bad connection or unclear photos), you can do 'PostIdent' at any post office (Deutsche Post). They will verify you in person for a small fee (~10€).",
-          "**Cost breakdown:** The 10€ starter set includes your SIM and about 10€ credit. Monthly plans start at 8.99€, the unlimited option is about 9.99€ as of 18 Jan 2026."
+          "**Cost breakdown:** The 10€ starter set includes your SIM and about 10€ credit. Monthly plans start at 8.99€, the unlimited option is about 9.99€ as of 19 Jan 2026."
         ]
       },
       { type: "h2", text: "2. Essential Apps: Maps, Translator & Transport" },
@@ -98,7 +98,7 @@ export const POSTS = [
       },
       {
         type: "p",
-        text: "**About the Deutschlandticket:** This monthly pass costs 63€(as of 18 Jan 2026) and covers ALL local transport nationwide (trains, buses, metros). It does NOT cover long-distance express trains (ICE/IC). But for getting around your city? Perfect. Consider buying one at the airport train station before you leave."
+        text: "**About the Deutschlandticket:** This monthly pass costs 63€(as of 19 Jan 2026) and covers ALL local transport nationwide (trains, buses, metros). It does NOT cover long-distance express trains (ICE/IC). But for getting around your city? Perfect. Consider buying one at the airport train station before you leave."
       },
       { type: "h2", text: "4. Your First Weekend (The Sunday Rule)" },
       {
@@ -424,7 +424,7 @@ export const POSTS = [
     color: "from-rose-500 to-pink-600",
     shadow: "shadow-rose-500/20",
     accent: "text-rose-600",
-    verified: "2026-01-18",
+    verified: "2026-01-19",
     summary:
       "Master your field's vocabulary and theory. Resources to pass licensing exams and talk confidently with colleagues.",
     vibeCheck:
@@ -672,7 +672,7 @@ export const POSTS = [
     color: "from-amber-500 to-orange-600",
     shadow: "shadow-amber-500/20",
     accent: "text-amber-600",
-    verified: "2026-01-18",
+    verified: "2026-01-19",
     summary: "Supermarket chains ranked, weekly budgets, student discounts, and how to eat well without spending your salary on food.",
     vibeCheck: "German supermarkets are cheaper than most countries. Learn which ones, and you'll eat better for less.",
     content: [
@@ -779,7 +779,7 @@ export const POSTS = [
     color: "from-indigo-500 to-blue-600",
     shadow: "shadow-indigo-500/20",
     accent: "text-indigo-600",
-    verified: "2026-01-18",
+    verified: "2026-01-19",
     summary: "You have B2 German. Master workplace communication, field-specific phrases, and communication styles Germans expect.",
     vibeCheck: "B2 means you can survive. Your Ausbildung demands precision and workplace confidence. Here's how.",
     content: [
@@ -874,7 +874,7 @@ export const POSTS = [
     color: "from-red-500 to-rose-600",
     shadow: "shadow-red-500/20",
     accent: "text-red-600",
-    verified: "2026-01-18",
+    verified: "2026-01-19",
     summary: "How to find a doctor (Hausarzt), make appointments, get prescriptions, and understand the pharmacy system.",
     vibeCheck: "German healthcare is excellent, but the process is different. Here's the map.",
     content: [
@@ -984,7 +984,7 @@ export const POSTS = [
     color: "from-pink-500 to-rose-600",
     shadow: "shadow-pink-500/20",
     accent: "text-pink-600",
-    verified: "2026-01-18",
+    verified: "2026-01-19",
     summary: "Where to buy clothes cheaply, electronics, toiletries, and when online shopping beats physical stores.",
     vibeCheck: "German stores are organized and prices are fair. Here's where to save the most.",
     content: [
@@ -1097,7 +1097,7 @@ export const POSTS = [
     color: "from-violet-500 to-purple-600",
     shadow: "shadow-violet-500/20",
     accent: "text-violet-600",
-    verified: "2026-01-18",
+    verified: "2026-01-19",
     summary: "Germans are direct. That's not rudeness—it's efficiency. Here's how to navigate the culture without taking things personally.",
     vibeCheck: "German culture might feel cold at first. It's not. It's just different. Here's the unwritten rulebook.",
     content: [
@@ -1237,7 +1237,7 @@ export const POSTS = [
     color: "from-green-500 to-emerald-600",
     shadow: "shadow-green-500/20",
     accent: "text-green-600",
-    verified: "2026-01-18",
+    verified: "2026-01-19",
     summary: "How to work a second part-time job legally without breaking your training contract or visa rules.",
     vibeCheck: "You can earn extra money. But there are legal limits. Here's the rulebook so you don't get fined.",
     content: [
@@ -1361,7 +1361,7 @@ export const POSTS = [
     color: "from-red-600 to-orange-600",
     shadow: "shadow-red-500/20",
     accent: "text-red-600",
-    verified: "2026-01-18",
+    verified: "2026-01-19",
     summary: "Medical emergencies use 112. But what about car accidents, theft, or lost passport? Here's the actual protocol.",
     vibeCheck: "Emergencies happen. Knowing the exact steps removes panic. Here's your checklist.",
     content: [
