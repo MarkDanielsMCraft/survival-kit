@@ -59,14 +59,14 @@ const HeroImage = ({ post }) => {
 
   if (!imageUrl || failed) {
     return (
-      <div className="h-48 sm:h-56 w-full bg-slate-100 flex items-center justify-center text-slate-400">
+      <div className="h-72 sm:h-96 w-full bg-slate-100 flex items-center justify-center text-slate-400">
         {post.icon}
       </div>
     );
   }
 
   return (
-    <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-slate-100">
+    <div className="relative h-72 sm:h-96 lg:h-[28rem] w-full overflow-hidden bg-slate-100">
       <img
         src={`${imageUrl}${imageUrl.includes('?') ? '' : '?'}&auto=format&fit=crop&w=2000&q=80`}
         alt={`${post.title} header`}
@@ -75,7 +75,6 @@ const HeroImage = ({ post }) => {
         decoding="async"
         onError={() => setFailed(true)}
       />
-      <div className="absolute inset-0 bg-white/70" />
     </div>
   );
 };

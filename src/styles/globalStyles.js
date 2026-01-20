@@ -7,7 +7,7 @@ export const styles = `
     background-color: #f6f7f9;
     background-image:
       linear-gradient(rgba(246, 247, 249, 0.85), rgba(246, 247, 249, 0.85)),
-      url('https://images.unsplash.com/photo-1455885666463-1ef1c02d6944?w=2400&auto=format&fit=crop');
+      url('https://pixabay.com/images/download/frankfurt-5377161_1920.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

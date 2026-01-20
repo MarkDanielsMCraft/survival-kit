@@ -268,10 +268,6 @@ export const POSTS = [
         type: "p",
         text: "**What's actually covered?** All public insurance covers: doctor visits, hospital stays, prescription medications, emergency care, mental health therapy, preventive check-ups, and basic dental work. [See the full official list here](https://www.barmer.de/leistungen/alle-leistungen). Germany's healthcare system is ranked among the best in the world."
       },
-      {
-        type: "p",
-        text: "**⚠️ VERIFY:** Always check the official [German government health insurance page](https://www.make-it-in-germany.com/en/manage-life/social-security/health-insurance/) for the most current information, as laws can change."
-      },
       { type: "h2", text: "4. The Tax ID (Steuer-ID)" },
       {
         type: "p",
@@ -1154,7 +1150,7 @@ export const POSTS = [
     content: [
       {
         type: "p",
-        text: "If you come from a culture where politeness means indirectness, Germany will feel shocking. Germans say what they mean. 'That's wrong.' Not 'That's kind of not quite right maybe?' This directness is not personal—it's how efficiency works here."
+        text: "German social and work life values clarity, structure, and predictability. The sections below explain how directness, punctuality, greetings, and etiquette work in daily life so you can interpret behavior correctly."
       },
       { type: "h2", text: "1. Directness & Criticism" },
       {
@@ -1887,7 +1883,7 @@ export const POSTS = [
           "**Attend the Next WG Meeting (if scheduled):** Listen, don't dominate. Understand existing house rules and shared costs.",
           "**Ask About Cleaning Schedule:** When does each person clean common areas? What's the rotating schedule?",
           "**Find Out Payment Methods:** How are utilities split? Do you pay someone directly, or does the landlord collect?",
-          "**Respect Quiet Hours Immediately:** Show respect from day one. Don't be the 'loud new person'."
+          "**Clarify Guest & Noise Expectations:** Ask about visitors, parties, and any specific boundaries for the apartment."
         ]
       },
       { type: "h2", text: "8. Special Considerations for Nursing Trainees in a WG" },
@@ -1910,7 +1906,7 @@ export const POSTS = [
     steps: [
       {
         title: "Learn the Unwritten Rules",
-        text: "Quiet hours 22:00-06:00. Clean dishes immediately. Respect private space.",
+        text: "Ask for the house rules and how they’re applied in daily life.",
         action: "Ask roommates about any additional house rules.",
         readMore: [
           {

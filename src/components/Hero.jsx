@@ -64,8 +64,8 @@ export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, 
       <section className="relative overflow-hidden border-b border-slate-200">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1455885666463-1ef1c02d6944?w=2000&auto=format&fit=crop"
-            alt="Hamburg street"
+            src="https://pixabay.com/images/download/skyscraper-7360222_1920.jpg"
+            alt="German skyline"
             className="h-full w-full object-cover"
             loading="lazy"
             decoding="async"
