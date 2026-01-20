@@ -142,32 +142,89 @@ export default function App() {
               )}
             </main>
 
-            <footer className="text-center py-12 text-slate-400 text-sm font-medium border-t border-slate-200/50 glass-card">
-              <p>Made with ❤️ for future colleagues.</p>
+            <footer className="relative mt-20 overflow-hidden">
+              {/* Background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900" />
               
-              {/* Buy Me A Coffee Button - Prominent */}
-              <div className="my-6 py-6 border-y border-slate-200/50">
-                <p className="text-xs font-bold text-slate-500 mb-3 uppercase tracking-wider">Like this guide? Support the author</p>
-                <a
-                  href={LINKS.buyMeACoffee}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-white font-black uppercase tracking-wide text-sm hover:from-amber-300 hover:via-orange-300 hover:to-rose-300 transition-all shadow-lg shadow-orange-400/40 hover:shadow-xl hover:shadow-orange-400/60 hover:scale-105 active:scale-95"
-                >
-                  ☕ Buy Me A Coffee
-                </a>
-              </div>
+              {/* Decorative elements */}
+              <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
               
-              <p className="mt-2 text-xs opacity-70">
-                Unofficial Guide • Verified {META.lastUpdatedDate}
-              </p>
-              <div className="mt-4 flex justify-center gap-4 text-xs opacity-60">
-                <a href="#" className="hover:underline">
-                  Impressum
-                </a>
-                <a href="#" className="hover:underline">
-                  Datenschutz
-                </a>
+              {/* Content */}
+              <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                  {/* About Section */}
+                  <div className="text-left">
+                    <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
+                      <span className="text-2xl">🇩🇪</span>
+                      Survival Kit
+                    </h3>
+                    <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                      Your honest guide to starting life in Germany. Real talk for international students and scholars.
+                    </p>
+                    <p className="text-slate-400 text-xs">
+                      Verified {META.lastUpdatedDate}
+                    </p>
+                  </div>
+
+                  {/* Quick Links */}
+                  <div className="text-left">
+                    <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul className="space-y-2 text-sm">
+                      <li>
+                        <button onClick={() => setView("posts")} className="text-slate-300 hover:text-white transition-colors">
+                          Blog Guides
+                        </button>
+                      </li>
+                      <li>
+                        <button onClick={() => setView("library")} className="text-slate-300 hover:text-white transition-colors">
+                          Resource Library
+                        </button>
+                      </li>
+                      <li>
+                        <button onClick={() => setEmergencyMode(true)} className="text-slate-300 hover:text-white transition-colors">
+                          Emergency Numbers
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Support */}
+                  <div className="text-left">
+                    <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Support This Guide</h4>
+                    <p className="text-slate-300 text-sm mb-4">
+                      Help keep this resource free and up-to-date
+                    </p>
+                    <a
+                      href={LINKS.buyMeACoffee}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-white font-bold text-sm hover:from-amber-300 hover:via-orange-300 hover:to-rose-300 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+                    >
+                      ☕ Buy Me A Coffee
+                    </a>
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="border-t border-white/10 pt-8">
+                  <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-slate-400 text-sm">
+                      Made with ❤️ for future colleagues in Germany
+                    </p>
+                    <div className="flex gap-6 text-sm">
+                      <a href="#" className="text-slate-400 hover:text-white transition-colors">
+                        Impressum
+                      </a>
+                      <a href="#" className="text-slate-400 hover:text-white transition-colors">
+                        Datenschutz
+                      </a>
+                    </div>
+                  </div>
+                  <p className="text-slate-500 text-xs text-center md:text-left mt-4">
+                    © {new Date().getFullYear()} Survival Kit. Unofficial guide • All information verified as of January 2026.
+                  </p>
+                </div>
               </div>
             </footer>
           </>
