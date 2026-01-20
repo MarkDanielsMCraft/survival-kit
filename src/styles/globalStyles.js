@@ -9,6 +9,11 @@ export const styles = `
     overflow: hidden;
   }
 
+  .hero-photo > * {
+    position: relative;
+    z-index: 10;
+  }
+
   .hero-photo.mesh-bg {
     background-color: transparent;
     background-image: none;
@@ -16,22 +21,22 @@ export const styles = `
 
   .hero-photo::before {
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
     background-image: url('https://images.unsplash.com/photo-1473889006385-9c10fc6c2c87?w=2000&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    opacity: 0.35;
-    z-index: -2;
+    opacity: 0.6;
+    z-index: 1;
     pointer-events: none;
   }
 
   .hero-photo::after {
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(248,250,252,0.86), rgba(248,250,252,0.9));
-    z-index: -1;
+    background: linear-gradient(180deg, rgba(248,250,252,0.75), rgba(248,250,252,0.8));
+    z-index: 2;
     pointer-events: none;
   }
 
