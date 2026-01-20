@@ -17,6 +17,15 @@ import img1 from '../frankfurt-5377161.jpg';
 import img2 from '../opera-4513452.jpg';
 import img3 from '../skyscraper-7360222.jpg';
 import img4 from '../frankfurt-5377161_1920.jpg';
+import img5 from '../alliance-5201816.jpg';
+import img6 from '../augsburg-3080437.jpg';
+import img7 from '../cologne-cathedral-6664664.jpg';
+import img8 from '../hamburg-2255755.jpg';
+import img9 from '../hamburg-2383200.jpg';
+import img10 from '../munich-2516492.jpg';
+import img11 from '../munich-3521933.jpg';
+import img12 from '../port-4851408.jpg';
+import img13 from '../ryanair-5249631.jpg';
 
 /**
  * BLOG POSTS DATA
