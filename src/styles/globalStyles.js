@@ -23,6 +23,14 @@ export const styles = `
   ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 6px; }
   ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .content-block {
     width: 100%;
     max-width: 72ch;

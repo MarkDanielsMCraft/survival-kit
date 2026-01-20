@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import {
   ArrowLeft,
   ExternalLink,
@@ -36,12 +36,107 @@ export const PostDetail = ({
   const done = post.steps.reduce((acc, _, i) => acc + (progress[`${post.slug}-${i}`] ? 1 : 0), 0);
   const progressPercent = pct(done, total);
   const [copied, setCopied] = useState(false);
+  const [activeSectionId, setActiveSectionId] = useState(null);
+  const [pageSearch, setPageSearch] = useState("");
+
+  const sections = useMemo(() => {
+    const result = [];
+    const slugify = (text) =>
+      String(text)
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+
+    let current = null;
+    (post.content || []).forEach((block, index) => {
+      if (block.type === "h2") {
+        if (current) result.push(current);
+        current = {
+          id: `section-${index}-${slugify(block.text)}`,
+          title: block.text,
+          intro: null,
+          blocks: [],
+        };
+        return;
+      }
+
+      if (!current) {
+        current = {
+          id: "section-overview",
+          title: "Overview",
+          intro: null,
+          blocks: [],
+        };
+      }
+
+      if (block.type === "p" && !current.intro) {
+        current.intro = block.text;
+        return;
+      }
+
+      current.blocks.push(block);
+    });
+
+    if (current) result.push(current);
+
+    return result.map((section) => {
+      if (section.intro || section.blocks.length === 0) return section;
+      const firstParagraphIndex = section.blocks.findIndex((b) => b.type === "p");
+      if (firstParagraphIndex === -1) return section;
+      const [introBlock] = section.blocks.splice(firstParagraphIndex, 1);
+      return { ...section, intro: introBlock.text };
+    });
+  }, [post.content]);
 
   const relatedPosts = useMemo(() => {
     const sameStage = POSTS.filter((p) => p.slug !== post.slug && p.stage === post.stage);
     const filler = POSTS.filter((p) => p.slug !== post.slug && p.stage !== post.stage);
     return [...sameStage, ...filler].slice(0, 3);
   }, [post]);
+
+  useEffect(() => {
+    if (!sections.length || typeof window === "undefined") return undefined;
+
+    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible.length > 0) {
+          const targetId = visible[0].target.getAttribute("data-section-id");
+          if (targetId) setActiveSectionId(targetId);
+        }
+      },
+      {
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: reducedMotion ? 0.1 : [0.1, 0.25, 0.5, 0.75],
+      }
+    );
+
+    const sectionElements = document.querySelectorAll("[data-section-id]");
+    sectionElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, [sections]);
+
+  const scrollToSection = (sectionId) => {
+    if (typeof window === "undefined") return;
+    const element = document.getElementById(sectionId);
+    if (!element) return;
+    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    element.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+  };
+
+  const handlePageSearch = () => {
+    const query = pageSearch.trim().toLowerCase();
+    if (!query) return;
+    const match = sections.find((section) =>
+      section.title.toLowerCase().includes(query)
+    );
+    if (match) scrollToSection(match.id);
+  };
 
   const handleShare = async () => {
     const url = typeof window !== "undefined" ? window.location.href : "";
@@ -66,6 +161,13 @@ export const PostDetail = ({
         onNavigateHome={onNavigateHome}
         showBack
         onBack={onBack}
+        sections={sections}
+        activeSectionId={activeSectionId}
+        onSelectSection={scrollToSection}
+        showSearch
+        searchValue={pageSearch}
+        onSearchChange={setPageSearch}
+        onSearchSubmit={handlePageSearch}
       />
 
       {/* Floating controls */}
@@ -97,56 +199,21 @@ export const PostDetail = ({
         </button>
       </div>
 
-      {/* Hero */}
+      {/* Page introduction block */}
       <section className="bg-white border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-12 space-y-5">
-          <div className="flex items-center flex-wrap gap-2 text-xs text-slate-400 font-semibold uppercase tracking-wide">
-            <span>Home</span>
-            <span>/</span>
-            <span>Guides</span>
-            <span>/</span>
-            <span className="text-slate-700">{post.title}</span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="inline-flex p-3 sm:p-4 rounded-xl bg-slate-100 text-indigo-700">
-              {React.cloneElement(post.icon, { size: 26 })}
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-600">{post.stage}</span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-600">{post.readTime} read</span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-600">
-                <CheckCircle size={12} className="text-indigo-700" /> Verified {post.verified}
-              </span>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <h1 className="text-[34px] sm:text-[40px] md:text-[44px] font-semibold text-slate-900 leading-tight">
-              {post.title}
-            </h1>
-            {post.subtitle && (
-              <p className="text-[18px] text-slate-700 font-medium leading-relaxed">
-                {post.subtitle}
-              </p>
-            )}
-            {!post.subtitle && (
-              <p className="text-[18px] text-slate-700 font-medium leading-relaxed">
-                {post.summary}
-              </p>
-            )}
-          </div>
-
-          <div className="flex flex-wrap items-center gap-4">
-            <div className="flex items-center gap-2 text-slate-700 font-semibold text-sm">
-              <span className="h-2 w-24 bg-slate-200 rounded-full overflow-hidden">
-                <span className="block h-full bg-indigo-600" style={{ width: `${progressPercent}%` }} />
-              </span>
-              <span>{progressPercent}% completed</span>
-            </div>
-            <div className="text-xs font-semibold text-slate-500">
-              Updated {post.verified}
-            </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-12 space-y-5">
+          <h1 className="text-[34px] sm:text-[40px] md:text-[44px] font-semibold text-slate-900 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-[18px] text-slate-700 font-medium leading-relaxed">
+            {post.subtitle || post.summary}
+          </p>
+          <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1">{post.stage}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1">{post.readTime} read</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1">
+              <CheckCircle size={12} className="text-indigo-700" /> Verified {post.verified}
+            </span>
           </div>
         </div>
       </section>
@@ -188,14 +255,52 @@ export const PostDetail = ({
               </div>
             </div>
 
-            {post.content && (
-              <div className="prose prose-slate mx-auto xl:mx-0 w-full bg-white p-6 sm:p-9 md:p-10 xl:p-12 rounded-2xl border border-slate-200 shadow-sm content-block space-y-0">
-                {post.content.map((block, i) => {
-                  if (block.type === "h2") return <h2 key={i} className="scroll-mt-40 font-semibold text-slate-900 text-[28px] sm:text-[30px] tracking-tight">{block.text}</h2>;
-                  if (block.type === "p") return <p key={i} className="text-slate-700 text-[17px] leading-relaxed font-medium">{renderRichText(block.text, `p-${i}`)}</p>;
-                  if (block.type === "ul") return <ul key={i} className="list-disc list-outside pl-6 sm:pl-8 space-y-3">{block.items.map((item, j) => <li key={j} className="text-slate-700 text-[17px] leading-relaxed font-medium">{renderRichText(item, `li-${i}-${j}`)}</li>)}</ul>;
-                  return null;
-                })}
+            {sections.length > 0 && (
+              <div className="space-y-6">
+                {sections.map((section) => (
+                  <section
+                    key={section.id}
+                    id={section.id}
+                    data-section-id={section.id}
+                    className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-4 scroll-mt-28"
+                  >
+                    <div className="space-y-2">
+                      <h2 className="text-[28px] sm:text-[30px] font-semibold text-slate-900 tracking-tight">
+                        {section.title}
+                      </h2>
+                      {section.intro && (
+                        <p className="text-[17px] text-slate-700 font-medium leading-relaxed">
+                          {renderRichText(section.intro, `intro-${section.id}`)}
+                        </p>
+                      )}
+                    </div>
+                    <div className="space-y-4">
+                      {section.blocks.map((block, i) => {
+                        if (block.type === "p") {
+                          return (
+                            <p key={i} className="text-[17px] text-slate-700 font-medium leading-relaxed">
+                              {renderRichText(block.text, `p-${section.id}-${i}`)}
+                            </p>
+                          );
+                        }
+                        if (block.type === "ul") {
+                          return (
+                            <div key={i} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                              <ul className="list-disc list-outside pl-6 space-y-2">
+                                {block.items.map((item, j) => (
+                                  <li key={j} className="text-[16px] text-slate-700 font-medium leading-relaxed">
+                                    {renderRichText(item, `li-${section.id}-${i}-${j}`)}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
+                  </section>
+                ))}
               </div>
             )}
 
@@ -354,6 +459,22 @@ export const PostDetail = ({
             </div>
 
             <ReadMoreList links={post.readMore} />
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-600 mb-3">
+                End-of-page summary
+              </h3>
+              <ul className="list-disc list-outside pl-6 space-y-2 text-[16px] text-slate-700">
+                {(sections.length > 0
+                  ? sections.slice(0, 4).map((section) => ({ key: section.id, text: section.title }))
+                  : post.steps.slice(0, 4).map((step, index) => ({ key: `step-${index}`, text: step.title }))
+                ).map((item) => (
+                  <li key={item.key} className="font-medium">
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* Navigation */}
             <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm">

@@ -1,4 +1,4 @@
-import { LINKS } from '../constants/config';
+import { LINKS, META } from '../constants/config';
 
 /**
  * RESOURCES LIBRARY
@@ -11,6 +11,8 @@ import { LINKS } from '../constants/config';
  * Categories: "Arrival & Setup", "Money & Banking", "Housing", "Nursing & Math", 
  *             "Rights & Legal", "Health & Social", "Apps & Tools"
  */
+
+const RESOURCE_VERIFIED = META.lastUpdatedDate;
 
 export const RESOURCES = [
   // === CORE ESSENTIALS ===
@@ -26,7 +28,10 @@ export const RESOURCES = [
   { id: "r15", title: "Handbook Germany - Official Guide", url: "https://handbookgermany.de/en/", type: "Website", category: "Arrival & Setup", tags: ["arrival", "official"], source: "official" },
   { id: "r17", title: "Integreat - Local Information App", url: "https://integreat.app", type: "App", category: "Arrival & Setup", tags: ["local-info", "languages"], source: "tool" },
   { id: "r28", title: "Make It In Germany - Official Portal", url: "https://www.make-it-in-germany.com/en/", type: "Website", category: "Arrival & Setup", tags: ["visa", "official"], source: "official" },
-  { id: "r29", title: "Google Maps Germany", url: "maps.google.com", type: "App", category: "Arrival & Setup", tags: ["navigation"], source: "tool" },
+  { id: "r29", title: "Google Maps Germany", url: "https://maps.google.com", type: "App", category: "Arrival & Setup", tags: ["navigation"], source: "tool" },
+  { id: "r48", title: "Make It In Germany - Visa for Vocational Training", url: "https://www.make-it-in-germany.com/en/visa-residence/types/training", type: "Website", category: "Arrival & Setup", tags: ["visa", "training"], source: "official" },
+  { id: "r49", title: "Anerkennung in Deutschland - Recognition of Qualifications", url: "https://www.anerkennung-in-deutschland.de/html/en/professional-recognition-refugees.php", type: "Website", category: "Rights & Legal", tags: ["recognition", "qualifications"], source: "official" },
+  { id: "r50", title: "Handbook Germany - Visa for Vocational Training", url: "https://handbookgermany.de/en/visa-seeking-vocational-training", type: "Website", category: "Arrival & Setup", tags: ["visa", "training"], source: "ngo" },
   
   // === MONEY & BANKING ===
   { id: "r19", title: "Too Good To Go - Food App", url: "https://www.toogoodtogo.com/de/de", type: "App", category: "Money & Banking", tags: ["food", "savings"], source: "tool" },
@@ -55,12 +60,16 @@ export const RESOURCES = [
   { id: "r37", title: "Duolingo - German Language Learning", url: "https://www.duolingo.com/", type: "App", category: "Apps & Tools", tags: ["language"], source: "tool" },
   { id: "r38", title: "BBC Learning English (German)", url: "https://www.bbc.co.uk/learning/english/", type: "Website", category: "Apps & Tools", tags: ["language"], source: "learning" },
   { id: "r39", title: "VHS (Volkshochschule) - Language Courses", url: "https://www.vhsonline.de/", type: "Website", category: "Apps & Tools", tags: ["language", "courses"], source: "official" },
+  { id: "r51", title: "BAMF - Berufssprachkurse (Vocational German)", url: "https://www.bamf.de/EN/Themen/Integration/ZugewanderteTeilnehmende/DeutschBeruf/deutsch-beruf.html", type: "Website", category: "Apps & Tools", tags: ["language", "courses"], source: "official" },
   
   // === RIGHTS & LEGAL ===
   { id: "r20", title: "Faire Integration - Worker Rights", url: "https://www.faire-integration.de/", type: "Website", category: "Rights & Legal", tags: ["rights", "workers"], source: "ngo" },
   { id: "r40", title: "Arbeitsagentur - Employment Agency", url: "https://www.arbeitsagentur.de/", type: "Website", category: "Rights & Legal", tags: ["employment", "official"], source: "official" },
+  { id: "r52", title: "Arbeitsagentur - Info for People from Abroad", url: "https://www.arbeitsagentur.de/int/en/for-people-from-abroad", type: "Website", category: "Rights & Legal", tags: ["employment", "training"], source: "official" },
   { id: "r41", title: "IG Metall - Trade Union", url: "https://www.igmetall.de/", type: "Website", category: "Rights & Legal", tags: ["workers", "union"], source: "ngo" },
   { id: "r42", title: "Betriebsrat Info - Works Council", url: "https://www.dgb.de/themen/++co++a51d7df8-5d32-11eb-a38c-001a4a160123", type: "Website", category: "Rights & Legal", tags: ["rights"], source: "official" },
+  { id: "r53", title: "Handbook Germany - Vocational Training Orientation", url: "https://handbookgermany.de/en/vocational-training-orientation-for-refugees", type: "Website", category: "Rights & Legal", tags: ["training", "orientation"], source: "ngo" },
+  { id: "r54", title: "EURES - Living & Working in Germany", url: "https://eures.europa.eu/living-and-working/living-and-working-conditions-europe/living-and-working-conditions-germany_en", type: "Website", category: "Rights & Legal", tags: ["employment", "eu"], source: "official" },
   
   // === HEALTH & SOCIAL ===
   { id: "r21", title: "TelefonSeelsorge - Crisis Hotline", url: "https://www.telefonseelsorge.de/", type: "Website", category: "Health & Social", tags: ["mental-health", "crisis"], source: "official" },
@@ -70,9 +79,10 @@ export const RESOURCES = [
   { id: "r16", title: "Together in Germany - Community", url: "https://together-in-germany.org/", type: "Website", category: "Health & Social", tags: ["community", "social"], source: "ngo" },
   { id: "r43", title: "ProAsyl - Refugee Support", url: "https://www.proasyl.de/en/", type: "Website", category: "Health & Social", tags: ["support", "refugees"], source: "ngo" },
   { id: "r44", title: "Malteser International - Medical Support", url: "https://www.malteser.de/", type: "Website", category: "Health & Social", tags: ["medical", "ngo"], source: "ngo" },
+  { id: "r55", title: "Refugee Phrasebook", url: "https://refugeephrasebook.de/", type: "Tool", category: "Apps & Tools", tags: ["language", "phrases"], source: "tool" },
   
   // === STUDY & SCHOLARSHIPS ===
   { id: "r14", title: "DAAD - German Academic Exchange Service", url: "https://www.daad.de/en/", type: "Website", category: "Apps & Tools", tags: ["study", "scholarships"], source: "official" },
   { id: "r45", title: "Deutsches Studentenwerk - Student Services", url: "https://www.studentenwerke.de/", type: "Website", category: "Apps & Tools", tags: ["students", "official"], source: "official" },
   { id: "r46", title: "BafÖG - Education Grants", url: "https://www.bafög.de/", type: "Website", category: "Apps & Tools", tags: ["funding", "official"], source: "official" },
-];
+].map((resource) => ({ verified: RESOURCE_VERIFIED, ...resource }));

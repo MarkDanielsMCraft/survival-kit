@@ -1,11 +1,14 @@
 import React, { useState, useMemo } from "react";
 import { ExternalLink, Calculator, AppWindow, ArrowLeft } from "lucide-react";
-import { RESOURCE_CATEGORIES } from '../constants/config';
+import { RESOURCE_CATEGORIES, SOURCE_BADGE, META } from '../constants/config';
 import { SourcePill } from './SourcePill';
 import { safeOpen } from '../utils/security';
 
 export const Library = ({ resources, searchTerm, onBack }) => {
   const [category, setCategory] = useState("All");
+  const [sourceFilter, setSourceFilter] = useState("All");
+
+  const sourceOptions = useMemo(() => ["All", ...Object.keys(SOURCE_BADGE)], []);
 
   const filtered = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
@@ -18,9 +21,10 @@ export const Library = ({ resources, searchTerm, onBack }) => {
         (r.tags || []).some((t) => String(t).toLowerCase().includes(q));
 
       const matchCat = category === "All" || r.category === category;
-      return matchSearch && matchCat;
+      const matchSource = sourceFilter === "All" || r.source === sourceFilter;
+      return matchSearch && matchCat && matchSource;
     });
-  }, [resources, searchTerm, category]);
+  }, [resources, searchTerm, category, sourceFilter]);
 
   return (
     <div className="max-w-6xl mx-auto px-6 pb-28 space-y-6">
@@ -53,13 +57,30 @@ export const Library = ({ resources, searchTerm, onBack }) => {
         ))}
       </div>
 
+      {/* Source filter */}
+      <div className="flex gap-2 overflow-x-auto pb-4 hide-scrollbar">
+        {sourceOptions.map((source) => (
+          <button
+            key={source}
+            onClick={() => setSourceFilter(source)}
+            className={`px-4 py-2 rounded-full text-xs font-semibold border whitespace-nowrap transition ${
+              source === sourceFilter
+                ? "bg-indigo-700 text-white border-indigo-700"
+                : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
+            }`}
+          >
+            {source === "All" ? "All sources" : SOURCE_BADGE[source]?.label}
+          </button>
+        ))}
+      </div>
+
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map((r) => (
           <button
             key={r.id}
             onClick={() => safeOpen(r.url)}
-            className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm transition-colors hover:border-slate-300 text-left group"
+            className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm transition-colors hover:border-slate-300 text-left group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             <div className="flex justify-between items-start mb-3">
               <div className="bg-slate-50 p-2 rounded-xl text-indigo-700">
@@ -80,9 +101,13 @@ export const Library = ({ resources, searchTerm, onBack }) => {
               </span>
             </div>
 
-            <h3 className="text-base font-bold text-slate-800 leading-snug mt-2">
+            <h3 className="text-base font-semibold text-slate-800 leading-snug mt-2">
               {r.title}
             </h3>
+
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-400 mt-2">
+              Verified {r.verified || META.lastUpdatedDate}
+            </p>
 
             <div className="mt-4 flex flex-wrap gap-2">
               {(r.tags || []).slice(0, 4).map((t) => (
@@ -104,7 +129,10 @@ export const Library = ({ resources, searchTerm, onBack }) => {
             No resources found
           </p>
           <p className="text-sm text-slate-400">
-            Try searching "dosage", "Anmeldung", "trash", "DeepL"
+            Try searching "visa", "Anmeldung", "health insurance", "banking"
+          </p>
+          <p className="text-xs text-slate-400 mt-3">
+            Official sources include Make it in Germany, BAMF, and the Federal Employment Agency.
           </p>
         </div>
       )}
