@@ -15,7 +15,7 @@ export const SourcePill = ({ source }) => {
   const icon = iconMap[source] || <ExternalLink size={14} />;
   
   return (
-    <span className={`inline-flex items-center gap-1.5 text-[10px] font-black px-2 py-1 rounded-full border ${s.color}`}>
+    <span className={`inline-flex items-center gap-1.5 text-[10px] font-semibold px-2 py-1 rounded-full border ${s.color}`}>
       {icon}
       {s.label}
     </span>

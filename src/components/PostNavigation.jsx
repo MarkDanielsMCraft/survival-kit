@@ -20,7 +20,7 @@ export const PostNavigation = ({ currentPost }) => {
         {prevPost ? (
           <button
             onClick={() => goTo(prevPost)}
-            className="flex-1 inline-flex items-center gap-3 px-3 sm:px-4 py-3 rounded-xl border border-slate-200 text-left hover:border-indigo-100 hover:bg-indigo-50/70 transition"
+            className="flex-1 inline-flex items-center gap-3 px-3 sm:px-4 py-3 rounded-xl border border-slate-200 text-left hover:border-slate-300 hover:bg-slate-50 transition"
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-500">
               <ChevronLeft size={18} />
@@ -37,7 +37,7 @@ export const PostNavigation = ({ currentPost }) => {
         {nextPost ? (
           <button
             onClick={() => goTo(nextPost)}
-            className="flex-1 inline-flex items-center gap-3 px-3 sm:px-4 py-3 rounded-xl border border-slate-200 text-left hover:border-indigo-100 hover:bg-indigo-50/70 transition"
+            className="flex-1 inline-flex items-center gap-3 px-3 sm:px-4 py-3 rounded-xl border border-slate-200 text-left hover:border-slate-300 hover:bg-slate-50 transition"
           >
             <div className="min-w-0 flex-1">
               <p className="text-[11px] font-bold uppercase tracking-wide text-slate-400">Next</p>

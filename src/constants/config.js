@@ -28,10 +28,10 @@ export const RESOURCE_CATEGORIES = [
 ];
 
 export const SOURCE_BADGE = {
-  official: { label: "Official", color: "bg-blue-50 text-blue-700 border-blue-100" },
-  ngo: { label: "NGO/Support", color: "bg-rose-50 text-rose-700 border-rose-100" },
-  tool: { label: "Tool/App", color: "bg-slate-50 text-slate-700 border-slate-100" },
-  learning: { label: "Learning", color: "bg-emerald-50 text-emerald-700 border-emerald-100" },
-  video: { label: "Video", color: "bg-red-50 text-red-700 border-red-100" },
-  referral: { label: "Referral", color: "bg-amber-50 text-amber-700 border-amber-100" }
+  official: { label: "Official", color: "bg-slate-50 text-slate-700 border-slate-200" },
+  ngo: { label: "NGO/Support", color: "bg-slate-50 text-slate-700 border-slate-200" },
+  tool: { label: "Tool/App", color: "bg-slate-50 text-slate-700 border-slate-200" },
+  learning: { label: "Learning", color: "bg-slate-50 text-slate-700 border-slate-200" },
+  video: { label: "Video", color: "bg-slate-50 text-slate-700 border-slate-200" },
+  referral: { label: "Referral", color: "bg-slate-50 text-slate-700 border-slate-200" }
 };

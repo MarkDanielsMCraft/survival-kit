@@ -29,10 +29,10 @@ export const TableOfContents = ({ post }) => {
   };
 
   return (
-    <div className="glass-card rounded-2xl sm:rounded-3xl border border-white/30 backdrop-blur-xl overflow-hidden">
+    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between text-left transition-colors hover:bg-white/60"
+        className="w-full px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between text-left transition-colors hover:bg-slate-50"
       >
         <div className="flex items-center gap-2">
           <div className="text-[11px] uppercase font-semibold text-slate-500 tracking-[0.25em]">
@@ -46,12 +46,12 @@ export const TableOfContents = ({ post }) => {
       </button>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-white/40 px-4 sm:px-5 py-3 sm:py-4 space-y-1.5 max-h-96 overflow-y-auto">
+        <div className="border-t border-slate-200 bg-white px-4 sm:px-5 py-3 sm:py-4 space-y-1.5 max-h-96 overflow-y-auto">
           {headings.map((heading, i) => (
             <button
               key={i}
               onClick={() => scrollToHeading(heading.text)}
-              className="block w-full rounded-xl px-2 py-2 text-left text-[13px] font-medium text-slate-600 transition-colors hover:bg-white/70 hover:text-slate-900"
+              className="block w-full rounded-xl px-2 py-2 text-left text-[13px] font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900"
             >
               {heading.text}
             </button>

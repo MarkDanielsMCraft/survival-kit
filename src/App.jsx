@@ -107,7 +107,7 @@ export default function App() {
   return (
     <>
       <style>{styles}</style>
-      <div className="min-h-screen text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-900 mesh-bg hero-photo">
+      <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-900">
         {activePost ? (
           <>
             <PostDetail
@@ -158,17 +158,16 @@ export default function App() {
                       <p className="text-sm text-slate-500 font-medium">Hand verified walkthroughs for every milestone in your first year.</p>
                     </div>
                     <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                      <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                      <span className="h-2 w-2 rounded-full bg-indigo-500" />
                       {filteredPosts.length} guides available
                     </span>
                   </div>
                   {filteredPosts.length > 0 ? (
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 auto-rows-fr">
-                      {filteredPosts.map((post, index) => (
+                      {filteredPosts.map((post) => (
                         <PostCard
                           key={post.slug}
                           post={post}
-                          index={index}
                           onOpen={setActiveSlug}
                           progressPercent={postProgress(post)}
                         />

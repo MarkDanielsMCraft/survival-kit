@@ -28,7 +28,7 @@ export const Library = ({ resources, searchTerm, onBack }) => {
         <div className="flex justify-start">
           <button
             onClick={onBack}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-600 backdrop-blur hover:bg-white"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-50"
           >
             <ArrowLeft size={16} />
             Back to guides
@@ -42,10 +42,10 @@ export const Library = ({ resources, searchTerm, onBack }) => {
           <button
             key={cat}
             onClick={() => setCategory(cat)}
-            className={`px-4 py-2 rounded-full text-xs font-black border whitespace-nowrap transition ${
+            className={`px-4 py-2 rounded-full text-xs font-semibold border whitespace-nowrap transition ${
               cat === category
-                ? "bg-indigo-600 text-white border-indigo-600"
-                : "bg-white text-slate-500 border-slate-200 hover:bg-slate-50"
+                ? "bg-indigo-700 text-white border-indigo-700"
+                : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
             }`}
           >
             {cat}
@@ -59,10 +59,10 @@ export const Library = ({ resources, searchTerm, onBack }) => {
           <button
             key={r.id}
             onClick={() => safeOpen(r.url)}
-            className="liquid-glass-card p-5 rounded-3xl border border-white/40 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-left group"
+            className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm transition-colors hover:border-slate-300 text-left group"
           >
             <div className="flex justify-between items-start mb-3">
-              <div className="bg-slate-50 p-2 rounded-xl text-indigo-600 group-hover:bg-indigo-50 transition">
+              <div className="bg-slate-50 p-2 rounded-xl text-indigo-700">
                 {r.type === "Tool" ? (
                   <Calculator size={20} />
                 ) : r.type === "App" ? (
@@ -75,7 +75,7 @@ export const Library = ({ resources, searchTerm, onBack }) => {
             </div>
 
             <div className="mt-3 flex items-center justify-between gap-2">
-              <span className="text-[10px] font-black text-slate-400 bg-slate-50 border border-slate-100 px-2 py-1 rounded-full">
+              <span className="text-[10px] font-semibold text-slate-500 bg-slate-50 border border-slate-200 px-2 py-1 rounded-full">
                 {r.category}
               </span>
             </div>
@@ -88,7 +88,7 @@ export const Library = ({ resources, searchTerm, onBack }) => {
               {(r.tags || []).slice(0, 4).map((t) => (
                 <span
                   key={`${r.id}-${t}`}
-                  className="text-[10px] font-bold bg-slate-50 text-slate-500 border border-slate-100 px-2 py-1 rounded-full"
+                  className="text-[10px] font-semibold bg-slate-50 text-slate-500 border border-slate-200 px-2 py-1 rounded-full"
                 >
                   #{t}
                 </span>
