@@ -47,7 +47,7 @@ export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, 
   return (
     <>
       {/* Hero Section with Background Image */}
-      <section className="relative min-h-[550px] sm:min-h-[650px] md:min-h-[750px] overflow-hidden">
+      <section className="hero-photo relative min-h-[550px] sm:min-h-[650px] md:min-h-[750px] overflow-hidden">
         {/* Animated background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900" />
         
