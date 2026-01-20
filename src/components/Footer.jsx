@@ -1,4 +1,5 @@
 import { META, LINKS } from '../constants/config';
+import { safeOpen } from '../utils/security';
 
 export const Footer = ({ onShowPosts, onShowLibrary, onOpenEmergency, variant = "default", onBackToGuideList }) => (
   <footer className="relative mt-24 overflow-hidden text-slate-100">
@@ -80,8 +81,18 @@ export const Footer = ({ onShowPosts, onShowLibrary, onOpenEmergency, variant = 
         <div className="liquid-glass-card border border-white/15 rounded-3xl px-6 py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs text-slate-200/80">
           <p>© {new Date().getFullYear()} Survival Kit. Unofficial orientation guide · Last verified January 2026.</p>
           <div className="flex items-center gap-6 text-xs font-semibold">
-            <a href="#" className="hover:text-white transition">Impressum</a>
-            <a href="#" className="hover:text-white transition">Datenschutz</a>
+            <button
+              onClick={() => safeOpen('https://www.make-it-in-germany.com/en/service/legal-notice')}
+              className="hover:text-white transition"
+            >
+              Impressum
+            </button>
+            <button
+              onClick={() => safeOpen('https://www.make-it-in-germany.com/en/service/data-protection')}
+              className="hover:text-white transition"
+            >
+              Datenschutz
+            </button>
           </div>
         </div>
       </div>

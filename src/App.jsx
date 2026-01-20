@@ -119,6 +119,7 @@ export default function App() {
               emergencyMode={emergencyMode}
               setEmergencyMode={setEmergencyMode}
               onNavigateHome={handleShowPosts}
+              onOpenPost={setActiveSlug}
             />
             <Footer
               variant="detail"

@@ -33,6 +33,7 @@ export const PostDetail = ({
   emergencyMode,
   setEmergencyMode,
   onNavigateHome,
+  onOpenPost,
 }) => {
   const total = post.steps.length;
   const done = post.steps.reduce((acc, _, i) => acc + (progress[`${post.slug}-${i}`] ? 1 : 0), 0);
@@ -182,8 +183,9 @@ export const PostDetail = ({
                     <button
                       key={rp.slug}
                       onClick={() => {
-                        window.location.hash = `post-${rp.slug}`;
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        if (typeof onOpenPost === "function") {
+                          onOpenPost(rp.slug);
+                        }
                       }}
                       className="w-full text-left p-3 rounded-2xl border border-slate-100/70 hover:border-indigo-100 hover:bg-indigo-50/70 transition"
                     >
