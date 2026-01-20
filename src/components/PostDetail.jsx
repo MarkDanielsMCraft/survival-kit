@@ -203,7 +203,7 @@ export const PostDetail = ({
             )}
 
             {post.content && (
-              <div className="prose prose-slate max-w-3xl mx-auto bg-gradient-to-br from-white to-slate-50/80 p-6 sm:p-9 md:p-10 rounded-3xl border border-slate-200/60 shadow-xl content-block space-y-0 backdrop-blur-sm">
+              <div className="prose prose-slate mx-auto xl:mx-0 w-full bg-gradient-to-br from-white to-slate-50/80 p-6 sm:p-9 md:p-10 xl:p-12 rounded-3xl border border-slate-200/60 shadow-xl content-block space-y-0 backdrop-blur-sm">
                 {post.content.map((block, i) => {
                   if (block.type === "h2") return <h2 key={i} className="scroll-mt-40 font-semibold text-slate-900 text-3xl sm:text-4xl tracking-tight">{block.text}</h2>;
                   if (block.type === "p") return <p key={i} className="text-slate-700 text-lg leading-relaxed font-medium">{renderRichText(block.text, `p-${i}`)}</p>;

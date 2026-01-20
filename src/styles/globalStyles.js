@@ -327,8 +327,21 @@ export const styles = `
 
   .content-block {
     word-spacing: 0.02em;
-    max-width: 62ch;
+    width: 100%;
     margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    .content-block {
+      max-width: 78ch;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .content-block {
+      max-width: none;
+      margin: 0;
+    }
   }
 
   .content-block h2 {
