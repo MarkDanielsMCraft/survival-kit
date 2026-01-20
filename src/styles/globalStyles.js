@@ -4,9 +4,11 @@ export const styles = `
   * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
   body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
 
+  /* Ensure hero pseudo-background sits behind hero content but above the page background */
   .hero-photo {
     position: relative;
     overflow: hidden;
+    z-index: 0; /* create stacking context so ::before can sit behind content */
   }
 
   .hero-photo.mesh-bg {
@@ -16,13 +18,13 @@ export const styles = `
 
   .hero-photo::before {
     content: "";
-    position: fixed;
+    position: absolute; /* contained to the hero area */
     inset: 0;
     background-image: url('https://images.unsplash.com/photo-1473889006385-9c10fc6c2c87?w=2000&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    opacity: 0.35;
-    z-index: -2;
+    opacity: 0.35; /* tweak as needed */
+    z-index: -1; /* behind hero content but above the page background */
     pointer-events: none;
   }
 
