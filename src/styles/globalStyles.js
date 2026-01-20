@@ -231,10 +231,10 @@ export const styles = `
   .prose h2:first-child { margin-top: 0; }
   
   .prose p { 
-    margin-bottom: 1.2rem; 
-    line-height: 1.7; 
-    color: #465467; 
-    font-size: 1.02rem; 
+    margin-bottom: 1.35rem; 
+    line-height: 1.78; 
+    color: #415066; 
+    font-size: 1.03rem; 
     font-family: 'Poppins', 'Inter', sans-serif;
   }
   
@@ -281,6 +281,34 @@ export const styles = `
     background: radial-gradient(circle at 20% 20%, rgba(99,102,241,0.12), transparent 35%),
                 radial-gradient(circle at 80% 0%, rgba(56,189,248,0.1), transparent 35%),
                 #0f172a;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-hero::before {
+    content: "";
+    position: absolute;
+    inset: -15% -5% 0 -5%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blank_map_of_Germany.svg/1024px-Blank_map_of_Germany.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    opacity: 0.18;
+    filter: drop-shadow(0 50px 90px rgba(15, 23, 42, 0.5));
+    animation: heroMapDrift 40s ease-in-out infinite;
+  }
+
+  .article-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(200deg, rgba(15,23,42,0.45), rgba(15,23,42,0.7));
+    pointer-events: none;
+  }
+
+  .article-hero > * {
+    position: relative;
+    z-index: 10;
   }
 
   .meta-pill {

@@ -105,11 +105,10 @@ export const PostDetail = ({
         {post.backgroundImage && (
           <div
             className="absolute inset-0 bg-cover bg-center pointer-events-none"
-            style={{ backgroundImage: `linear-gradient(180deg, rgba(15,23,42,0.4), rgba(15,23,42,0.5)), url('${post.backgroundImage}')` }}
+            style={{ backgroundImage: `linear-gradient(200deg, rgba(15,23,42,0.4), rgba(15,23,42,0.55)), url('${post.backgroundImage}')` }}
           />
         )}
-        {!post.backgroundImage && <div className={`absolute inset-0 bg-gradient-to-br ${post.color} opacity-80 pointer-events-none`} />}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/30 to-slate-900/50 pointer-events-none" />
+        {!post.backgroundImage && <div className={`absolute inset-0 bg-gradient-to-br ${post.color} opacity-85 pointer-events-none`} />}
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-5">
           <div className="flex items-center flex-wrap gap-2 text-xs text-slate-200 font-semibold uppercase tracking-wide">
@@ -164,9 +163,39 @@ export const PostDetail = ({
       {/* Main layout */}
       <main className="w-full min-h-screen pb-20 relative z-20" style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 25%, #ede9fe 100%)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 -mt-10 sm:-mt-14">
-          <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-[340px_minmax(0,1fr)] gap-6 sm:gap-8">
+          {/* Sidebar */}
+          <aside className="order-2 xl:order-1 space-y-6">
+            <div className="sticky top-24 space-y-6">
+              <div className="liquid-glass-card border border-white/40 shadow-lg rounded-3xl p-5">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-600 mb-4">On this page</h3>
+                <TableOfContents post={post} />
+              </div>
+
+              <div className="liquid-glass-card border border-white/40 shadow-lg rounded-3xl p-5">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-600 mb-4">Related reads</h3>
+                <div className="space-y-3">
+                  {relatedPosts.map((rp) => (
+                    <button
+                      key={rp.slug}
+                      onClick={() => {
+                        window.location.hash = `post-${rp.slug}`;
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                      className="w-full text-left p-3 rounded-2xl border border-slate-100/70 hover:border-indigo-100 hover:bg-indigo-50/70 transition"
+                    >
+                      <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-slate-400 mb-1">{rp.stage}</p>
+                      <p className="text-sm font-semibold text-slate-800 line-clamp-2">{rp.title}</p>
+                      <p className="text-xs text-slate-500 mt-1">{rp.readTime}</p>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </aside>
+
           {/* Article */}
-          <article className="xl:col-span-3 space-y-6 sm:space-y-7">
+          <article className="order-1 xl:order-2 space-y-6 sm:space-y-7 xl:pl-6">
             {post.vibeCheck && (
               <div className="bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200/60 shadow-md rounded-3xl p-5 sm:p-6 backdrop-blur-sm">
                 <p className="text-indigo-900 font-semibold text-base sm:text-lg leading-relaxed">{post.vibeCheck}</p>
@@ -345,36 +374,6 @@ export const PostDetail = ({
             </div>
           </div>
           </article>
-
-          {/* Sidebar */}
-          <aside className="lg:col-span-1 space-y-6">
-            <div className="sticky top-28 space-y-6">
-              <div className="bg-white border border-slate-100 rounded-3xl shadow-sm p-4 sm:p-5">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">On this page</h3>
-                <TableOfContents post={post} />
-              </div>
-
-              <div className="bg-white border border-slate-100 rounded-3xl shadow-sm p-4 sm:p-5">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">Related reads</h3>
-                <div className="space-y-3">
-                  {relatedPosts.map((rp) => (
-                    <button
-                      key={rp.slug}
-                      onClick={() => {
-                        window.location.hash = `post-${rp.slug}`;
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }}
-                      className="w-full text-left p-3 rounded-2xl border border-slate-100 hover:border-indigo-100 hover:bg-indigo-50/60 transition"
-                    >
-                      <p className="text-[11px] font-bold uppercase tracking-wide text-slate-400 mb-1">{rp.stage}</p>
-                      <p className="text-sm font-semibold text-slate-800 line-clamp-2">{rp.title}</p>
-                      <p className="text-xs text-slate-500 mt-1">{rp.readTime}</p>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </aside>
         </div>
         </div>
       </main>
