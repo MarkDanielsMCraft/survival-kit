@@ -72,7 +72,7 @@ export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, 
           />
           <div className="absolute inset-0 bg-white/80" />
         </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-8 lg:gap-16 items-center">
             <div className="max-w-2xl space-y-6 text-slate-900">
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">

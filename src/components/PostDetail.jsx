@@ -18,6 +18,7 @@ import { PostNavigation } from './PostNavigation';
 import { renderRichText } from '../utils/textRenderer';
 import { safeOpen } from '../utils/security';
 import { pct } from '../utils/helpers';
+import { POSTS } from "../data/posts";
 import { STAGE_STYLES } from "../constants/ui";
 import { SmartImage } from "./SmartImage";
 
