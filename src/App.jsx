@@ -117,14 +117,34 @@ export default function App() {
     
     return posts.filter((p) => {
       const inTitle = (p.title || "").toLowerCase().includes(q);
+      const inSubtitle = (p.subtitle || "").toLowerCase().includes(q);
       const inSummary = (p.summary || "").toLowerCase().includes(q);
+      const inVibeCheck = (p.vibeCheck || "").toLowerCase().includes(q);
+      const inGoldenRule = (p.goldenRule || "").toLowerCase().includes(q);
       const inSteps = (p.steps || []).some(
         (s) =>
           (s.title || "").toLowerCase().includes(q) ||
           (s.text || "").toLowerCase().includes(q)
       );
+      const inContent = (p.content || []).some((block) => {
+        if (block?.type === "ul") {
+          return (block.items || []).some((item) => (item || "").toLowerCase().includes(q));
+        }
+        return (block?.text || "").toLowerCase().includes(q);
+      });
+      const inReadMore = (p.readMore || []).some((item) => (item.title || "").toLowerCase().includes(q));
       const inTags = (p.tags || []).some((t) => String(t).toLowerCase().includes(q));
-      return inTitle || inSummary || inSteps || inTags;
+      return (
+        inTitle ||
+        inSubtitle ||
+        inSummary ||
+        inVibeCheck ||
+        inGoldenRule ||
+        inSteps ||
+        inContent ||
+        inReadMore ||
+        inTags
+      );
     });
   }, [searchTerm, selectedStage]);
 
