@@ -2,12 +2,12 @@ export const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
   * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-  body { font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: #f8fafc; font-weight: 400; letter-spacing: 0.1px; font-size: 16px; line-height: 1.65; color: #0f172a; }
+  body { font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: #f8fafc; font-weight: 400; letter-spacing: 0.05px; font-size: 15.8px; line-height: 1.65; color: #0f172a; }
 
   h1, h2, h3, .display-heading {
     font-family: 'Poppins', 'Inter', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.01em;
+    font-weight: 600;
+    letter-spacing: -0.008em;
   }
 
   .hero-photo {
@@ -114,12 +114,12 @@ export const styles = `
   .prose h2 { 
     color: #0f172a; 
     font-family: 'Poppins', 'Inter', sans-serif;
-    font-weight: 700; 
-    font-size: 1.8rem; 
+    font-weight: 600; 
+    font-size: 1.75rem; 
     margin-top: 2.5rem; 
     margin-bottom: 1rem; 
-    line-height: 1.3; 
-    letter-spacing: -0.01em;
+    line-height: 1.32; 
+    letter-spacing: -0.008em;
   }
   .prose h2:first-child { margin-top: 0; }
   
@@ -166,7 +166,7 @@ export const styles = `
   
   .prose strong { 
     color: #111928; 
-    font-weight: 700; 
+    font-weight: 600; 
     font-family: 'Poppins', 'Inter', sans-serif;
   }
 

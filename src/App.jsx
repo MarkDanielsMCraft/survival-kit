@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState, useCallback } from "react";
+import React, { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { PostCard } from './components/PostCard';
@@ -24,6 +24,7 @@ export default function App() {
       return {};
     }
   });
+  const postsSectionRef = useRef(null);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
@@ -109,13 +110,24 @@ export default function App() {
               setSearchTerm={setSearchTerm}
               selectedStage={selectedStage}
               setSelectedStage={setSelectedStage}
+              postsSectionRef={postsSectionRef}
             />
 
-            <main className="max-w-6xl mx-auto px-6 py-8 pb-32">
+            <main ref={postsSectionRef} className="max-w-6xl mx-auto px-6 py-8 pb-32">
               {view === "posts" ? (
                 <>
+                  <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Guides that keep you moving</h2>
+                      <p className="text-sm text-slate-500 font-medium">Hand verified walkthroughs for every milestone in your first year.</p>
+                    </div>
+                    <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                      <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                      {filteredPosts.length} guides available
+                    </span>
+                  </div>
                   {filteredPosts.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 auto-rows-fr">
                       {filteredPosts.map((post, index) => (
                         <PostCard
                           key={post.slug}

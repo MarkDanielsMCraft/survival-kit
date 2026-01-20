@@ -1,8 +1,24 @@
 import { Search, Grid, List, Info } from "lucide-react";
-import { META, LINKS } from '../constants/config';
+import { META } from '../constants/config';
 import { CategoryFilter } from './CategoryFilter';
 
-export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, setSelectedStage }) => {
+export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, setSelectedStage, postsSectionRef }) => {
+  const handleExploreClick = () => {
+    if (view !== "posts") {
+      setView("posts");
+      return;
+    }
+
+    const node = postsSectionRef?.current;
+    if (!node) return;
+
+    if (typeof window === "undefined") return;
+
+    const rect = node.getBoundingClientRect();
+    const scrollTop = window.scrollY + rect.top - 96;
+    window.scrollTo({ top: Math.max(scrollTop, 0), behavior: "smooth" });
+  };
+
   if (view === "library") {
     return (
       <div className="relative pt-12 pb-10 px-6 text-center overflow-hidden">
@@ -29,8 +45,8 @@ export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, 
           </div>
 
           <div className="flex justify-center gap-2">
-            <button
-              onClick={() => setView("posts")}
+              <button
+                onClick={() => setView("posts")}
               className="px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"
             >
               <div className="flex items-center gap-2">
@@ -46,78 +62,63 @@ export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, 
 
   return (
     <>
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-[550px] sm:min-h-[650px] md:min-h-[800px] overflow-hidden">
-        {/* Background image - full opacity */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=2000&auto=format&fit=crop&q=90')`,
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        />
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-900">
+        <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_rgba(129,140,248,0.35),_transparent_55%),_radial-gradient(circle_at_80%_20%,_rgba(239,246,255,0.18),_transparent_60%)]" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-indigo-500/40 blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-purple-500/20 blur-3xl" />
 
-        {/* Elegant dark overlay with subtle gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/40 to-slate-900/20" />
-        
-        {/* Refined accent gradients */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl" />
-
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 h-full flex flex-col justify-center py-16 sm:py-24 md:py-32">
-          <div className="max-w-3xl space-y-8 sm:space-y-10">
-            <div className="space-y-4 sm:space-y-6">
-              {/* Modern badge */}
-              <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/15 border border-white/25 backdrop-blur-md w-fit hover:bg-white/20 transition-all duration-300 shadow-lg shadow-black/20">
-                <span className="flex relative h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-400"></span>
-                </span>
-                <p className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Welcome to Germany</p>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-8 lg:gap-16 items-center">
+            <div className="max-w-2xl space-y-6 text-white">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 backdrop-blur-sm text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
+                Germany, decoded
               </div>
-              
-              {/* Main heading */}
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tight drop-shadow-2xl">
-                Your honest guide to starting life in Germany
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+                Plain-language playbooks for your first year in Germany
               </h1>
+
+              <p className="text-base sm:text-lg text-white/80 font-medium leading-relaxed">
+                Graded checklists, timelines, and verified links that keep you moving. Built for students and researchers landing in a new system.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <button
+                  onClick={handleExploreClick}
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-white text-slate-900 px-7 py-3 text-sm font-semibold shadow-lg shadow-indigo-500/20 transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  Explore guides
+                  <span className="text-indigo-500 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                </button>
+
+                <button
+                  onClick={() => setView("library")}
+                  className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3 text-sm font-semibold text-white/80 transition-colors duration-200 hover:border-white/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  Browse resources
+                </button>
+              </div>
             </div>
 
-            {/* Description */}
-            <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium leading-relaxed max-w-3xl drop-shadow-lg">
-              Real talk for international students and scholars. No fluff, no jargon. Everything you need from arrival to first paycheck.
-            </p>
-
-            {/* Modern CTA buttons */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-6">
-              <button
-                onClick={() => setView("posts")}
-                className="group relative px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-white text-slate-900 font-black text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-110 active:scale-100 flex items-center justify-center gap-2 whitespace-nowrap overflow-hidden"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-indigo-400 via-white to-indigo-400 opacity-0 group-hover:opacity-20 transition-opacity"></span>
-                <span className="relative flex items-center gap-2">
-                  Explore Guides
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                </span>
-              </button>
-              
-              <button
-                onClick={() => setView("library")}
-                className="px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-white/20 hover:bg-white/30 text-white font-bold text-base sm:text-lg border-2 border-white/60 hover:border-white transition-all duration-300 backdrop-blur-md shadow-lg hover:shadow-xl flex items-center justify-center gap-2 whitespace-nowrap"
-              >
-                Browse Resources
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Modern scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-3">
-          <p className="text-white/60 text-xs font-bold uppercase tracking-widest">Scroll to explore</p>
-          <div className="relative">
-            <div className="w-1.5 h-8 border border-white/40 rounded-full flex items-start justify-center p-2">
-              <div className="w-0.5 h-1.5 bg-white/60 rounded-full animate-bounce"></div>
+            <div className="bg-white/5 border border-white/10 rounded-3xl backdrop-blur-md shadow-[0_40px_120px_-60px_rgba(99,102,241,0.9)] p-6 sm:p-7 lg:p-8 flex flex-col gap-6 text-white/90 max-w-md">
+              <div>
+                <p className="text-xs uppercase tracking-[0.25em] text-indigo-200 font-semibold mb-2">What to expect</p>
+                <h2 className="text-2xl font-semibold leading-snug text-white">Step-by-step essentials from Anmeldung to your first pay slip</h2>
+              </div>
+              <ul className="space-y-4 text-sm font-medium">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-emerald-300"></span>
+                  Local checklists synced with Germany-specific deadlines and forms.
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-300"></span>
+                  Updated pricing, office hours, and documents verified this year.
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-rose-300"></span>
+                  Searchable resource library covering banking, housing, healthcare, and more.
+                </li>
+              </ul>
             </div>
           </div>
         </div>

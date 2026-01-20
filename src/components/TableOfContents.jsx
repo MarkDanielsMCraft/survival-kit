@@ -2,7 +2,10 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 export const TableOfContents = ({ post }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return window.innerWidth >= 1024;
+  });
 
   // Extract headings from content
   const headings = post.content
@@ -26,14 +29,14 @@ export const TableOfContents = ({ post }) => {
   };
 
   return (
-    <div className="glass-card rounded-2xl sm:rounded-3xl border border-white/20 backdrop-blur-xl overflow-hidden">
+    <div className="glass-card rounded-2xl sm:rounded-3xl border border-white/30 backdrop-blur-xl overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between hover:bg-white/50 transition-colors text-left"
+        className="w-full px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between text-left transition-colors hover:bg-white/60"
       >
         <div className="flex items-center gap-2">
-          <div className="text-xs uppercase font-black text-slate-500 tracking-wider">
-            📑 In this post
+          <div className="text-[11px] uppercase font-semibold text-slate-500 tracking-[0.25em]">
+            In this guide
           </div>
         </div>
         <ChevronDown
@@ -43,12 +46,12 @@ export const TableOfContents = ({ post }) => {
       </button>
 
       {isOpen && (
-        <div className="border-t border-white/10 px-4 sm:px-6 py-3 sm:py-4 space-y-2 bg-white/30 max-h-96 overflow-y-auto">
+        <div className="border-t border-white/10 bg-white/40 px-4 sm:px-5 py-3 sm:py-4 space-y-1.5 max-h-96 overflow-y-auto">
           {headings.map((heading, i) => (
             <button
               key={i}
               onClick={() => scrollToHeading(heading.text)}
-              className="block w-full text-left text-xs sm:text-sm text-slate-600 hover:text-slate-900 hover:bg-white/50 px-2 sm:px-3 py-1.5 sm:py-2 rounded transition-colors"
+              className="block w-full rounded-xl px-2 py-2 text-left text-[13px] font-medium text-slate-600 transition-colors hover:bg-white/70 hover:text-slate-900"
             >
               {heading.text}
             </button>
