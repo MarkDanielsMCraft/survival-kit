@@ -47,7 +47,7 @@ const HeroImage = ({ post }) => {
   const imageUrl = post.cardImage || post.backgroundImage || "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2000&auto=format&fit=crop";
   
   return (
-    <div className="relative h-72 sm:h-96 lg:h-[28rem] w-full overflow-hidden bg-slate-100">
+    <div className="relative h-96 sm:h-[28rem] lg:h-[32rem] w-full overflow-hidden bg-slate-100">
       <SmartImage
         src={imageUrl}
         alt={`${post.title} header`}
