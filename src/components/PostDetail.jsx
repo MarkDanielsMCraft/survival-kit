@@ -280,7 +280,7 @@ export const PostDetail = ({
   };
 
   return (
-    <div className="min-h-screen bg-slate-50" id={`post-${post.slug}`}>
+    <div className="min-h-screen bg-transparent" id={`post-${post.slug}`}>
       <Header
         emergencyMode={emergencyMode}
         setEmergencyMode={setEmergencyMode}
@@ -346,7 +346,7 @@ export const PostDetail = ({
       </section>
 
       {/* Main layout */}
-      <main className="w-full min-h-screen pb-20 relative z-20 bg-slate-50">
+      <main className="w-full min-h-screen pb-20 relative z-20 bg-transparent">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 pt-8">
           <article className="space-y-6 sm:space-y-8">
             {post.vibeCheck && (

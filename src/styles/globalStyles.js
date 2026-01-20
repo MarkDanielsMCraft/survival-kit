@@ -12,14 +12,29 @@ export const styles = `
     color: #0b1220;
   }
 
-  body::before {
+  .app-shell {
+    position: relative;
+    background-color: #f6f7f9;
+    isolation: isolate;
+  }
+
+  .app-shell::before {
     content: "";
     position: fixed;
     inset: 0;
     background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2000&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    opacity: 0.04;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: -2;
+  }
+
+  .app-shell::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(246, 247, 249, 0.92);
     pointer-events: none;
     z-index: -1;
   }

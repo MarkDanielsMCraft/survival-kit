@@ -107,7 +107,7 @@ export default function App() {
   return (
     <>
       <style>{styles}</style>
-      <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-900">
+      <div className="app-shell min-h-screen text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-900">
         {activePost ? (
           <>
             <PostDetail
