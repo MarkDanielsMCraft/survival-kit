@@ -66,15 +66,16 @@ const HeroImage = ({ post }) => {
   }
 
   return (
-    <div className="h-48 sm:h-56 w-full overflow-hidden bg-slate-100">
+    <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-slate-100">
       <img
-        src={`${imageUrl}${imageUrl.includes('?') ? '' : '?'}&auto=format&fit=crop&w=1600&q=80`}
+        src={`${imageUrl}${imageUrl.includes('?') ? '' : '?'}&auto=format&fit=crop&w=2000&q=80`}
         alt={`${post.title} header`}
         className="h-full w-full object-cover"
         loading="lazy"
         decoding="async"
         onError={() => setFailed(true)}
       />
+      <div className="absolute inset-0 bg-white/70" />
     </div>
   );
 };

@@ -61,7 +61,17 @@ export const Hero = ({ view, setView, searchTerm, setSearchTerm, selectedStage, 
 
   return (
     <>
-      <section className="bg-slate-50 border-b border-slate-200">
+      <section className="relative overflow-hidden border-b border-slate-200">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1455885666463-1ef1c02d6944?w=2000&auto=format&fit=crop"
+            alt="Hamburg street"
+            className="h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-white/80" />
+        </div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-8 lg:gap-16 items-center">
             <div className="max-w-2xl space-y-6 text-slate-900">
