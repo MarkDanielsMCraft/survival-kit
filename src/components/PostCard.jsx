@@ -1,36 +1,11 @@
 import React from "react";
 import { ChevronRight, Clock, Tag } from "lucide-react";
+import { STAGE_STYLES } from "../constants/ui";
+import { SmartImage } from "./SmartImage";
 
 export const PostCard = ({ post, onOpen, progressPercent }) => {
   const cardImage = post.cardImage || post.backgroundImage;
-  const [imageError, setImageError] = React.useState(false);
-  const stageStyles = {
-    Arrival: {
-      pill: "bg-blue-50 text-blue-700 border-blue-200",
-      icon: "bg-blue-700",
-      bar: "bg-blue-600",
-    },
-    "Settling In": {
-      pill: "bg-emerald-50 text-emerald-700 border-emerald-200",
-      icon: "bg-emerald-700",
-      bar: "bg-emerald-600",
-    },
-    "Work & Study": {
-      pill: "bg-amber-50 text-amber-700 border-amber-200",
-      icon: "bg-amber-700",
-      bar: "bg-amber-600",
-    },
-    "Health & Social": {
-      pill: "bg-rose-50 text-rose-700 border-rose-200",
-      icon: "bg-rose-700",
-      bar: "bg-rose-600",
-    },
-  };
-  const stageStyle = stageStyles[post.stage] || {
-    pill: "bg-slate-50 text-slate-700 border-slate-200",
-    icon: "bg-slate-700",
-    bar: "bg-slate-600",
-  };
+  const stageStyle = STAGE_STYLES[post.stage] || STAGE_STYLES.DEFAULT;
 
   return (
     <button
@@ -38,20 +13,13 @@ export const PostCard = ({ post, onOpen, progressPercent }) => {
       className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm transition-colors hover:border-slate-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
     >
       <div className="relative h-44 w-full overflow-hidden bg-slate-100">
-        {cardImage && !imageError ? (
-          <img
-            src={`${cardImage}${cardImage.includes('?') ? '' : '?'}&auto=format&fit=crop&w=900&q=80`}
-            alt={`${post.title} guide cover`}
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="lazy"
-            decoding="async"
-            onError={() => setImageError(true)}
-          />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-slate-400">
-            {post.icon}
-          </div>
-        )}
+        <SmartImage
+          src={cardImage}
+          alt={`${post.title} guide cover`}
+          fallbackIcon={post.icon}
+          className="absolute inset-0 h-full w-full"
+          width={900}
+        />
       </div>
 
       <div className="relative z-10 flex flex-col gap-6 p-6 sm:p-7">

@@ -18,7 +18,8 @@ import { PostNavigation } from './PostNavigation';
 import { renderRichText } from '../utils/textRenderer';
 import { safeOpen } from '../utils/security';
 import { pct } from '../utils/helpers';
-import { POSTS } from "../data/posts";
+import { STAGE_STYLES } from "../constants/ui";
+import { SmartImage } from "./SmartImage";
 
 const stripText = (value) =>
   String(value || "")
@@ -29,51 +30,29 @@ const stripText = (value) =>
     .replace(/\s+/g, " ")
     .trim();
 
-const RelatedThumbnail = ({ post }) => {
-  const [failed, setFailed] = useState(false);
-  if (!post.backgroundImage || failed) {
-    return (
-      <div className="h-12 w-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400">
-        {post.icon}
-      </div>
-    );
-  }
-
-  return (
-    <div className="h-12 w-12 rounded-lg bg-slate-100 overflow-hidden">
-      <img
-        src={`${post.backgroundImage}${post.backgroundImage.includes('?') ? '' : '?'}&auto=format&fit=crop&w=160&q=70`}
-        alt={`${post.title} thumbnail`}
-        className="h-full w-full object-cover"
-        loading="lazy"
-        decoding="async"
-        onError={() => setFailed(true)}
-      />
-    </div>
-  );
-};
+const RelatedThumbnail = ({ post }) => (
+  <div className="h-12 w-12 rounded-lg bg-slate-100 overflow-hidden shrink-0">
+    <SmartImage
+      src={post.backgroundImage}
+      alt={`${post.title} thumbnail`}
+      fallbackIcon={post.icon}
+      width={160}
+      className="h-full w-full"
+    />
+  </div>
+);
 
 const HeroImage = ({ post }) => {
   const imageUrl = post.cardImage || post.backgroundImage || "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2000&auto=format&fit=crop";
-  const [failed, setFailed] = useState(false);
-
-  if (!imageUrl || failed) {
-    return (
-      <div className="h-72 sm:h-96 w-full bg-slate-100 flex items-center justify-center text-slate-400">
-        {post.icon}
-      </div>
-    );
-  }
-
+  
   return (
     <div className="relative h-72 sm:h-96 lg:h-[28rem] w-full overflow-hidden bg-slate-100">
-      <img
-        src={`${imageUrl}${imageUrl.includes('?') ? '' : '?'}&auto=format&fit=crop&w=2000&q=80`}
+      <SmartImage
+        src={imageUrl}
         alt={`${post.title} header`}
-        className="h-full w-full object-cover"
-        loading="lazy"
-        decoding="async"
-        onError={() => setFailed(true)}
+        fallbackIcon={post.icon}
+        width={2000}
+        className="h-full w-full"
       />
     </div>
   );
@@ -96,53 +75,7 @@ export const PostDetail = ({
   const [copied, setCopied] = useState(false);
   const [activeSectionId, setActiveSectionId] = useState(null);
   const [pageSearch, setPageSearch] = useState("");
-  const stageStyles = {
-    Arrival: {
-      pill: "bg-blue-50 text-blue-700 border-blue-200",
-      accent: "text-blue-700",
-      doneBg: "bg-blue-50/60",
-      doneBorder: "border-blue-200",
-      doneText: "text-blue-700",
-      doneChip: "bg-blue-100 text-blue-700",
-      doneButton: "bg-blue-100 text-blue-700",
-    },
-    "Settling In": {
-      pill: "bg-emerald-50 text-emerald-700 border-emerald-200",
-      accent: "text-emerald-700",
-      doneBg: "bg-emerald-50/60",
-      doneBorder: "border-emerald-200",
-      doneText: "text-emerald-700",
-      doneChip: "bg-emerald-100 text-emerald-700",
-      doneButton: "bg-emerald-100 text-emerald-700",
-    },
-    "Work & Study": {
-      pill: "bg-amber-50 text-amber-700 border-amber-200",
-      accent: "text-amber-700",
-      doneBg: "bg-amber-50/60",
-      doneBorder: "border-amber-200",
-      doneText: "text-amber-700",
-      doneChip: "bg-amber-100 text-amber-700",
-      doneButton: "bg-amber-100 text-amber-700",
-    },
-    "Health & Social": {
-      pill: "bg-rose-50 text-rose-700 border-rose-200",
-      accent: "text-rose-700",
-      doneBg: "bg-rose-50/60",
-      doneBorder: "border-rose-200",
-      doneText: "text-rose-700",
-      doneChip: "bg-rose-100 text-rose-700",
-      doneButton: "bg-rose-100 text-rose-700",
-    },
-  };
-  const stageStyle = stageStyles[post.stage] || {
-    pill: "bg-slate-50 text-slate-700 border-slate-200",
-    accent: "text-slate-700",
-    doneBg: "bg-slate-50",
-    doneBorder: "border-slate-200",
-    doneText: "text-slate-700",
-    doneChip: "bg-slate-100 text-slate-700",
-    doneButton: "bg-slate-100 text-slate-700",
-  };
+  const stageStyle = STAGE_STYLES[post.stage] || STAGE_STYLES.DEFAULT;
 
   const sections = useMemo(() => {
     const result = [];

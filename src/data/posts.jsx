@@ -69,10 +69,10 @@ export const POSTS = [
       {
         type: "ul",
         items: [
-          "**Where to buy:** Any [Aldi Süd](https://www.aldi-sued.de/) or [Aldi Nord](https://www.aldi-nord.de/) supermarket. There is usually one inside or very near major train stations and airports. Pro tip: Aldi is divided into North and South regions, but both Aldi Talk services work nationwide.",
-          "**How to register:** German law requires ID verification before you can use any mobile SIM. You can download the [Aldi Talk app](https://www.alditalk.de/registrierung) and do a 'Video Ident' call—this is a video call where you show your passport to verify who you are. However, you can also finish all this verification withing a webbrowser such as chrome etc. You need good lighting and a clear photo of your passport.",
-          "**Troubleshooting:** If the video call fails (which happens with bad connection or unclear photos), you can do 'PostIdent' at any post office (Deutsche Post). They will verify you in person for a small fee (~10€).",
-          "**Cost breakdown:** The 10€ starter set includes your SIM and about 10€ credit. Monthly plans start at 8.99€, the unlimited option is about 9.99€ as of 19 Jan 2026."
+          "**Where to buy:** Any [Aldi Süd](https://www.aldi-sued.de/) or [Aldi Nord](https://www.aldi-nord.de/) supermarket. There is usually one inside or very near major train stations and airports.",
+          "**How to register:** German law requires ID verification. You can download the [Aldi Talk app](https://www.alditalk.de/registrierung) and do a 'Video Ident' call. You need good lighting and a clear photo of your passport.",
+          "**Troubleshooting:** If video call fails (bad connection), you can do 'PostIdent' at any post office (Deutsche Post) for a small fee (~10€).",
+          "**Cost:** The 10€ starter set includes your SIM and ~10€ credit. Monthly plans start at 8.99€ (Verified 19 Jan 2026)."
         ]
       },
       { type: "h2", text: "2. Essential Apps: Maps, Translator & Transport" },

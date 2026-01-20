@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { PostCard } from './components/PostCard';
+import { PostGrid } from './components/PostGrid';
 import { PostDetail } from './components/PostDetail';
 import { Library } from './components/Library';
 import { Footer } from './components/Footer';
@@ -30,6 +30,56 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
   }, [progress]);
+
+  // Deep linking support
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#/guide/')) {
+        const slug = hash.replace('#/guide/', '');
+        if (POSTS.some(p => p.slug === slug)) {
+          setActiveSlug(slug);
+          setView("posts");
+        }
+      } else if (hash === '#/library') {
+        setActiveSlug(null);
+        setView("library");
+      } else {
+        // Default to home/posts if no specific hash
+        if (activeSlug) setActiveSlug(null);
+        if (view === "library") setView("posts");
+      }
+    };
+
+    // Check on initial load
+    handleHashChange();
+
+    // Listen for back/forward navigation
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Sync state changes to URL
+  useEffect(() => {
+    let targetHash = "";
+    if (activeSlug) {
+      targetHash = `#/guide/${activeSlug}`;
+    } else if (view === "library") {
+      targetHash = "#/library";
+    }
+
+    // Only push if different to avoid redundant history entries
+    if (window.location.hash !== targetHash) {
+       // using replaceState for initial sync or creating excessive history? 
+       // For better UX, clicking a guide should push state.
+       if(targetHash === "") {
+          // Clean URL for home
+          window.history.pushState(null, "", window.location.pathname);
+       } else {
+          window.history.pushState(null, "", targetHash);
+       }
+    }
+  }, [activeSlug, view]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -162,27 +212,13 @@ export default function App() {
                       {filteredPosts.length} guides available
                     </span>
                   </div>
-                  {filteredPosts.length > 0 ? (
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 auto-rows-fr">
-                      {filteredPosts.map((post) => (
-                        <PostCard
-                          key={post.slug}
-                          post={post}
-                          onOpen={setActiveSlug}
-                          progressPercent={postProgress(post)}
-                        />
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="text-center py-20 opacity-60">
-                      <p className="text-xl font-extrabold text-slate-400">
-                        No posts found for "{searchTerm}"
-                      </p>
-                      <p className="text-sm text-slate-400">
-                        Try "Anmeldung", "Trash", "Tax ID", "Dosage"
-                      </p>
-                    </div>
-                  )}
+                  
+                  <PostGrid 
+                    posts={filteredPosts} 
+                    searchTerm={searchTerm} 
+                    onOpenPost={setActiveSlug}
+                    getProgress={postProgress}
+                  />
                 </>
               ) : (
                 <Library
