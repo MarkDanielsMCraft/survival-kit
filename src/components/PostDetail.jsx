@@ -54,7 +54,7 @@ const RelatedThumbnail = ({ post }) => {
 };
 
 const HeroImage = ({ post }) => {
-  const imageUrl = post.cardImage || post.backgroundImage;
+  const imageUrl = post.cardImage || post.backgroundImage || "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2000&auto=format&fit=crop";
   const [failed, setFailed] = useState(false);
 
   if (!imageUrl || failed) {

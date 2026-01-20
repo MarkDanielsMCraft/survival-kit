@@ -12,6 +12,18 @@ export const styles = `
     color: #0b1220;
   }
 
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: -1;
+  }
+
   h1, h2, h3, .display-heading {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 600;
@@ -74,9 +86,9 @@ export const styles = `
   .prose li:last-child { margin-bottom: 0; }
 
   .prose a {
-    color: #1f3a8a;
+    color: #1d4ed8;
     text-decoration: underline;
-    text-decoration-color: rgba(31, 58, 138, 0.35);
+    text-decoration-color: rgba(29, 78, 216, 0.35);
     text-underline-offset: 3px;
     font-weight: 600;
   }
