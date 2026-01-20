@@ -114,6 +114,46 @@ export const POSTS = [
       {
         type: "p",
         text: "When you arrive at your housing, ask your landlord or host for the **Wohnungsgeberbestätigung** (Landlord Confirmation). This is a single sheet of paper that confirms you moved in. You **cannot** register your address at the city office without this specific paper. Your rental contract is *not* enough. I have added a [PDF Template](https://formular-service.augsburg.de/intelliform/forms/stadt_augsburg/extern/330/extern/330/meldewesen/wohnungsgeberbestaetigung/download;jsessionid=uZF3OT69kpWC24HWyAC_aL-HL-MeLo73RHTISBvd.IF0) below—if they don't have one, print this and make them sign it."
+      },
+      { type: "h2", text: "6. Documents to keep on you" },
+      {
+        type: "p",
+        text: "For the first days, carry your passport and a copy of your entry visa or residence permit. Non EU scholars are sometimes asked for proof at hotels, banks, or SIM registration. Keep a clear photo set on your phone and one printed copy in your bag."
+      },
+      {
+        type: "ul",
+        items: [
+          "**Carry daily:** Passport and visa copy, address of your housing, and your phone number.",
+          "**Keep safe:** Original admission letter or employment contract, and your university or hospital contact details.",
+          "**Proof of funds:** If a bank or landlord asks, show your latest bank statement or scholarship letter."
+        ]
+      },
+      { type: "h2", text: "7. Cash and cards in your first week" },
+      {
+        type: "p",
+        text: "Germany still uses cash more than many countries. In January 2026, many bakeries and small shops accept cards, but not all do. Plan to keep at least 50 to 100 euros in cash during your first week."
+      },
+      {
+        type: "p",
+        text: "If you have no German account yet, use an international debit card for ATM withdrawals. Avoid airport exchange counters since their rates are poor."
+      },
+      { type: "h2", text: "8. What to do on day two" },
+      {
+        type: "p",
+        text: "Once you have internet and transport sorted, set up the next steps. Book your Anmeldung appointment, check your university or hospital onboarding email, and locate the nearest supermarket and pharmacy. These three actions reduce stress fast."
+      },
+      {
+        type: "ul",
+        items: [
+          "**Book the Anmeldung:** Appointments often appear early in the morning. Check the city website daily.",
+          "**Confirm onboarding time:** Email your department or training office and confirm the first day and required documents.",
+          "**Stock basics:** Water, bread, simple meals, and any daily medication."
+        ]
+      },
+      { type: "h2", text: "9. Quick reality check for non EU scholars" },
+      {
+        type: "p",
+        text: "As of January 2026, non EU scholars must respect the visa purpose and registration rules. If you entered for study or training, keep documents that show your program status. Do not assume that a tourist stay allows training work. Verify with your university or local foreigners office if you are unsure."
       }
     ],
     goldenRule: "Do NOT sign a 24-month contract at the airport. Buy a prepaid SIM.",
