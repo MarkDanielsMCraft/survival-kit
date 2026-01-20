@@ -69,7 +69,7 @@ export const styles = `
     background-repeat: no-repeat;
     background-position: center;
     background-size: 75%;
-    opacity: 0.15;
+    opacity: 0.28;
     filter: drop-shadow(0 40px 80px rgba(15, 23, 42, 0.4));
     transform-origin: center;
     animation: heroMapDrift 36s ease-in-out infinite;
@@ -323,13 +323,14 @@ export const styles = `
   .header-with-map::before {
     content: "";
     position: absolute;
-    inset: -140% 10% 20% auto;
+    inset: -160% 8% 10% auto;
     width: 420px;
+    height: 420px;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blank_map_of_Germany.svg/1024px-Blank_map_of_Germany.svg.png');
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
-    opacity: 0.14;
+    opacity: 0.2;
     filter: drop-shadow(0 24px 48px rgba(79,70,229,0.25));
     animation: heroMapDrift 38s ease-in-out infinite;
     pointer-events: none;

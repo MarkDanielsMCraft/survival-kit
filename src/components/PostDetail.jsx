@@ -162,17 +162,20 @@ export const PostDetail = ({
 
       {/* Main layout */}
       <main className="w-full min-h-screen pb-20 relative z-20" style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 25%, #ede9fe 100%)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 -mt-10 sm:-mt-14">
-          <div className="grid grid-cols-1 xl:grid-cols-[340px_minmax(0,1fr)] gap-6 sm:gap-8">
-          {/* Sidebar */}
-          <aside className="order-2 xl:order-1 space-y-6">
-            <div className="sticky top-24 space-y-6">
-              <div className="liquid-glass-card border border-white/40 shadow-lg rounded-3xl p-5">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 -mt-10 sm:-mt-14">
+          <article className="space-y-6 sm:space-y-8">
+            {post.vibeCheck && (
+              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200/60 shadow-md rounded-3xl p-5 sm:p-6 backdrop-blur-sm">
+                <p className="text-indigo-900 font-semibold text-base sm:text-lg leading-relaxed">{post.vibeCheck}</p>
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 sm:gap-6">
+              <div className="liquid-glass-card border border-white/40 shadow-lg rounded-3xl p-5 sm:p-6">
                 <h3 className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-600 mb-4">On this page</h3>
                 <TableOfContents post={post} />
               </div>
-
-              <div className="liquid-glass-card border border-white/40 shadow-lg rounded-3xl p-5">
+              <div className="liquid-glass-card border border-white/40 shadow-lg rounded-3xl p-5 sm:p-6">
                 <h3 className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-600 mb-4">Related reads</h3>
                 <div className="space-y-3">
                   {relatedPosts.map((rp) => (
@@ -192,15 +195,6 @@ export const PostDetail = ({
                 </div>
               </div>
             </div>
-          </aside>
-
-          {/* Article */}
-          <article className="order-1 xl:order-2 space-y-6 sm:space-y-7 xl:pl-6">
-            {post.vibeCheck && (
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200/60 shadow-md rounded-3xl p-5 sm:p-6 backdrop-blur-sm">
-                <p className="text-indigo-900 font-semibold text-base sm:text-lg leading-relaxed">{post.vibeCheck}</p>
-              </div>
-            )}
 
             {post.content && (
               <div className="prose prose-slate mx-auto xl:mx-0 w-full bg-gradient-to-br from-white to-slate-50/80 p-6 sm:p-9 md:p-10 xl:p-12 rounded-3xl border border-slate-200/60 shadow-xl content-block space-y-0 backdrop-blur-sm">
@@ -320,6 +314,7 @@ export const PostDetail = ({
                   );
                 })}
               </div>
+            </div>
 
             {/* Downloads + videos */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -372,9 +367,7 @@ export const PostDetail = ({
             <div className="bg-white border border-slate-100 rounded-3xl p-5 sm:p-6 shadow-sm">
               <PostNavigation currentPost={post} />
             </div>
-          </div>
           </article>
-        </div>
         </div>
       </main>
     </div>
