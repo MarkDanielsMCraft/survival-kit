@@ -13,6 +13,10 @@ import {
   Briefcase as BriefcaseWork,
 } from "lucide-react";
 import { LINKS } from '../constants/config';
+import img1 from '../frankfurt-5377161.jpg';
+import img2 from '../opera-4513452.jpg';
+import img3 from '../skyscraper-7360222.jpg';
+import img4 from '../frankfurt-5377161_1920.jpg';
 
 /**
  * BLOG POSTS DATA
@@ -49,7 +53,7 @@ export const POSTS = [
     shadow: "shadow-blue-500/20",
     accent: "text-blue-600",
     verified: "2026-01-19",
-      backgroundImage: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&auto=format&fit=crop",
+      backgroundImage: img1,
     summary: "Your first 72 hours stripped to essentials: internet, transport, and the apps you actually need.",
     vibeCheck: "You just landed. You are tired, your luggage is heavy, and you don't have internet. Take a deep breath. We'll sort this out.",
     content: [
@@ -195,7 +199,7 @@ export const POSTS = [
     color: "from-emerald-500 to-teal-600",
     shadow: "shadow-emerald-500/20",
     accent: "text-emerald-600",
-      backgroundImage: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&auto=format&fit=crop",
+      backgroundImage: img2,
     verified: "2026-01-19",
     summary: "Banks, registration, taxes, insurance—we break down the catch-22s and show you the smart shortcuts.",
     vibeCheck: "Yes, it feels impossible. You need a bank for rent, but they want an address. We're gonna untangle this.",
@@ -337,7 +341,7 @@ export const POSTS = [
     color: "from-orange-500 to-amber-600",
     shadow: "shadow-orange-500/20",
     accent: "text-orange-600",
-      backgroundImage: "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=1200&auto=format&fit=crop",
+      backgroundImage: img3,
     verified: "2026-01-19",
     summary: "Platform reviews (WG Gesucht), free furniture hacks (Kleinanzeigen), and the house rules that matter.",
     vibeCheck: "Flats are tight and expensive. But furnishing them cheap? That's doable. Here's how.",
@@ -463,7 +467,7 @@ export const POSTS = [
     color: "from-rose-500 to-pink-600",
     shadow: "shadow-rose-500/20",
     accent: "text-rose-600",
-    backgroundImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&auto=format&fit=crop",
+    backgroundImage: img4,
     verified: "2026-01-19",
     summary:
       "Master your field's vocabulary and theory. Resources to pass licensing exams and talk confidently with colleagues.",
@@ -564,7 +568,7 @@ export const POSTS = [
     color: "from-purple-500 to-violet-600",
     shadow: "shadow-purple-500/20",
     accent: "text-purple-600",
-    backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop",
+    backgroundImage: img1,
     verified: "2026-01-19",
     summary:
       "You're a trainee, not a servant. Learn what's legal, what's exploitation, and who to call when something's wrong.",
@@ -641,7 +645,7 @@ export const POSTS = [
     icon: <Heart size={24} />,
     color: "from-cyan-500 to-teal-500",
     shadow: "shadow-cyan-500/20",
-    backgroundImage: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=1200&auto=format&fit=crop",
+    backgroundImage: img2,
     accent: "text-cyan-600",
     verified: "2026-01-19",
     summary:
@@ -712,7 +716,7 @@ export const POSTS = [
     readTime: "10 min",
     icon: <Utensils size={24} />,
     color: "from-amber-500 to-orange-600",
-      backgroundImage: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&auto=format&fit=crop",
+      backgroundImage: img3,
     shadow: "shadow-amber-500/20",
     accent: "text-amber-600",
     verified: "2026-01-19",
@@ -822,7 +826,7 @@ export const POSTS = [
     color: "from-indigo-500 to-blue-600",
     shadow: "shadow-indigo-500/20",
     accent: "text-indigo-600",
-      backgroundImage: "https://images.unsplash.com/photo-1524222717473-730000096953?w=1200&auto=format&fit=crop",
+      backgroundImage: img4,
     verified: "2026-01-19",
     summary: "You have B2 German. Master workplace communication, field-specific phrases, and communication styles Germans expect.",
     vibeCheck: "B2 means you can survive. Your Ausbildung demands precision and workplace confidence. Here's how.",
@@ -918,7 +922,7 @@ export const POSTS = [
     color: "from-red-500 to-rose-600",
     shadow: "shadow-red-500/20",
     accent: "text-red-600",
-    backgroundImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&auto=format&fit=crop",
+    backgroundImage: img2,
     verified: "2026-01-19",
     summary: "How to find a doctor (Hausarzt), make appointments, get prescriptions, and understand the pharmacy system.",
     vibeCheck: "German healthcare is excellent, but the process is different. Here's the map.",
@@ -1029,7 +1033,7 @@ export const POSTS = [
     color: "from-pink-500 to-rose-600",
     shadow: "shadow-pink-500/20",
     accent: "text-pink-600",
-    backgroundImage: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1200&auto=format&fit=crop",
+    backgroundImage: img1,
     verified: "2026-01-19",
     summary: "Where to buy clothes cheaply, electronics, toiletries, and when online shopping beats physical stores.",
     vibeCheck: "German stores are organized and prices are fair. Here's where to save the most.",
@@ -1143,7 +1147,7 @@ export const POSTS = [
     color: "from-violet-500 to-purple-600",
     shadow: "shadow-violet-500/20",
     accent: "text-violet-600",
-    backgroundImage: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&auto=format&fit=crop",
+    backgroundImage: img3,
     verified: "2026-01-19",
     summary: "Germans are direct. That's not rudeness—it's efficiency. Here's how to navigate the culture without taking things personally.",
     vibeCheck: "German culture might feel cold at first. It's not. It's just different. Here's the unwritten rulebook.",
@@ -1284,7 +1288,7 @@ export const POSTS = [
     color: "from-green-500 to-emerald-600",
     shadow: "shadow-green-500/20",
     accent: "text-green-600",
-    backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop",
+    backgroundImage: img1,
     verified: "2026-01-19",
     summary: "How to work a second part-time job legally without breaking your training contract or visa rules.",
     vibeCheck: "You can earn extra money. But there are legal limits. Here's the rulebook so you don't get fined.",
@@ -1409,7 +1413,7 @@ export const POSTS = [
     color: "from-red-600 to-orange-600",
     shadow: "shadow-red-500/20",
     accent: "text-red-600",
-    backgroundImage: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600&auto=format&fit=crop",
+    backgroundImage: img2,
     verified: "2026-01-19",
     summary: "Medical emergencies use 112. But what about car accidents, theft, or lost passport? Here's the actual protocol.",
     vibeCheck: "Emergencies happen. Knowing the exact steps removes panic. Here's your checklist.",
@@ -1573,7 +1577,7 @@ export const POSTS = [
     icon: <HomeIcon size={24} />,
     color: "from-cyan-500 to-blue-500",
     shadow: "shadow-cyan-500/20",
-    backgroundImage: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1600&auto=format&fit=crop",
+    backgroundImage: img4,
     accent: "text-cyan-600",
     verified: "2026-01-19",
     summary: "Nursing Ausbildung requires stability. Explore your accommodation options, understand costs, and know what to expect when living in Germany as a trainee.",
@@ -1780,7 +1784,7 @@ export const POSTS = [
     icon: <Users size={24} />,
     color: "from-indigo-500 to-purple-600",
     shadow: "shadow-indigo-500/20",
-    backgroundImage: "https://images.unsplash.com/photo-1470753937643-efeb931202a9?w=1200&auto=format&fit=crop",
+    backgroundImage: img1,
     accent: "text-indigo-600",
     verified: "2026-01-19",
     summary: "WG (shared apartment) living is normal in Germany. Learn the unwritten rules, communication norms, and how to avoid conflicts with roommates.",
