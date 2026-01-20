@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from "react";
-import { ExternalLink, Calculator, AppWindow } from "lucide-react";
+import { ExternalLink, Calculator, AppWindow, ArrowLeft } from "lucide-react";
 import { RESOURCE_CATEGORIES } from '../constants/config';
 import { SourcePill } from './SourcePill';
 import { safeOpen } from '../utils/security';
 
-export const Library = ({ resources, searchTerm }) => {
+export const Library = ({ resources, searchTerm, onBack }) => {
   const [category, setCategory] = useState("All");
 
   const filtered = useMemo(() => {
@@ -23,7 +23,19 @@ export const Library = ({ resources, searchTerm }) => {
   }, [resources, searchTerm, category]);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 pb-28">
+    <div className="max-w-6xl mx-auto px-6 pb-28 space-y-6">
+      {onBack && (
+        <div className="flex justify-start">
+          <button
+            onClick={onBack}
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-600 backdrop-blur hover:bg-white"
+          >
+            <ArrowLeft size={16} />
+            Back to guides
+          </button>
+        </div>
+      )}
+
       {/* Category pills */}
       <div className="flex gap-2 overflow-x-auto pb-4 mb-4 hide-scrollbar">
         {RESOURCE_CATEGORIES.map((cat) => (
@@ -47,7 +59,7 @@ export const Library = ({ resources, searchTerm }) => {
           <button
             key={r.id}
             onClick={() => safeOpen(r.url)}
-            className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-left group"
+            className="liquid-glass-card p-5 rounded-3xl border border-white/40 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-left group"
           >
             <div className="flex justify-between items-start mb-3">
               <div className="bg-slate-50 p-2 rounded-xl text-indigo-600 group-hover:bg-indigo-50 transition">

@@ -24,7 +24,16 @@ import { pct } from '../utils/helpers';
 import { POSTS } from "../data/posts";
 import { LINKS } from "../constants/config";
 
-export const PostDetail = ({ post, onBack, progress, onToggle, onReset, emergencyMode, setEmergencyMode }) => {
+export const PostDetail = ({
+  post,
+  onBack,
+  progress,
+  onToggle,
+  onReset,
+  emergencyMode,
+  setEmergencyMode,
+  onNavigateHome,
+}) => {
   const total = post.steps.length;
   const done = post.steps.reduce((acc, _, i) => acc + (progress[`${post.slug}-${i}`] ? 1 : 0), 0);
   const progressPercent = pct(done, total);
@@ -53,7 +62,14 @@ export const PostDetail = ({ post, onBack, progress, onToggle, onReset, emergenc
 
   return (
     <div className="min-h-screen bg-slate-50" id={`post-${post.slug}`}>
-      <Header emergencyMode={emergencyMode} setEmergencyMode={setEmergencyMode} isPostDetail={true} />
+      <Header
+        emergencyMode={emergencyMode}
+        setEmergencyMode={setEmergencyMode}
+        isPostDetail={true}
+        onNavigateHome={onNavigateHome}
+        showBack
+        onBack={onBack}
+      />
 
       {/* Floating controls */}
       <div className="glass-card sticky top-[72px] z-50 px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between border-b border-white/20 gap-2">

@@ -90,6 +90,7 @@ export default function App() {
   const handleShowPosts = () => {
     setActiveSlug(null);
     setView("posts");
+    setEmergencyMode(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -117,6 +118,7 @@ export default function App() {
               onReset={() => resetPost(activePost.slug)}
               emergencyMode={emergencyMode}
               setEmergencyMode={setEmergencyMode}
+              onNavigateHome={handleShowPosts}
             />
             <Footer
               variant="detail"
@@ -128,7 +130,14 @@ export default function App() {
           </>
         ) : (
           <>
-            <Header emergencyMode={emergencyMode} setEmergencyMode={setEmergencyMode} />
+            <Header
+              emergencyMode={emergencyMode}
+              setEmergencyMode={setEmergencyMode}
+              onNavigateHome={handleShowPosts}
+              showBack={view === "library"}
+              onBack={view === "library" ? handleShowPosts : undefined}
+              backLabel="Back to guides"
+            />
             <Hero
               view={view}
               setView={setView}
@@ -176,7 +185,11 @@ export default function App() {
                   )}
                 </>
               ) : (
-                <Library resources={RESOURCES} searchTerm={searchTerm} />
+                <Library
+                  resources={RESOURCES}
+                  searchTerm={searchTerm}
+                  onBack={handleShowPosts}
+                />
               )}
             </main>
             <Footer

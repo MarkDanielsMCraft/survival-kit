@@ -113,6 +113,72 @@ export const styles = `
     box-shadow: none;
   }
 
+  .liquid-glass {
+    background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(246,248,255,0.65));
+    border-color: rgba(255,255,255,0.4);
+    box-shadow: 0 16px 32px -24px rgba(15, 23, 42, 0.35);
+  }
+
+  .liquid-glass-emergency {
+    position: relative;
+    background: linear-gradient(120deg, rgba(220, 38, 38, 0.88), rgba(190, 18, 60, 0.78));
+    padding: 1px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 22px;
+  }
+
+  .liquid-glass-emergency::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(248, 113, 113, 0.15), rgba(244, 63, 94, 0.05));
+    pointer-events: none;
+  }
+
+  .liquid-glass-emergency > * {
+    position: relative;
+    border-radius: 18px;
+    background: rgba(248, 113, 113, 0.16);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .liquid-glass-tile {
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: linear-gradient(140deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+    padding: 16px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .liquid-glass-tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 32px -20px rgba(15,23,42,0.4);
+  }
+
+  .liquid-glass-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.82), rgba(226,232,240,0.55));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .emergency-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 800;
+    color: #dc2626;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 12px 24px -12px rgba(248,113,113,0.6);
+  }
+
   @keyframes gradient-animation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
