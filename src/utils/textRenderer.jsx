@@ -17,7 +17,13 @@ export const renderRichText = (text, keyPrefix) => {
       // Bold link
       if (isSafeUrl(match[2])) {
         parts.push(
-          <a key={`${keyPrefix}-${match.index}`} href={match[2]} target="_blank" rel="noopener noreferrer">
+          <a
+            key={`${keyPrefix}-${match.index}`}
+            href={match[2]}
+            className="rich-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <strong>{match[1]}</strong>
           </a>
         );
@@ -28,7 +34,13 @@ export const renderRichText = (text, keyPrefix) => {
       // Link
       if (isSafeUrl(match[4])) {
         parts.push(
-          <a key={`${keyPrefix}-${match.index}`} href={match[4]} target="_blank" rel="noopener noreferrer">
+          <a
+            key={`${keyPrefix}-${match.index}`}
+            href={match[4]}
+            className="rich-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {match[3]}
           </a>
         );

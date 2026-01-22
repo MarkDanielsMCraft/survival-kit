@@ -358,7 +358,7 @@ export const POSTS = [
       { type: "h2", text: "1. Finding a Place: WG Gesucht & ImmobilienScout24" },
       {
         type: "p",
-        text: "Finding housing in Germany is competitive. You need to act fast and know the platforms. **WG-Gesucht.de** is THE platform for shared flats (WGs) and student housing. 'WG' means **Wohngemeinschaft** (shared living community). It's how most young people in Germany live—usually 3-4 people sharing an apartment, each with their own room but shared kitchen and bathroom."
+        text: "Finding housing in Germany is competitive. You need to act fast and know the platforms. **[WG-Gesucht.de](https://www.wg-gesucht.de/)** is THE platform for shared flats (WGs) and student housing. 'WG' means **Wohngemeinschaft** (shared living community). It's how most young people in Germany live—usually 3-4 people sharing an apartment, each with their own room but shared kitchen and bathroom."
       },
       {
         type: "p",
@@ -592,7 +592,7 @@ export const POSTS = [
       { type: "h2", text: "2. Contract Check" },
       {
         type: "p",
-        text: "You're an employee, not just a trainee. Your contract matters. If you don't understand something or feel it's unfair, get advice. Use **Faire Integration**—they offer free counseling for refugees and migrants about worker rights. They can review your contract and tell you if it's legal."
+        text: "You're an employee, not just a trainee. Your contract matters. If you don't understand something or feel it's unfair, get advice. Use **[Faire Integration](https://www.faire-integration.de/)**—they offer free counseling for refugees and migrants about worker rights. They can review your contract and tell you if it's legal."
       },
       { type: "h2", text: "3. Your Legal Rights" },
       {
@@ -679,11 +679,11 @@ export const POSTS = [
       },
       {
         type: "p",
-        text: "**Ipso Care (The Best Option):** This organization specializes in helping people who have moved cultures. They offer **free**, video-based counseling in many languages (Arabic, Farsi, Ukrainian, Russian, French, English, etc.). You speak to counselors who understand your cultural background. You can book an appointment anonymously on their website. I have linked it below."
+        text: "**[Ipso Care](https://ipso-care.com/) (The Best Option):** This organization specializes in helping people who have moved cultures. They offer **free**, video-based counseling in many languages (Arabic, Farsi, Ukrainian, Russian, French, English, etc.). You speak to counselors who understand your cultural background. You can book an appointment anonymously on their website. I have linked it below."
       },
       {
         type: "p",
-        text: "**TelefonSeelsorge (Crisis Line):** If you are in a crisis at 3:00 AM and have nobody to talk to, you can call **0800 111 0 111** or **0800 111 0 222**. It is free, available 24/7, and completely anonymous. They also offer chat support online if you prefer typing."
+        text: "**[TelefonSeelsorge](https://www.telefonseelsorge.de/) (Crisis Line):** If you are in a crisis at 3:00 AM and have nobody to talk to, you can call **0800 111 0 111** or **0800 111 0 222**. It is free, available 24/7, and completely anonymous. They also offer chat support online if you prefer typing."
       }
     ],
     goldenRule: "Do not isolate yourself. Speak early if you feel unwell.",
@@ -739,26 +739,26 @@ export const POSTS = [
       { type: "h2", text: "1. The Supermarket Hierarchy: Which One to Choose" },
       {
         type: "p",
-        text: "**Cheapest (Budget Options):** **Aldi** and **Lidl** are your best friends. Both have nearly identical prices. Average basket: €30-40/week for one person. Everything you need is there, and their own brands are high quality. Go here first."
+        text: "**Cheapest (Budget Options):** **[Aldi](https://www.aldi.de/)** and **[Lidl](https://www.lidl.de/)** are your best friends. Both have nearly identical prices. Average basket: €30-40/week for one person. Everything you need is there, and their own brands are high quality. Go here first."
       },
       {
         type: "ul",
         items: [
-          "**Aldi:** Often slightly cheaper on basics, no-frills layout, limited selection but enough",
-          "**Lidl:** Slightly better variety, often has weekly specials. Both have weekly offers on different products—check their apps.",
-          "**Rewe/Penny:** Mid-range prices. Go here if you need something specific Aldi doesn't have.",
-          "**Edeka:** Most expensive chain, but has the best fruit/vegetables and local brands. Use only for specific items.",
-          "**Bio Company/Biomarkt:** Organic only, most expensive. Skip this unless you have specific needs."
+          "**[Aldi](https://www.aldi.de/):** Often slightly cheaper on basics, no-frills layout, limited selection but enough",
+          "**[Lidl](https://www.lidl.de/):** Slightly better variety, often has weekly specials. Both have weekly offers on different products—check their apps.",
+          "**[Rewe](https://www.rewe.de/)/[Penny](https://www.penny.de/):** Mid-range prices. Go here if you need something specific Aldi doesn't have.",
+          "**[Edeka](https://www.edeka.de/):** Most expensive chain, but has the best fruit/vegetables and local brands. Use only for specific items.",
+          "**[Bio Company](https://www.biocompany.de/) / Biomarkt:** Organic only, most expensive. Skip this unless you have specific needs."
         ]
       },
       { type: "h2", text: "2. Shopping Strategy: Budget to Premium" },
       {
         type: "p",
-        text: "**€40/week budget (Bare minimum):** Rice, pasta, canned beans, potatoes, eggs, cheap bread, canned tomatoes, seasonal vegetables (carrots, cabbage). Aldi/Lidl only."
+        text: "**€40/week budget (Bare minimum):** Rice, pasta, canned beans, potatoes, eggs, cheap bread, canned tomatoes, seasonal vegetables (carrots, cabbage). [Aldi](https://www.aldi.de/)/[Lidl](https://www.lidl.de/) only."
       },
       {
         type: "p",
-        text: "**€60/week budget (Comfortable):** Add: chicken thighs (cheap protein), fresh fruit (apples, bananas), cheese, yogurt, oats. Mix Aldi + occasional Rewe."
+        text: "**€60/week budget (Comfortable):** Add: chicken thighs (cheap protein), fresh fruit (apples, bananas), cheese, yogurt, oats. Mix [Aldi](https://www.aldi.de/) + occasional [Rewe](https://www.rewe.de/)."
       },
       {
         type: "p",
@@ -771,7 +771,7 @@ export const POSTS = [
       },
       {
         type: "p",
-        text: "**Aldi/Lidl Apps:** Check weekly offers before you shop. Sometimes there are deep discounts (€0.99 for butter, etc.). Sign up for push notifications."
+        text: "**Aldi/Lidl Apps:** Check weekly offers before you shop. Sometimes there are deep discounts (€0.99 for butter, etc.). Sign up for push notifications. [Aldi App](https://www.aldi-nord.de/services/apps/aldi-app.html) and [Lidl Plus](https://www.lidl.de/c/lidl-plus/s10008772) have the current coupons."
       },
       {
         type: "p",
@@ -880,15 +880,15 @@ export const POSTS = [
       { type: "h2", text: "4. Free Learning Resources" },
       {
         type: "p",
-        text: "**DW Learn German:** Free courses from Deutsche Welle (Germany's international broadcaster). Videos with B1/B2 level content."
+        text: "**[DW Learn German](https://learngerman.dw.com/en/overview):** Free courses from Deutsche Welle (Germany's international broadcaster). Videos with B1/B2 level content."
       },
       {
         type: "p",
-        text: "**Easy German (YouTube):** Authentic interviews with real Germans. Start with B1/B2 videos. Subtitles in German + English."
+        text: "**[Easy German (YouTube)](https://www.youtube.com/@EasyGerman):** Authentic interviews with real Germans. Start with B1/B2 videos. Subtitles in German + English."
       },
       {
         type: "p",
-        text: "**Slow German (Podcast):** 5-minute podcasts read slowly. Topics from culture to current events. Perfect for listening practice."
+        text: "**[Slow German (Podcast)](https://www.slow-german.de/):** 5-minute podcasts read slowly. Topics from culture to current events. Perfect for listening practice."
       }
     ],
     goldenRule: "Ask questions at work instead of guessing. Germans respect curiosity. Master 50 field-specific terms first—grammar second.",
@@ -1054,26 +1054,26 @@ export const POSTS = [
       { type: "h2", text: "1. Clothes: Budget to Premium" },
       {
         type: "p",
-        text: "**Budget tier (€10-30):** **H&M**, **Primark** (if you find one—rare in Germany), **C&A**. Decent quality for the price. Good for basics."
+        text: "**Budget tier (€10-30):** **[H&M](https://www2.hm.com/de_de/index.html)**, **[Primark](https://www.primark.com/de)** (if you find one—rare in Germany), **[C&A](https://www.c-and-a.com/de/de/shop)**. Decent quality for the price. Good for basics."
       },
       {
         type: "ul",
         items: [
-          "**Mid-range (€20-60):** **Zalando** (online, free returns), **Urban Outfitters**, **Zara**. Trendy, better quality.",
-          "**Outlet:** **Outletcity** in Metzingen or Wertheim. 30-70% off major brands. Worth a weekend trip if you have time.",
+          "**Mid-range (€20-60):** **[Zalando](https://www.zalando.de/)** (online, free returns), **[Urban Outfitters](https://www.urbanoutfitters.com/de-de)**, **[Zara](https://www.zara.com/de/)**. Trendy, better quality.",
+          "**Outlet:** **[Outletcity Metzingen](https://www.outletcity.com/en/metzingen/)** or **[Wertheim Village](https://www.wertheimvillage.com/en/home/)**. 30-70% off major brands. Worth a weekend trip if you have time.",
           "**Thrift/Second-hand:** **Vintage stores** in most cities. German quality clothing lasts forever—used is smart.",
-          "**Online:** **Vinted** (German app), **eBay Kleinanzeigen** (free classifieds). Buy used, save 50-70%."
+          "**Online:** **[Vinted](https://www.vinted.de/)** (German app), **[eBay Kleinanzeigen](https://www.kleinanzeigen.de/)** (free classifieds). Buy used, save 50-70%."
         ]
       },
       { type: "h2", text: "2. Toiletries & Personal Care" },
       {
         type: "p",
-        text: "**Cheapest:** **dm** and **Rossmann** (drugstores, not just pharmacy). Own brands are excellent quality and cost €2-5. Found everywhere."
+        text: "**Cheapest:** **[dm](https://www.dm.de/)** and **[Rossmann](https://www.rossmann.de/)** (drugstores, not just pharmacy). Own brands are excellent quality and cost €2-5. Found everywhere."
       },
       {
         type: "ul",
         items: [
-          "**Where:** Any city center has at least one. Both have loyalty programs (get a card, earn points).",
+          "**Where:** Any city center has at least one. Both have loyalty programs (get a card, earn points) via the [dm App](https://www.dm.de/services/apps) or [Rossmann App](https://www.rossmann.de/de/unternehmen/services/app).",
           "**What to buy there:** Shampoo, deodorant, skin care, toothbrush, razors. All brand names available too.",
           "**If you need specific items:** Check prices on **Flixbus, Amazon, or local supermarkets** before buying. dm/Rossmann prices vary.",
           "**Avoid:** Airport shops, train station shops (50% markup). Buy before travel."
@@ -1082,38 +1082,38 @@ export const POSTS = [
       { type: "h2", text: "3. Electronics & Tech" },
       {
         type: "p",
-        text: "**Where to buy:** **MediaMarkt**, **Saturn**, or **Amazon.de**. All have identical prices usually. Amazon offers free returns."
+        text: "**Where to buy:** **[MediaMarkt](https://www.mediamarkt.de/)**, **[Saturn](https://www.saturn.de/)**, or **[Amazon.de](https://www.amazon.de/)**. All have identical prices usually. Amazon offers free returns."
       },
       {
         type: "ul",
         items: [
           "**Best for:** New laptops, phones, headphones. Warranty is automatic (usually 2 years by law).",
           "**Avoid:** Buying electronics in the first 2 weeks after launch (prices drop fast).",
-          "**For older/budget electronics:** Check **eBay Kleinanzeigen**. Students often sell working laptops for €300-600.",
+          "**For older/budget electronics:** Check **[eBay Kleinanzeigen](https://www.kleinanzeigen.de/)**. Students often sell working laptops for €300-600.",
           "**Phone plans:** Buy SIM at Aldi/Lidl/Saturn, not at carrier stores (avoid contracts)."
         ]
       },
       { type: "h2", text: "4. Furniture & Household Items" },
       {
         type: "p",
-        text: "**New:** **IKEA** (obvious choice, good value), **Baumarkt chains** (OBI, Bauhaus—for kitchen/tools). Prices are fair."
+        text: "**New:** **[IKEA](https://www.ikea.com/de/de/)** (obvious choice, good value), **Baumarkt chains** ([OBI](https://www.obi.de/), [Bauhaus](https://www.bauhaus.info/) for kitchen/tools). Prices are fair."
       },
       {
         type: "p",
-        text: "**Used (money-saving hack):** **Kleinanzeigen.de** 'Zu verschenken' (free), **eBay**, **Vinted**. Germans throw out quality stuff. Claim it before it's gone."
+        text: "**Used (money-saving hack):** **[Kleinanzeigen.de](https://www.kleinanzeigen.de/)** 'Zu verschenken' (free), **[eBay](https://www.ebay.de/)**, **[Vinted](https://www.vinted.de/)**. Germans throw out quality stuff. Claim it before it's gone."
       },
       { type: "h2", text: "5. Books & Supplies for Ausbildung" },
       {
         type: "p",
-        text: "**New textbooks:** **Thieme Online Store** (medical books), **Hugendubel** (general bookstore chain)."
+        text: "**New textbooks:** **[Thieme Online Store](https://shop.thieme.de/)** (medical books), **[Hugendubel](https://www.hugendubel.de/)** (general bookstore chain)."
       },
       {
         type: "p",
-        text: "**Used textbooks:** **Kleinanzeigen.de**. Search '[Your textbook name]'. Saves €30-80 per book. Previous students sell them constantly."
+        text: "**Used textbooks:** **[Kleinanzeigen.de](https://www.kleinanzeigen.de/)**. Search '[Your textbook name]'. Saves €30-80 per book. Previous students sell them constantly."
       },
       {
         type: "p",
-        text: "**Office supplies:** **Staples**, **Müller** (drugstore chain, has office supplies), or supermarkets. Very cheap."
+        text: "**Office supplies:** **[Staples](https://www.staples.de/)**, **[Müller](https://www.mueller.de/)** (drugstore chain, has office supplies), or supermarkets. Very cheap."
       }
     ],
     goldenRule: "Buy used furniture from Kleinanzeigen. Toiletries from dm/Rossmann. Clothes from Zalando (free returns).",
@@ -1603,7 +1603,7 @@ export const POSTS = [
       { type: "h2", text: "1. Types of Accommodation Available" },
       {
         type: "p",
-        text: "You have several options. Each has pros and cons. Choose based on your budget, comfort level, and what your employer offers."
+        text: "You have several options. Each has pros and cons. Choose based on your budget, comfort level, and what your employer offers. Compare offers from your hospital (Charité, Munich Klinik, etc.)—many list trainee housing on their websites."
       },
       {
         type: "ul",
@@ -1652,9 +1652,9 @@ export const POSTS = [
       {
         type: "ul",
         items: [
-          "**WG Gesucht (www.wg-gesucht.de):** THE platform for shared apartments. Create account, filter by city and price range, apply to listings. Write professional, concise messages. Most rooms go within 24-48 hours.",
-          "**Kleinanzeigen (www.kleinanzeigen.de):** For private apartments and also WG rooms. Less curated than WG Gesucht, so scams exist. NEVER transfer money before seeing apartment in person.",
-          "**ImmobilienScout24 (www.immobilienscout24.de):** For larger, more 'official' listings. Good for private apartments, often more expensive.",
+          "**[WG Gesucht](https://www.wg-gesucht.de/):** THE platform for shared apartments. Create account, filter by city and price range, apply to listings. Write professional, concise messages. Most rooms go within 24-48 hours.",
+          "**[Kleinanzeigen](https://www.kleinanzeigen.de/):** For private apartments and also WG rooms. Less curated than WG Gesucht, so scams exist. NEVER transfer money before seeing apartment in person.",
+          "**[ImmobilienScout24](https://www.immobilienscout24.de/):** For larger, more 'official' listings. Good for private apartments, often more expensive.",
           "**University Housing Office:** Contact your nursing school's international office. Many schools have lists of recommended housing or partnerships with landlords.",
           "**Facebook Groups:** Search '[Your City Name] + Wohnung suchen' or '[Your City] + housing'. Many locals post here, sometimes bypassing platforms.",
           "**Direct Contact:** Ask your employer (hospital, care facility) if they have relationships with landlords or housing programs for trainees."
@@ -1712,7 +1712,7 @@ export const POSTS = [
         type: "ul",
         items: [
           "**Shift Work Tip:** If you work nights, your roommates (in a WG) need to respect that you sleep during the day. Discuss this upfront. A quiet WG is essential.",
-          "**Employer Housing Programs:** Many large hospital groups (Charité in Berlin, Munich Clinics, etc.) offer subsidized housing for trainees. Ask HR specifically: 'Gibt es ein Wohnungsprogramm für Auszubildende?' (Is there a housing program for trainees?)",
+          "**Employer Housing Programs:** Many large hospital groups (Charité in Berlin, [Munich Clinic](https://www.muenchen-klinik.de/), [Helios](https://www.helios-gesundheit.de/)) offer subsidized housing for trainees. Ask HR specifically: 'Gibt es ein Wohnungsprogramm für Auszubildende?' (Is there a housing program for trainees?)",
           "**Proximity to Training Site:** Don't choose based purely on price. Consider commute time. 45+ minutes each way will exhaust you during 12-hour shifts.",
           "**Emergency Backup:** Tell your landlord/roommates about your shift schedule. In emergencies (illness, injury), you need support nearby."
         ]

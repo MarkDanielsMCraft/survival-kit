@@ -86,17 +86,25 @@ export const styles = `
 
   .prose li:last-child { margin-bottom: 0; }
 
-  .prose a {
-    color: #1d4ed8;
+  .prose a,
+  .rich-link {
+    color: #0f766e;
     text-decoration: underline;
-    text-decoration-color: rgba(29, 78, 216, 0.35);
+    text-decoration-color: rgba(14, 165, 233, 0.45);
     text-underline-offset: 3px;
     font-weight: 600;
+    background-image: linear-gradient(120deg, rgba(14, 165, 233, 0.15), rgba(16, 185, 129, 0.15));
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 100%;
+    transition: color 150ms ease, background-size 180ms ease, text-decoration-color 150ms ease;
   }
 
-  .prose a:hover {
-    color: #1e40af;
-    text-decoration-color: rgba(30, 64, 175, 0.5);
+  .prose a:hover,
+  .rich-link:hover {
+    color: #0ea5e9;
+    text-decoration-color: rgba(16, 185, 129, 0.65);
+    background-size: 100% 0.35em;
   }
 
   .prose strong {
