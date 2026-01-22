@@ -37,18 +37,22 @@ export default function App() {
       const hash = window.location.hash;
       if (hash.startsWith('#/guide/')) {
         const slug = hash.replace('#/guide/', '');
-        if (POSTS.some(p => p.slug === slug)) {
+        if (POSTS.some((p) => p.slug === slug)) {
           setActiveSlug(slug);
           setView("posts");
         }
-      } else if (hash === '#/library') {
+        return;
+      }
+
+      if (hash === '#/library') {
         setActiveSlug(null);
         setView("library");
-      } else {
-        // Default to home/posts if no specific hash
-        if (activeSlug) setActiveSlug(null);
-        if (view === "library") setView("posts");
+        return;
       }
+
+      // Default to home/posts if no specific hash
+      setActiveSlug(null);
+      setView("posts");
     };
 
     // Check on initial load

@@ -17,7 +17,6 @@ import { TableOfContents } from './TableOfContents';
 import { PostNavigation } from './PostNavigation';
 import { renderRichText } from '../utils/textRenderer';
 import { safeOpen } from '../utils/security';
-import { pct } from '../utils/helpers';
 import { POSTS } from "../data/posts";
 import { STAGE_STYLES } from "../constants/ui";
 import { SmartImage } from "./SmartImage";
@@ -25,7 +24,7 @@ import { SmartImage } from "./SmartImage";
 const stripText = (value) =>
   String(value || "")
     .replace(/\*\*([^*]+)\*\*/g, "$1")
-    .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
     .replace(/`([^`]+)`/g, "$1")
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
@@ -70,9 +69,6 @@ export const PostDetail = ({
   onNavigateHome,
   onOpenPost,
 }) => {
-  const total = post.steps.length;
-  const done = post.steps.reduce((acc, _, i) => acc + (progress[`${post.slug}-${i}`] ? 1 : 0), 0);
-  const progressPercent = pct(done, total);
   const [copied, setCopied] = useState(false);
   const [activeSectionId, setActiveSectionId] = useState(null);
   const [pageSearch, setPageSearch] = useState("");
