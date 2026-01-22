@@ -197,9 +197,9 @@ export const POSTS = [
       { title: "Integreat App (Local Info)", url: "https://integreat-app.de/en/", source: "tool" },
       { title: "DeepL Translator", url: "https://www.deepl.com/en/translator", source: "tool" },
     ],
-    downloads: [{ title: "Wohnungsgeberbestätigung Template (PDF)", url: "https://formular-service.augsburg.de/intelliform/forms/stadt_augsburg/extern/330/extern/330/meldewesen/wohnungsgeberbestaetigung/download;jsessionid=uZF3OT69kpWC24HWyAC_aL-HL-MeLo73RHTISBvd.IF0" }],
-    videos: [{ title: "How to buy a train ticket in Germany", url: "https://youtu.be/q1Qpa07wPb0?si=p_imqa6j9tq6Xz0z" }],
-    tags: ["arrival", "internet", "transport", "safety"],
+    downloads: [{ title: "Anmeldung Documents Checklist (PDF)", url: null }],
+    videos: [{ title: "How to fill out the Anmeldung Form", url: "https://youtu.be/1TuG6EzbVbE?si=exzIKp-pqleql-DE" }],
+    tags: ["arrival", "internet", "transport", "safety", "money", "banking"],
   },
 
   {
@@ -284,18 +284,7 @@ export const POSTS = [
           },
         ],
       },
-      {
-        title: "Book Anmeldung Appointment",
-        text: "Search 'Bürgeramt Termin [Your City]' online.",
-        action: "Book the earliest slot available.",
-        readMore: [
-          {
-            title: "Registration Guide (Handbook Germany)",
-            url: "https://handbookgermany.de/en/registration",
-            source: "ngo",
-          },
-        ],
-      },
+
       {
         title: "Health Insurance",
         url: "https://www.tk.de/en/health-insurance-in-germany/basic-information-german-health-system/german-health-insurance-system-2169412?tkcm=ab",
@@ -306,20 +295,12 @@ export const POSTS = [
             title: "Health Insurance Comparison",
             url: "https://www.check24.de/gesetzliche-krankenversicherung/",
             source: "tool",
+            tags: ["money", "banking", "revolut", "tax", "insurance"],
           },
         ],
       },
     ],
-    readMore: [
-      {
-        title: "Too Good To Go (Food App)",
-        url: "https://www.toogoodtogo.com/de/de",
-        source: "tool",
-      },
-    ],
-    downloads: [{ title: "Anmeldung Documents Checklist (PDF)", url: null }],
-    videos: [{ title: "How to fill out the Anmeldung Form", url: "https://youtu.be/1TuG6EzbVbE?si=exzIKp-pqleql-DE" }],
-    tags: ["money", "banking", "revolut", "tax", "insurance"],
+    
   },
 
   {
