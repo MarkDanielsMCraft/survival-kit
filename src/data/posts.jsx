@@ -329,6 +329,14 @@ export const POSTS = [
         ]
       },
       {
+        type: "h2",
+        text: "1.1 Digital Access & TAN Codes (Do NOT bin the letter)"
+      },
+      {
+        type: "p",
+        text: "German banks combine paper + app security. After you open an account, you get two things: a letter with a QR code (sometimes called an 'Aktivierungscode') and an app that generates TAN codes (one-time passwords). **Do not throw the letter away thinking it's junk mail.** You scan that QR in the bank's TAN app to activate transfers. If you lose or bin it, you wait for another letter and are locked out of online banking for days. Keep both: (1) the physical letter and (2) the TAN app on your phone."
+      },
+      {
         type: "p",
         text: "**My honest recommendation:** Open [Revolut](https://www.revolut.com/) first. Once you get to the website, enter your German phone number, download the app, login with your phone numer, enter your personal details including the address where you are currently living and finish a video verification using your passport. After verification, your account will be verified and you'll be able to use your account. You can choose to order for a physical Revolut card(it for free, only ) Use it to establish your financial presence in Germany. Give the IBAN to your employer and landlord(**if required**, never share your IBAN/bank details anyhow!). Once you have your registration paper (Anmeldung), open a [Sparkasse](https://www.sparkasse.de/) or [Volksbank](https://www.volksbank.de/) account if you want a physical bank for backup. But Revolut alone is perfectly sufficient."
       },
