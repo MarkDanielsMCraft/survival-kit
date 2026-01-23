@@ -100,7 +100,7 @@ export const POSTS = [
           "[DeepL](https://www.deepl.com/en/translator): This is NOT Google Translate. DeepL is specifically trained on German and produces natural translations. Point your phone camera at a German sign or menu, and DeepL will translate it instantly. Free version works offline after download. It's the perfect alternative to Google Translator for German.",
           "[DB Navigator (Deutsche Bahn)](https://www.bahn.de/service/mobile/db-navigator): This is the official German railway app. It shows you every bus, train, and metro option. It tells you which platform (Gleis) to go to, when the train departs, and if it's running late. You'll use this constantly. You can also buy tickets directly in the app. If this seems confusing, just use Google Maps for transport directions. Note that every city in Germany has its own local transport system (Stadtverkehr) integrated into DB Navigator, so you can use it for buses and metros as well. You can check which app is used withing your city at a later time though!",
           "[Integreat App](https://integreat-app.de/en/): This app provides localized information for newcomers in various German cities. It includes tips on registration, housing, healthcare, and cultural norms specific to your city. Download it and select your city for tailored advice.",
-          "[Buy the Deutschland ticket here]: From May 2023, Germany introduced the 'Deutschlandticket', a flat-rate monthly ticket for 63€(as of January 2026) that allows unlimited travel on all local and regional public transport across Germany. You can purchase this ticket [from here] (https://www.bahn.de/en/view/offers/railpasses/deutschland-ticket.shtml), the DB Navigator app, or at train stations. It's a cost-effective way to explore Germany by public transport."
+          "[Buy the Deutschland ticket here](https://www.bahn.de/en/view/offers/railpasses/deutschland-ticket.shtml): From May 2023, Germany introduced the 'Deutschlandticket', a flat-rate monthly ticket for 63€(as of January 2026) that allows unlimited travel on all local and regional public transport across Germany. You can purchase this ticket from here, the DB Navigator app, or at train stations. It's a cost-effective way to explore Germany by public transport."
         ]
       },
       { type: "h2", text: "3. Getting From Airport to City: Transport vs Taxi" },
@@ -243,7 +243,7 @@ export const POSTS = [
       },
       {
         type: "p",
-        text: "You can open a free Revolut account using this link: [Open Revolut Account](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect). Full transparency: this is a referral link (I might get a small bonus), but I genuinely recommend it because it solves the biggest headache for newcomers. You only need your German phone number, address(where you are currently living), and passport to get started. You'll need to do a video ID verification as well. After verifying your account, you can order for a phyical bank card(it's free), you only pay around 7€ for shipping."
+        text: "You can open a free Revolut account using this link: [Open Revolut Account](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect)."
       },
       
       { type: "h2", text: "3. Health Insurance (Krankenkasse): It's Mandatory" },
