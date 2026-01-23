@@ -45,14 +45,49 @@ survival-kit/
 │   ├── constants/      # stage styles, config, asset references
 │   ├── utils/          # text renderer, helpers, security
 │   ├── styles/         # global styles injection
+# 🇩🇪 Survival Kit: Move to Germany with Confidence
+
+[Live Demo](https://markdanielsmcraft.github.io/survival-kit/) · React 19 · Vite 7 · Tailwind 3
+
+> Data-first, verified guides for international students, scholars, and trainees building a life in Germany.
+
+## Overview
+- 17 structured posts with stage-specific styling and matched photography
+- Resource library with source badges (official, NGO, tool, learning, referral) and search
+- Interactive checklists with localStorage persistence; emergency shortcuts (112/110/116117) stay in the header
+- Mobile-first layout; hero overlays tuned so background images remain visible
+- GitHub Pages hosting (base `/survival-kit/`)
+
+**Verification date:** January 23, 2026 — see [CURRENT_AS_OF_JAN19_2026.md](./CURRENT_AS_OF_JAN19_2026.md).
+
+## Support the Project
+If this guide saves you time, fines, or stress, please fuel the work:
+
+**Buy Me a Coffee:** https://www.buymeacoffee.com/MarkDanielsMCraft
+
+Every coffee pays for fact-checking, new city-specific tips, and keeping the app free. The in-app footer also links to this support page (`LINKS.buyMeACoffee`).
+
+## Data-First Content Model
+- Posts: `src/data/posts.jsx` — structured blocks (`type: "p" | "h2" | "ul"`, with `items` for lists), per-post background images, `verified` date, `steps`, `readMore`, `downloads`, `videos`, `tags`.
+- Resources: `src/data/resources.js` — categories must match `RESOURCE_CATEGORIES` in `src/constants/config.js`.
+- Styling: stage tokens in `src/constants/ui.js`; global styles in `src/styles/globalStyles.js`.
+- Safety: external URLs pass through `isSafeUrl()` / `safeOpen()`.
+
+## Project Structure
+```
+survival-kit/
+├── src/
+│   ├── data/           # posts.jsx, resources.js
+│   ├── components/     # cards, detail view, filters, navigation
+│   ├── constants/      # stage styles, config, asset references
+│   ├── utils/          # text renderer, helpers, security
+│   ├── styles/         # global styles injection
 │   ├── App.jsx         # app shell, view toggles, filters
 │   └── main.jsx        # entry point
 ├── public/
 ├── vite.config.js      # base: /survival-kit/
 └── package.json
 ```
-
----
 
 ## Getting Started
 ```
@@ -74,70 +109,27 @@ npm run preview
 ```
 Open http://localhost:5173.
 
----
-
 ## Deployment (GitHub Pages)
 - Base path is `/survival-kit/` (see `vite.config.js`).
 - Deploy by pushing to `main`; GitHub Actions builds and publishes Pages automatically.
 - Local build: `npm run build` outputs to `dist/`.
 
----
-
 ## Authoring Guidelines
 - Keep posts beginner-friendly; define German terms inline (e.g., Anmeldung = address registration).
 - Every post needs `verified: "YYYY-MM-DD"` when content changes.
 - Use official/NGO sources first; ensure URLs are http/https.
-- Maintain content block schema and keep background images assigned and imported at the top of `posts.jsx`.
-
----
+- Maintain the content block schema and keep background images imported and assigned per post in `posts.jsx`.
 
 ## Quality Checks
 - `npm run lint`
 - Visual sanity check at 320–375px widths for card spacing, hero contrast, and tap targets.
 
----
-
 ## Contributing
 - Fork, branch, commit, and open a PR with a clear description.
 - Issues and feature ideas are welcome in the GitHub tracker.
 
----
-
 ## License
 MIT. See [LICENSE](LICENSE).
 
-*Last verified: January 18, 2026*
-
----
-
-## 🎓 Who is This For?
-
-This guide is designed for:
-
-- 🏥 **Nursing scholars & healthcare professionals** (Auszubildende, Pflegefachpersonen)
-- 🎓 **International students** in Germany (all fields of study)
-- 💼 **Working professionals** relocating to Germany
-- 🌍 **Anyone** seeking practical advice for navigating German bureaucracy and culture
-- 🤝 **Expats** wanting to understand German workplace culture and society
-
----
-
-## 📚 Additional Resources
-
-- [Official Handbook Germany](https://handbookgermany.de)
-- [Integreat App](https://integreat.app) - Local information in your language
-- [BAMF (Federal Office for Migration and Refugees)](https://www.bamf.bund.de)
-- [DB Navigator](https://www.bahn.de/service/mobile/db-navigator) - Train tickets
-
----
 
 ## 🙏 Acknowledgments
-
-Made with ❤️ for future colleagues navigating life in Germany.
-
-Thank you to the nursing community, international students, and mentors who shaped this guide through their experiences and feedback.
-
----
-
-**Ready to start your German adventure?** [Visit the live guide →](https://markdanielsmcraft.github.io/survival-kit/)
-
