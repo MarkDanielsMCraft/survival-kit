@@ -1018,6 +1018,29 @@ export const POSTS = [
   ],
   goldenRule:
     "If you feel lost, go back to vhs Pflege, then Flexikon, then hygiene guidelines; repeating basics is how confidence grows.",
+  steps: [
+    {
+      title: "Start with vhs Pflege app",
+      text:
+        "Install the free vhs Pflege app and finish at least one module this week so you learn real documentation language and phrases you will need on the ward.",
+      action: "Download vhs Pflege and complete 1 module."
+    },
+    {
+      title: "Save the exam prep PDFs",
+      text:
+        "Download the telc B1–B2 Pflege tip sheet and Übungstest, print or save them, and skim the structure so you know exactly how you will be tested.",
+      action: "Download telc prep PDFs."
+    }
+  ],
+  readMore: [
+    { title: "BAMF Pflege digital tools (PDF)", url: "https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Lehrkraefte/digitale-deutschlernangebote-arbeitsmarktorientierung-pflege.pdf", source: "official" },
+    { title: "vhs Pflege App", url: "https://slb.vhs-lernportal.de/wws/app-pflege.php", source: "official" },
+    { title: "telc B1–B2 Pflege Tipps (PDF)", url: "https://www.telc.net/fileadmin/user_upload/pdfs/Handbuch_und_Tipps_fuer_Pruefungsvorbereitung/Deutsch_b1_b2_pflege_tipps_zur_Pruefungsvorbereitung.pdf", source: "official" }
+  ],
+  downloads: [],
+  videos: [
+    { title: "PflegeTube (YouTube)", url: "https://youtube.com/@pflegetube?si=v9kLLMs6n1Pa9hQe" }
+  ],
   tags: ["nursing", "pflege", "learning", "free", "german", "documentation", "hygiene"]
 },
 
