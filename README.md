@@ -4,7 +4,7 @@
 
 Data-first, verified guides for international students, scholars, and trainees building a life in Germany. PDFs are available via the in-app footer (Download guides).
 
-**Verification date:** January 23, 2026 — see [CURRENT_AS_OF_JAN19_2026.md](CURRENT_AS_OF_JAN19_2026.md).
+**Verification date:** January 27, 2026 — see [CURRENT_AS_OF_JAN19_2026.md](CURRENT_AS_OF_JAN19_2026.md).
 
 ## Overview
 - 17 structured guides with stage-specific styling, photography, and checklists (localStorage persistence)
