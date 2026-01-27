@@ -71,7 +71,7 @@ export const POSTS = [
     color: "from-purple-600 to-indigo-600",
     shadow: "shadow-purple-500/20",
     accent: "text-purple-600",
-    verified: "2026-01-23",
+    verified: "2026-01-27",
       backgroundImage: img7,
     summary: "Set your expectations: direct communication, quiet Sundays, card vs. cash, and the weather curveballs.",
     vibeCheck: "Germany rewards preparation. A few mindset shifts upfront will save you awkward moments and late fees.",
@@ -118,6 +118,280 @@ export const POSTS = [
   },
 
   {
+    slug: "free-learning-resources-non-nursing",
+    title: "Professional Development: Field-Specific Learning (Non-Nursing)",
+    subtitle: "Free German + free vocational/IT/business learning for international students and refugees",
+    stage: "Career",
+    readTime: "14 min",
+    icon: <Briefcase size={24} />,
+    color: "from-sky-500 to-blue-600",
+    shadow: "shadow-blue-500/20",
+    accent: "text-blue-600",
+    backgroundImage: img11,
+    verified: "2026-01-27",
+    summary:
+      "A massive free library for non-nursing scholars: workplace German, job communication, and free online courses for IT, business, and career basics.",
+    vibeCheck:
+      "Germany rewards skills that are proven, not promised, and you can build those skills for free if you use structured platforms instead of random videos.",
+    content: [
+      {
+        type: "p",
+        text:
+          "Not everyone is in Pflege, but everyone still needs the same foundation to survive and grow in Germany: (1) German for work situations, (2) basic career knowledge like applications and workplace communication, and (3) at least one strong skill track such as IT, data, business, logistics, office administration, crafts, or hospitality. The good news is that Germany and major public platforms publish a huge amount of free learning material, but the bad news is that most newcomers never find it, so this tile is your shortcut and your library."
+      },
+
+      { type: "h2", text: "1) Workplace German (the most useful category)" },
+      {
+        type: "p",
+        text:
+          "If you want German that directly improves your daily life in Ausbildung, university, or any job, use workplace-oriented platforms, because they train the exact situations that create stress: phone calls, emails, teamwork, appointments, feedback, and conflicts, meaning you learn German that you can use immediately instead of only textbook German."
+      },
+      {
+        type: "ul",
+        items: [
+          "[Goethe – Deutsch am Arbeitsplatz](https://www.goethe.de/de/spr/ueb/daa.html): A structured and very practical set of workplace German materials, designed to help you communicate at work without sounding unclear or “too casual,” especially in emails, meetings, and everyday workplace situations.",
+          "[Goethe – Arbeit & Beruf (overview)](https://www.goethe.de/de/spr/ueb/aub.html): A clear entry point into job-related German where you can practice vocabulary and phrases connected to professions, work routines, and professional communication.",
+          "[Goethe – Deutsch am Arbeitsplatz: Allgemeine Übungen](https://www.goethe.de/de/spr/ueb/daa/all.html): A large set of general workplace exercises that are useful for almost every job and Ausbildung, especially when you struggle with polite phrases, instructions, and typical work conversations.",
+          "[Goethe – Deutsch im Büro](https://www.goethe.de/de/spr/ueb/daa/brf/dib/ib0/ib1.html): Focused practice for office German like emails, phone calls, appointments, and short formal messages, which is extremely useful for students, working students, and office-based Ausbildung programs.",
+          "[Deutsch am Arbeitsplatz – Arbeitsplatzbezogene Materialien](https://www.deutsch-am-arbeitsplatz.de/fuer-den-unterricht/arbeitsplatzbezogene-materialien): A big hub of workplace-specific learning material where you can practice German in realistic scenarios instead of only learning isolated grammar rules.",
+          "[Deutsch am Arbeitsplatz – Materialsammlung](https://www.deutsch-am-arbeitsplatz.de/fuer-die-kursplanung/materialsammlung): A browsable collection where you can pick materials by topic and job context, which helps you avoid wasting time on content that does not match your field.",
+          "[Deutsch am Arbeitsplatz – Tools für Lernende](https://www.deutsch-am-arbeitsplatz.de/aktuelles/digitaleslernen/weitere-tools-fuer-lernende): A practical list of extra tools you can use at home for self-study, especially helpful when you cannot afford paid courses."
+        ]
+      },
+
+      { type: "h2", text: "2) Official curated lists (safe, updated, government-backed)" },
+      {
+        type: "p",
+        text:
+          "These lists are gold because they are curated by official institutions, meaning the links are usually reliable and legal, and you can treat them like a trusted menu where you choose what fits your level instead of relying on random recommendations."
+      },
+      {
+        type: "ul",
+        items: [
+          "[BAMF – Kostenlose Online-Sprachangebote (PDF)](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/online-sprachangebote.pdf?__blob=publicationFile&v=3): A government PDF listing free online German learning offers, useful when you want a quick list of safe tools without scams.",
+          "[BAMF – Kostenlose Online-Sprachangebote (page)](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/online-sprachangebote.html?nn=282388): The official web page where the BAMF PDF is hosted, useful for checking you have the correct official source.",
+          "[BAMF – Digitale Deutschlernangebote mit Arbeitsmarktorientierung (PDF)](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Lehrkraefte/digitale-deutschlernangebote-arbeitsmarktorientierung.pdf?__blob=publicationFile&v=3): A more job-focused BAMF list that helps you learn German with work situations in mind, which is often what refugees and trainees need most.",
+          "[Agentur für Arbeit – Online Sprachlernangebote Deutsch (PDF)](https://www.arbeitsagentur.de/vor-ort/datei/linksammlung-online-sprachlernangebote-deutsch_ba232254.pdf): A reliable list from the Federal Employment Agency, useful because these are tools job centers often recommend.",
+          "[KAUSA – Linkliste Deutsch lernen (PDF)](https://www.bildungsketten.de/bildungsketten/shareddocs/arbeitsmaterialien/de/links-kausa-deutsch-lernen.pdf?__blob=publicationFile&v=8): A curated list for migrants and refugees focusing on German learning and integration into Ausbildung and work.",
+          "[KAUSA – Linkliste Einstieg in die Ausbildung für Migrant*innen (PDF)](https://www.bildungsketten.de/bildungsketten/shareddocs/arbeitsmaterialien/de/links-kausa-ausbildung-fuer-migranten.pdf?__blob=publicationFile&v=4): A curated list that supports your path into Ausbildung with practical info and resources.",
+          "[KAUSA Bayern – Toolbox Links](https://www.kausa-bayern.de/infothek/links-toolbox): A “toolbox” page that points you to language and Ausbildung-related resources in a structured way."
+        ]
+      },
+
+      { type: "h2", text: "3) Free German practice (worksheets, grammar, reading, writing)" },
+      {
+        type: "p",
+        text:
+          "If you feel that you understand some German but your grammar and writing are weak, these worksheet platforms help you train the basics properly, because daily practice with clear exercises is what makes German feel automatic."
+      },
+      {
+        type: "ul",
+        items: [
+          "[Schubert Verlag – Online-Aufgaben](https://www.aufgaben.schubert-verlag.de/): A high-quality free exercise platform for German learners, covering grammar, vocabulary, reading and listening, and suitable for consistent daily practice.",
+          "[Schubert Verlag – Arbeitsblätter A1](https://www.schubert-verlag.de/aufgaben/arbeitsblaetter_a1_z/a1_arbeitsblaetter_index_z.htm): Printable beginner worksheets that make it easier to build a foundation without needing paid books.",
+          "[Schubert Verlag – Übungen A1](https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_uebungen_index.htm): Short A1 exercises you can do daily when you want fast progress without long study sessions.",
+          "[Schubert Verlag – Arbeitsblätter A2](https://www.schubert-verlag.de/aufgaben/arbeitsblaetter_a2/a2_arbeitsblaetter_index.htm): A2 worksheets for people who can do basics but need stronger sentence building and grammar stability.",
+          "[Schubert Verlag – Arbeitsblätter B1](https://www.schubert-verlag.de/aufgaben/arbeitsblaetter_b1/b1_arbeitsblaetter_index.htm): B1 worksheets that help a lot with job interviews and Ausbildung school tasks because B1 is where real German starts to feel useful.",
+          "[Schubert Verlag – Erkundungen B2 Arbeitsblätter](https://www.schubert-verlag.de/aufgaben/arbeitsblaetter_b2/b2_erkund_arbeitsblaetter_index.htm): B2-level tasks for advanced reading and writing, useful for university or professional environments.",
+          "[Schubert Verlag – Erkundungen C1 Arbeitsblätter](https://www.schubert-verlag.de/aufgaben/arbeitsblaetter_c1/c1_erkund_arbeitsblaetter_index.htm): C1 tasks for high-level German learners who want academic-level writing and comprehension."
+        ]
+      },
+
+      { type: "h2", text: "4) Listening and real German input (free and structured)" },
+      {
+        type: "p",
+        text:
+          "Listening is the fastest way to reduce fear in Germany, because when you understand what people say, you stop feeling lost, so these resources give you structured listening practice instead of random videos."
+      },
+      {
+        type: "ul",
+        items: [
+          "[DW Learn German App](https://play.google.com/store/apps/details?id=com.dw.learngerman): A free structured German learning app with listening practice, which is excellent for building confidence in everyday German.",
+          "[DW – Nicos Weg (YouTube playlist)](https://www.youtube.com/playlist?list=PLs7zUO7VPyJ5DV1iBRgSw2uDl832n0bLg): A story-based German course where you learn phrases in context, which helps beginners a lot because it feels like real life.",
+          "[DW Learn German (YouTube)](https://www.youtube.com/@dwlearngerman): Free listening practice with subtitles and explanations that support A1 to B2 learners."
+        ]
+      },
+
+      { type: "h2", text: "5) Career basics (applications, CV, interviews, job culture)" },
+      {
+        type: "p",
+        text:
+          "Many newcomers struggle because they are competent but do not know how Germany expects applications and workplace communication, so these resources help you learn the rules and avoid mistakes that silently reduce your chances."
+      },
+      {
+        type: "ul",
+        items: [
+          "[Bundesagentur für Arbeit – Bewerbung (meinBERUF)](https://www.arbeitsagentur.de/bildung): Official guidance on applications, CVs, interviews, and training paths, written for learners and job seekers.",
+          "[BERUFENET (official)](https://web.arbeitsagentur.de/berufenet/): A huge official database describing jobs and Ausbildung roles in Germany, including tasks, entry requirements, and career prospects.",
+          "[BERUFENET Info Page](https://www.arbeitsagentur.de/berufenet-info): A quick overview of what BERUFENET offers, useful for beginners who do not know where to start.",
+          "[Arbeitsagentur – Berufsfelder entdecken](https://www.arbeitsagentur.de/bildung/berufe-und-wege/berufsfelder): Helps you explore job fields in a simple way when you are unsure what Ausbildung or career direction fits you.",
+          "[Europass CV Builder](https://europa.eu/europass/en/create-europass-cv): A free official European CV tool that helps you build a clean CV format when you do not know how to structure it.",
+          "[Make it in Germany (official)](https://www.make-it-in-germany.com/en): Official information about working and living in Germany, including contracts, visas (general guidance), and practical career explanations for newcomers."
+        ]
+      },
+
+      { type: "h2", text: "6) IT, data, and digital skills (free, high quality)" },
+      {
+        type: "p",
+        text:
+          "If you want long-term career growth in Germany, digital skills are one of the safest investments, and the best part is that many top-level platforms let you learn for free, so you can build projects and certificates without paying."
+      },
+      {
+        type: "ul",
+        items: [
+          "[openHPI – Courses (DE)](https://open.hpi.de/courses?lang=de&locale=de): A German university-level platform with free online courses in IT and innovation, good for structured learning with clear modules.",
+          "[openHPI – Home](https://open.hpi.de/?locale=de): The main openHPI page where you can see current free courses and understand how the platform works.",
+          "[openHPI – Courses (global)](https://open.hpi.de/courses): The general course catalog, useful if you want to find English-language options too.",
+          "[SAP Learning – free Expert Lectures (former openSAP)](https://learning.sap.com/expert-lectures-former-opensap): Free learning content for SAP and business processes, very useful if you want office or business-IT careers in Germany.",
+          "[freeCodeCamp](https://www.freecodecamp.org/): A free learning platform for web development and programming with step-by-step projects, useful for building a portfolio.",
+          "[The Odin Project](https://www.theodinproject.com/): A free full-stack curriculum that teaches you by building real projects, which is exactly what employers respect.",
+          "[MDN Web Docs](https://developer.mozilla.org/): The most reliable free documentation for web development, helpful when you want correct explanations and examples.",
+          "[W3Schools](https://www.w3schools.com/): A very beginner-friendly website to learn HTML, CSS, JavaScript, SQL, and more in small steps.",
+          "[Kaggle Learn](https://www.kaggle.com/learn): Free micro-courses on data analysis, Python, SQL, and machine learning, useful for data and analytics skills.",
+          "[GitHub Skills](https://skills.github.com/): Free interactive tutorials that teach you Git and GitHub properly, which is essential for modern tech jobs.",
+          "[Microsoft Learn (free)](https://learn.microsoft.com/training/): Free learning modules for Microsoft tools, cloud basics, and productivity skills that are often used in German workplaces.",
+          "[Google Digital Garage](https://grow.google/intl/en/google-digital-garage/): Free courses on digital skills like analytics, marketing, and online business basics, useful for business and career growth.",
+          "[Cisco Networking Academy (free options)](https://www.netacad.com/): Free and affordable learning paths for networking and IT fundamentals, useful for IT support and infrastructure roles."
+        ]
+      },
+
+      { type: "h2", text: "7) Business, finance, and office skills (free and practical)" },
+      {
+        type: "p",
+        text:
+          "If your field is business, logistics, administration, or anything office-related, these resources help you learn how organizations work in Germany, and they also help you build practical skills like Excel, communication, and process thinking."
+      },
+      {
+        type: "ul",
+        items: [
+          "[OpenLearn (The Open University)](https://www.open.edu/openlearn/): Free short courses including business and management topics, good when you want structured reading and clear explanations.",
+          "[MIT OpenCourseWare](https://ocw.mit.edu/): Free university-level courses, useful if you want deeper understanding of economics, management, or technical topics.",
+          "[Coursera (audit many courses free)](https://www.coursera.org/): Many courses can be audited for free without a certificate, useful when you want structured learning but cannot pay.",
+          "[edX (audit many courses free)](https://www.edx.org/): Similar to Coursera, often allowing free access to content, good for business and computer science foundations.",
+          "[LibreOffice (free office suite)](https://www.libreoffice.org/): A free alternative to Microsoft Office, useful when you need to work with documents and spreadsheets without paying.",
+          "[GCFGlobal – Excel basics](https://edu.gcfglobal.org/en/excel/): Free beginner-friendly Excel lessons that help you survive office work and data tasks.",
+          "[GCFGlobal – Word/Docs basics](https://edu.gcfglobal.org/en/topics/word/): Free lessons that help you write professional documents and format them properly."
+        ]
+      },
+
+      { type: "h2", text: "8) Trades, Ausbildung, and practical vocational orientation (free)" },
+      {
+        type: "p",
+        text:
+          "If you are aiming for Ausbildung in trades, logistics, hospitality, or technical fields, the smartest thing is to learn how Germany describes the job, what the daily tasks are, and what the training structure looks like, because that saves you from choosing blindly."
+      },
+      {
+        type: "ul",
+        items: [
+          "[BERUFENET – Job database](https://web.arbeitsagentur.de/berufenet/): Use this to read the official description of any Ausbildung and what you will do day-to-day, which helps you choose a field realistically.",
+          "[Arbeitsagentur – Bildung & Beruf](https://www.arbeitsagentur.de/bildung): A central hub with guidance for Ausbildung, career choices, and applications, written in an accessible way.",
+          "[Planet Beruf (orientation)](https://planet-beruf.de/): A German youth/career orientation platform that still helps newcomers understand Ausbildung structures and job fields in simple language.",
+          "[KURSNET (training database)](https://kursnet-finden.arbeitsagentur.de/kurs/): Helps you search for training offers and education paths, useful when you want formal training opportunities and recognized programs.",
+          "[BIBB (vocational training institute)](https://www.bibb.de/): Germany’s vocational training institute with explanations and publications that help you understand the dual training system."
+        ]
+      },
+
+      { type: "h2", text: "9) Everyday “survival knowledge” that supports work and study" },
+      {
+        type: "p",
+        text:
+          "Many people fail not because they cannot learn, but because daily life stress drains their energy, so these official resources help you understand systems like public services, online portals, and practical life rules, which makes everything else easier."
+      },
+      {
+        type: "ul",
+        items: [
+          "[bund.de (public services portal)](https://www.bund.de/): The central portal for official public services and government information, useful when you want to find official procedures and not rely on rumors.",
+          "[Verbraucherzentrale (consumer advice)](https://www.verbraucherzentrale.de/): A trusted consumer-protection organization that explains contracts, scams, and common problems in simple language.",
+          "[Integration portal (general info)](https://www.bamf.de/DE/Themen/Integration/integration-node.html): Official integration information from BAMF that helps you understand the system and your options."
+        ]
+      },
+
+      { type: "h2", text: "10) Vocabulary and study tools (free, simple, very effective)" },
+      {
+        type: "p",
+        text:
+          "If you do not build a vocabulary system, you will keep forgetting what you learn, so these tools help you store knowledge and make progress visible, which keeps motivation stable even when life is hard."
+      },
+      {
+        type: "ul",
+        items: [
+          "[Anki (flashcards)](https://apps.ankiweb.net/): A free spaced-repetition tool that helps you remember words long-term, which is perfect for German and professional vocabulary.",
+          "[Anki Shared Decks](https://ankiweb.net/shared/decks/): Ready-made decks you can use immediately if you do not want to create cards from scratch.",
+          "[DeepL Translator](https://www.deepl.com/en/translator): A translation tool that often produces more natural German, which is helpful for learning sentence patterns and writing polite messages.",
+          "[LanguageTool (grammar check)](https://languagetool.org/): A free grammar checker that helps you spot German mistakes in emails and assignments before you send them.",
+          "[Google Docs](https://docs.google.com/): Free document writing and sharing tool, useful when you work with teachers, employers, or other scholars remotely."
+        ]
+      },
+
+      { type: "h2", text: "11) Extra free library (more tools so you reach 60+ resources easily)" },
+      {
+        type: "p",
+        text:
+          "This last block is intentionally large so you have options for different fields like engineering, logistics, hospitality, data, business, and general German improvement, and you can simply pick what matches your reality instead of feeling forced to use everything."
+      },
+      {
+        type: "ul",
+        items: [
+          "[openHPI – YouTube playlist](https://www.youtube.com/playlist?list=PLU8gLN7WFOzdZNvPKitufrT9hngOnMmm7): Free videos from openHPI that can support your learning when you want shorter content than a full course.",
+          "[LanguageGuide – German Vocabulary](https://www.languageguide.org/german/vocabulary/): A free picture-and-audio vocabulary trainer that is helpful for beginners who learn best visually.",
+          "[BBC Languages (German archive)](http://www.bbc.co.uk/languages/german/): Simple beginner resources that help with foundational phrases and basic structure.",
+          "[Duolingo](https://www.duolingo.com/): A free app that helps build daily consistency, useful as a supplement but not enough alone for professional German.",
+          "[Memrise](https://www.memrise.com/): A vocabulary-focused app that can help you increase everyday words faster, especially when you are commuting.",
+          "[Khan Academy](https://www.khanacademy.org/): Free learning for math and foundational topics, useful if you need to rebuild math for technical Ausbildung or university.",
+          "[Khan Academy – Computing](https://www.khanacademy.org/computing): Free beginner programming and computer science explanations, useful for absolute beginners.",
+          "[CS50 (Harvard)](https://cs50.harvard.edu/x/): A famous free intro to computer science that builds strong thinking skills, helpful if you want to enter IT.",
+          "[Python Official Tutorial](https://docs.python.org/3/tutorial/): Free and correct Python learning source, useful when you want accurate information, not shortcuts.",
+          "[Java Documentation](https://docs.oracle.com/javase/): Official Java docs, useful when you want correct references while coding.",
+          "[SQLBolt](https://sqlbolt.com/): Free SQL lessons that are short and practical, perfect for data and business analytics.",
+          "[Mode SQL Tutorial](https://mode.com/sql-tutorial/): A free SQL tutorial that teaches you using real examples and clear explanations.",
+          "[Git Book (Pro Git)](https://git-scm.com/book/en/v2): A free full book that teaches Git properly, which is essential for modern development workflows.",
+          "[Visual Studio Code](https://code.visualstudio.com/): Free code editor used widely in Germany and globally, useful when you want one tool for many languages.",
+          "[Figma (free tier)](https://www.figma.com/): Free design tool useful for UI/UX and for presenting projects in a professional way.",
+          "[Canva (free tier)](https://www.canva.com/): Helpful for creating CV visuals, presentations, and simple design assets without paying.",
+          "[Coursera Project Network (some free projects)](https://www.coursera.org/projects): Short guided projects that help you build a portfolio quickly (availability varies, but many are accessible).",
+          "[edX – Search courses](https://www.edx.org/search): A quick place to search free-to-audit learning content when you want a structured course.",
+          "[OpenStax (free textbooks)](https://openstax.org/): Free legal textbooks for subjects like economics, statistics, and math, useful for self-study without piracy.",
+          "[Project Gutenberg (public domain books)](https://www.gutenberg.org/): Legal free books, useful for reading practice and general learning, especially if you want long reading material.",
+          "[Wikipedia (Simple English)](https://simple.wikipedia.org/): Very easy reading practice for beginners who want to build comprehension slowly without complex vocabulary."
+        ]
+      },
+
+      { type: "h2", text: "12) Beginner routine (simple and realistic)" },
+      {
+        type: "p",
+        text:
+          "If you are starting from scratch, do not chase everything at once; do 20 minutes workplace German (Goethe or vhs), then 20 minutes structured exercises (Schubert worksheets), then 20 minutes listening (DW), and finally 10 minutes building vocabulary in Anki, because after 6–8 weeks your brain becomes faster at German patterns, and that is when speaking at work stops feeling like a fight."
+      }
+    ],
+    goldenRule:
+      "Stop collecting random links every week; build one personal library, then repeat a simple routine until your German and your skill track become stable.",
+    steps: [
+      {
+        title: "Create your free learning stack",
+        text:
+          "Bookmark Goethe Deutsch am Arbeitsplatz, one worksheet engine (Schubert), and one listening source (DW), because these three cover speaking, writing, and understanding in a balanced way, and you can use them daily without confusion.",
+        action: "Bookmark and start today."
+      },
+      {
+        title: "Pick one skill track and finish one course",
+        text:
+          "If you want IT/data/business options, enroll in one openHPI course and finish it fully, because completed courses and projects matter more than watching random videos, and finishing gives you confidence and proof of learning.",
+        action: "Enroll and finish one course."
+      }
+    ],
+    readMore: [
+      { title: "Agentur für Arbeit – Linksammlung Deutsch (PDF)", url: "https://www.arbeitsagentur.de/vor-ort/datei/linksammlung-online-sprachlernangebote-deutsch_ba232254.pdf", source: "official" },
+      { title: "Goethe – Deutsch am Arbeitsplatz", url: "https://www.goethe.de/de/spr/ueb/daa.html", source: "official" },
+      { title: "openHPI – Free courses", url: "https://open.hpi.de/courses?lang=de&locale=de", source: "learning" }
+    ],
+    downloads: [],
+    videos: [
+      { title: "DW Nicos Weg (YouTube)", url: "https://www.youtube.com/playlist?list=PLs7zUO7VPyJ5DV1iBRgSw2uDl832n0bLg" }
+    ],
+    tags: ["career", "language", "workplace", "free", "refugees", "students", "it", "business"]
+  },
+
+  {
   slug: "first-72-hours",
   title: "First 72 Hours",
   subtitle: "Airport to apartment: what actually matters",
@@ -127,7 +401,7 @@ export const POSTS = [
   color: "from-blue-600 to-indigo-600",
   shadow: "shadow-blue-500/20",
   accent: "text-blue-600",
-  verified: "2026-01-19",
+  verified: "2026-01-27",
   backgroundImage: img12,
   summary: "Your first 72 hours stripped to essentials: internet, transport, and the apps you actually need.",
   vibeCheck: "You just landed. You are tired, your luggage is heavy, and you don't have internet. Take a deep breath. We'll sort this out.",
@@ -270,7 +544,7 @@ export const POSTS = [
   type: "ul",
   items: [
     "**Book the Anmeldung:** Appointment slots often appear early in the morning. Check the city website daily. Some cities do not require appointments, and landlords can provide guidance.",
-    "**Know the offices:** **Bürgeramt = City Hall for address registration (Anmeldung). Ausländerbehörde = Foreigners Office for residence permits.** These are different offices, with separate appointments, and the Ausländerbehörde is usually slower.",
+    "**Know the offices:** Bürgeramt = City Hall for address registration (Anmeldung). Ausländerbehörde = Foreigners Office for residence permits. These are different offices, with separate appointments, and the Ausländerbehörde is usually slower.",
     "**Confirm onboarding time:** Email your department or training office and confirm your first day and required documents.",
     "**Stock basics:** Water, bread, simple meals, and any daily medication."
   ]
@@ -319,407 +593,433 @@ export const POSTS = [
   },
 
   {
-    slug: "money-paperwork",
-    title: "Paperwork & Banks",
-    subtitle: "Legal identity, IBAN, insurance, and fees",
-    stage: "Bureaucracy",
-    readTime: "15 min",
-    icon: <Landmark size={24} />,
-    color: "from-emerald-500 to-teal-600",
-    shadow: "shadow-emerald-500/20",
-    accent: "text-emerald-600",
-      backgroundImage: img18,
-    verified: "2026-01-19",
-    summary: "Banks, registration, taxes, insurance—we break down the catch-22s and show you the smart shortcuts.",
-    vibeCheck: "Yes, it feels impossible. You need a bank for rent, but they want an address. We're gonna untangle this.",
-    content: [
-      {
-        type: "p",
-        text: "Germany runs on bureaucracy and paperwork. But it's not as chaotic as it seems. It's actually very organized once you understand the system. To function here, you need three main things: (1) A registered address (**Anmeldung**), (2) A German Bank Account (IBAN), and (3) A Tax ID. The catch? They often require each other."
-      },
+  slug: "money-paperwork",
+  title: "Paperwork & Banks",
+  subtitle: "Legal identity, IBAN, insurance, and fees",
+  stage: "Bureaucracy",
+  readTime: "15 min",
+  icon: <Landmark size={24} />,
+  color: "from-emerald-500 to-teal-600",
+  shadow: "shadow-emerald-500/20",
+  accent: "text-emerald-600",
+  backgroundImage: img18,
+  verified: "2026-01-27",
+  summary: "Banks, registration, taxes, insurance—we break down the catch-22s and show you the smart shortcuts.",
+  vibeCheck: "Yes, it feels impossible. You need a bank for rent, but they want an address. We're gonna untangle this.",
+  content: [
+    {
+      type: "p",
+      text: "Germany functions through paperwork, official letters, and clearly structured administrative systems, which can feel overwhelming, slow, or even frightening when you first arrive. However, the system itself is not chaotic or disorganized. Once you understand how the different parts connect to each other, the process becomes predictable and manageable. To function normally in Germany, you need three main things: (1) a registered address (**Anmeldung**), (2) a German bank account with an IBAN, and (3) a Tax ID. The main difficulty for newcomers is that these three requirements often depend on one another, which creates what feels like a never-ending bureaucratic loop at the beginning."
+    },
 
-      { type: "h2", text: "1. Banking: Which Bank Should You Choose?" },
-      {
-        type: "p",
-        text: "You need a German IBAN for two critical things: your employer needs it to pay your salary, and your landlord needs it to accept rent payments. But opening a bank account as a newcomer is tricky. Here's what you're up against:"
-      },
-      {
-        type: "ul",
-        items: [
-          "[Sparkasse](https://www.sparkasse.de/) / [Volksbank](https://www.volksbank.de/) (Traditional Banks): These are the safest and most trusted. Physical branches in every neighborhood. BUT they sometimes charge monthly fees especially for those above 25 years, however, this varies by branch and often require your Anmeldung (registration) proof before opening an account. This creates a chicken-and-egg problem.",
-          "[Commerzbank](https://www.commerzbank.de/) / [Deutsche Bank](https://www.deutsche-bank.de/): Large banks with solid reputations. Problem: They sometimes check your SCHUFA (credit score). If you're new to Germany, you won't have any credit history. They might reject you.",
-          "[N26](https://n26.com/) (Online Bank): Fast setup, German IBAN, no fees. Good if it works for your passport, but verification sometimes fails with non-EU documents.",
-          "[C24](https://c24.de/) (Online Bank): Similar to N26, but with better support for international documents. Still, some users report verification issues.",
-          "[Revolut](https://www.revolut.com/) (Online Bank): Similar to N26 and C24 but with better support for international documents. Gives you a valid German IBAN after verification. It has a user friendly app in many languages, English inclusive. No Anmeldung needed."
-        ]
-      },
-      {
-        type: "h2",
-        text: "1.1 Digital Access & TAN Codes (Do NOT bin the letter)"
-      },
-      {
-        type: "p",
-        text: "German banks combine paper + app security. After you open an account, you get two things: a letter with a QR code (sometimes called an 'Aktivierungscode') and an app that generates TAN codes (one-time passwords). **Do not throw the letter away thinking it's junk mail.** You scan that QR in the bank's TAN app to activate transfers. If you lose or bin it, you wait for another letter and are locked out of online banking for days. Keep both: (1) the physical letter and (2) the TAN app on your phone."
-      },
-      {
-        type: "p",
-        text: "**My honest recommendation:** Open [Revolut](https://www.revolut.com/) first. Once you get to the website, enter your German phone number, download the app, login with your phone numer, enter your personal details including the address where you are currently living and finish a video verification using your passport. After verification, your account will be verified and you'll be able to use your account. You can choose to order for a physical Revolut card(it for free, only ) Use it to establish your financial presence in Germany. Give the IBAN to your employer and landlord(**if required**, never share your IBAN/bank details anyhow!). Once you have your registration paper (Anmeldung), open a [Sparkasse](https://www.sparkasse.de/) or [Volksbank](https://www.volksbank.de/) account if you want a physical bank for backup. But Revolut alone is perfectly sufficient."
-      },
-      {
-        type: "p",
-        text: "You can open a free Revolut account using this link: [Open Revolut Account](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect)."
-      },
+    { type: "h2", text: "1. Banking: Which Bank Should You Choose?" },
 
-      { type: "h2", text: "1.5 The Visa Timer (Ausländerbehörde)" },
-      {
-        type: "p",
-        text: "Entry visas are often valid for 3–6 months. You must convert this to a residence permit (**Aufenthaltstitel**) before it expires. Book your Ausländerbehörde appointment immediately after arrival."
-      },
-      {
-        type: "p",
-        text: "**Don't Panic:** If your appointment is *after* your visa expires, you are still legal **IF** you applied before the expiry. You will receive a **'Fiktionsbescheinigung'** (fictional certificate). This piece of paper extends your legal status until your actual appointment. Keep it safe; it proves you are not illegal."
-      },
-      {
-        type: "p",
-        text: "**Shortcut:** Bürgeramt = City Hall for address registration (Anmeldung). Ausländerbehörde = Foreigners Office for residence permits. Different offices, different booking systems—and the Ausländerbehörde is slower."
-      },
+    {
+      type: "p",
+      text: "A German IBAN is required for two very important reasons. First, your employer needs it to pay your salary. Second, your landlord usually requires it so you can pay rent by bank transfer. Unfortunately, opening a bank account as a newcomer is not always easy, because many banks expect documents that you may not yet have, such as your Anmeldung. This is one of the most common problems people face in their first weeks in Germany."
+    },
 
-      { type: "h2", text: "2. Social Security Number (Sozialversicherungsnummer)" },
-      {
-        type: "p",
-        text: "After your employer registers you with public health insurance, you receive a **Sozialversicherungsnummer** by mail. This is separate from the Tax ID. Store it with your payslips; you'll need it for every job and for pension records."
-      },
-      
-      { type: "h2", text: "3. Health Insurance (Krankenkasse): It's Mandatory" },
-      {
-        type: "p",
-        text: "**Important:** Health insurance is not optional in Germany. It's legally required for everyone. As an employee or trainee, you're automatically enrolled in the **public health insurance system (GKV)**. [Verify this on the official government site](https://www.make-it-in-germany.com/en/manage-life/social-security/health-insurance/)."
-      },
-      {
-        type: "p",
-        text: "**How much does it cost?** Rates rose in 2026. The total is ~17.3% of your gross salary (14.6% base + ~2.7% Zusatzbeitrag). Your employer pays half, so **~8.65%** is deducted from your pay. On a €1,200 trainee salary, that's about €103/month." 
-      },
-      {
-        type: "p",
-        text: "**Which company should you choose?** The major providers are [AOK](https://www.aok.de/), [Techniker Krankenkasse (TK)](https://www.tk.de/), and [DAK-Gesundheit](https://www.dak.de/). All provide identical basic coverage (required by law). The differences are in small 'extras' like dental cleaning or preventive programs. **TK is often recommended for English speakers** because they have good international support. Compare options on [Check24](https://www.check24.de/gesetzliche-krankenversicherung/) or [Getsafe](https://www.getsafe.de/)."
-      },
-      {
-        type: "p",
-        text: "**What's actually covered?** All public insurance covers: doctor visits, hospital stays, prescription medications, emergency care, mental health therapy, preventive check-ups, and basic dental work. [See the full official list here](https://www.barmer.de/leistungen/alle-leistungen). Germany's healthcare system is ranked among the best in the world."
-      },
-      { type: "h2", text: "4. The Tax ID (Steuer-ID)" },
-      {
-        type: "p",
-        text: "You do not apply for this separately. It comes automatically by mail about 2-3 weeks after your Anmeldung. It contains your 11-digit Tax ID. Give this to your employer immediately. If you don't, you will be taxed at **Tax Class 6**, which is the highest rate (you lose ~50% of net income). Don't panic—you get the money back later via a tax return, but it's better to avoid it."
-      },
+    {
+      type: "ul",
+      items: [
+        "[Sparkasse](https://www.sparkasse.de/) / [Volksbank](https://www.volksbank.de/) (Traditional Banks): These are among the most trusted and stable banks in Germany and have physical branches in almost every neighborhood. Many people feel safer using them because they can speak to staff in person. However, these banks often charge monthly account fees, especially for customers over 25 years old, although this varies by branch. They also usually require proof of registration (**Anmeldung**) before opening an account, which creates a classic chicken-and-egg situation for newcomers.",
+        "[Commerzbank](https://www.commerzbank.de/) / [Deutsche Bank](https://www.deutsche-bank.de/): These are large, well-known banks with solid reputations. The challenge for newcomers is that they sometimes check your **SCHUFA** credit score. If you are new to Germany, you normally have no credit history at all, which can lead to rejection even if you have money.",
+        "[N26](https://n26.com/) (Online Bank): This bank allows you to open an account online, provides a German IBAN, and usually has no monthly fees. It works well for many people, but identity verification sometimes fails with non-EU passports, which can be frustrating.",
+        "[C24](https://c24.de/) (Online Bank): Similar to N26, with a modern app and competitive features. It generally supports international documents better, but some newcomers still report verification issues.",
+        "[Revolut](https://www.revolut.com/) (Online Bank): Similar to N26 and C24, but in practice often more reliable for international documents. After verification, you receive a valid German IBAN. The app is available in multiple languages, including English, and **no Anmeldung is required**, which makes it especially useful during your first weeks in Germany."
+      ]
+    },
 
-      { type: "h2", text: "5. The Schufa Score (Credit Rating)" },
-      {
-        type: "p",
-        text: "Newcomers start with **no Schufa score**, which can block apartment rentals and mobile phone contracts. Schufa tracks whether you pay bills on time (rent, phone, electricity, loans). Paying on time builds a clean record; missed payments or debt collection hurts it."
-      },
-      {
-        type: "p",
-        text: "**Proof for landlords/contracts:** You can request one free **Schufa-Auskunft (data copy)** per year (Datenkopie nach Art. 15 DSGVO) via the official Schufa site. Landlords often want the paid certificate (~€30) because it's formatted for them."
-      },
+    {
+      type: "h2",
+      text: "1.1 Digital Access & TAN Codes (Do NOT bin the letter)"
+    },
 
-      { type: "h2", text: "6. The 'Black Tax' (Remittances)" },
-      {
-        type: "p",
-        text: "Sending money home is generous but can destroy your German budget. Cover your own rent, insurance, transport, and groceries **first**. Only send money for true emergencies. If you must send, compare fees and exchange rates on apps like Taptap Send, Remitly, or WorldRemit, and pick the cheapest. Avoid borrowing in Germany to fund remittances—it creates debt and hurts your Schufa."
-      },
+    {
+      type: "p",
+      text: "German banks usually combine traditional paper mail with modern app-based security. After opening an account, you typically receive a physical letter by post containing a QR code or activation code (often called an 'Aktivierungscode'), along with instructions to install a TAN app that generates one-time passwords for secure transactions. This letter is extremely important. **Do not throw it away thinking it is advertising or junk mail.** You must scan this QR code to activate online transfers. If you lose or discard it, you may be locked out of online banking for several days while waiting for a replacement letter. This is commonly done by banks like Sparkasse, Volksbank, Commerzbank, and Deutsche Bank."
+    },
 
-      { type: "h2", text: "7. The Church Tax (Kirchensteuer)" },
-      {
-        type: "p",
-        text: "Important for Christians: When you register your address (Anmeldung), the form asks your religion. If you tick 'Roman Catholic' or 'Evangelical (Protestant)', the government will **automatically deduct 8-9% of your Income Tax** (not gross salary) from your monthly payslip and send it to the church. This is mandatory. If you do not want this deduction, you must leave the field blank or officially leave the church (Kirchenaustritt), which costs ~€30."
-      }
-    ],
-    goldenRule:
-      "Open a Revolut account first so you have an IBAN. Then hunt for the Anmeldung appointment.",
-    steps: [
-      {
-        title: "Open Bank Account",
-        text: "Use Revolut for an instant German IBAN without paperwork stress.",
-        action: "Download app and verify identity.",
-        readMore: [
-          {
-            title: "Open Revolut Account",
-            url: LINKS.revolutReferral,
-            source: "banking",
-          },
-        ],
-      },
+    {
+      type: "p",
+      text: "**My honest recommendation:** Open [Revolut](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect) first. Enter your German phone number, download the app, log in, and carefully enter your personal details, including the address where you are currently living. Complete the video verification using your passport. Once verified, your account becomes fully usable and you receive your German IBAN. You can then give this IBAN to your employer and landlord (only when required—never share your bank details unnecessarily). After you complete your Anmeldung, you may optionally open a Sparkasse or Volksbank account if you want a physical bank branch as a backup, but for most newcomers, Revolut alone is fully sufficient."
+    },
 
-      {
-        title: "Health Insurance",
-        url: "https://www.tk.de/en/health-insurance-in-germany/basic-information-german-health-system/german-health-insurance-system-2169412?tkcm=ab",
-        text: "Choose a public insurer (AOK, TK, Barmer). I personally use TK(link above).",
-        action: "Register online or visit local branch.",
-        readMore: [
-          {
-            title: "Health Insurance Comparison",
-            url: "https://www.check24.de/gesetzliche-krankenversicherung/",
-            source: "tool",
-            tags: ["money", "banking", "revolut", "tax", "insurance"],
-          },
-        ],
-      },
-    ],
-    
-  },
+    {
+      type: "p",
+      text: "You can open a free Revolut account using this link: [Open Revolut Account](https://revolut.com/referral/?referral-code=markdaniels_m!JAN1-26-AR-H1&geo-redirect)."
+    },
+
+    { type: "h2", text: "1.5 The Visa Timer (Ausländerbehörde)" },
+
+    {
+      type: "p",
+      text: "Entry visas are usually valid for three to one year. Before this period ends, you must convert your visa into a residence permit (**Aufenthaltstitel**). Because waiting times can be very long, it is strongly recommended to apply early and book your Ausländerbehörde appointment immediately after arriving in Germany."
+    },
+
+    {
+      type: "p",
+      text: "**Don't panic:** If your appointment date is after your visa expires, you are still legally allowed to stay **as long as you applied before the expiry date, usually 4 to 6 weeks earlier**. In this case, you will receive a **Fiktionsbescheinigung**, which temporarily extends your legal stay until your official appointment. Always keep this document safe, as it proves that your stay is legal."
+    },
+
+    {
+      type: "p",
+      text: "**Shortcut:** Bürgeramt = City Hall for address registration (Anmeldung). Ausländerbehörde = Foreigners Office for residence permits. These are different offices with different booking systems, and the Ausländerbehörde usually works much more slowly."
+    },
+
+    { type: "h2", text: "2. Social Security Number (Sozialversicherungsnummer)" },
+
+    {
+      type: "p",
+      text: "After your employer registers you with public health insurance, you will receive a **Sozialversicherungsnummer** by mail. This number is completely separate from your Tax ID and is used for employment records and pension contributions. Keep it together with your payslips, as you will need it throughout your working life in Germany."
+    },
+
+    { type: "h2", text: "3. Health Insurance (Krankenkasse): It's Mandatory" },
+
+    {
+      type: "p",
+      text: "**Important:** Health insurance is not optional in Germany. It is a legal requirement for everyone. As an employee or trainee, you are automatically enrolled in the public health insurance system (GKV)."
+    },
+
+    {
+      type: "p",
+      text: "**How much does it cost?** As of 2026, the total contribution is approximately 17.3% of your gross salary. Your employer pays half of this amount, which means around 8.65% is deducted from your salary. For example, if you earn €1,200 per month as a trainee, about €103 will be deducted for health insurance."
+    },
+
+    {
+      type: "p",
+      text: "**Which company should you choose?** Major public providers include [AOK](https://www.aok.de/), [Techniker Krankenkasse](https://www.tk.de/), and [DAK](https://www.dak.de/). By law, all public insurers provide the same basic coverage. The differences are mainly in customer service, language support, and small extra benefits. **TK is often recommended for English speakers** because of its international support."
+    },
+
+    {
+      type: "p",
+      text: "**What's actually covered?** Public health insurance covers doctor visits, hospital stays, prescription medications, emergency treatment, mental health therapy, preventive check-ups, and basic dental care, always check with your provider for specific details. You can choose to call or send them an e-mail. Germany’s healthcare system is consistently ranked among the best in the world."
+    },
+
+    { type: "h2", text: "4. The Tax ID (Steuer-ID)" },
+
+    {
+      type: "p",
+      text: "You do not need to apply separately for a Tax ID. It is automatically sent to you by mail approximately two to three weeks after your Anmeldung. You must give this number to your employer as soon as you receive it. If you do not, your employer may place you in **Tax Class 6**, which results in very high tax deductions."
+    },
+
+    { type: "h2", text: "5. The Schufa Score (Credit Rating)" },
+
+    {
+      type: "p",
+      text: "When you arrive in Germany, you start with no Schufa score at all. This can make renting an apartment or signing contracts more difficult. Schufa tracks whether you pay bills such as rent, phone contracts, and utilities on time. Paying bills on time builds trust, while missed payments damage your record."
+    },
+
+    { type: "h2", text: "6. The 'Black Tax' (Remittances)" },
+
+    {
+      type: "p",
+      text: "Sending money home is generous and understandable, but it can quickly damage your financial stability in Germany. Always make sure your own rent, insurance, transport, and food costs are covered first. If you must send money, compare transfer services carefully and avoid borrowing money in Germany to fund remittances."
+    },
+
+    { type: "h2", text: "7. The Church Tax (Kirchensteuer)" },
+
+    {
+      type: "p",
+      text: "When you register your address, you are asked to state your religion. If you declare Roman Catholic or Evangelical (Protestant), the government will automatically deduct a church tax of about 8–9% of your income tax from your salary. If you do not want this deduction, you must leave the field blank or officially leave the church (Kirchenaustritt), which costs around €30."
+    }
+  ],
+  goldenRule: "Open a Revolut account first so you have an IBAN. Then hunt for the Anmeldung appointment.",
+  steps: [
+    {
+      title: "Open Bank Account",
+      text: "Use Revolut for an instant German IBAN without paperwork stress.",
+      action: "Download app and verify identity.",
+    },
+    {
+      title: "Health Insurance",
+      text: "Choose a public insurer (AOK, TK, Barmer).",
+      action: "Register online or visit a local branch."
+    }
+  ]
+},
+  {
+  slug: "housing-neighbors",
+  title: "Housing & Finding a Flat",
+  subtitle: "Finding a place to live and not spending all your money on IKEA",
+  stage: "Housing",
+  readTime: "12 min",
+  icon: <HomeIcon size={24} />,
+  color: "from-orange-500 to-amber-600",
+  shadow: "shadow-orange-500/20",
+  accent: "text-orange-600",
+  backgroundImage: img6,
+  verified: "2026-01-27",
+  summary: "Platform reviews (WG Gesucht), free furniture hacks (Kleinanzeigen), and the house rules that matter.",
+  vibeCheck: "Flats are tight and expensive. But furnishing them cheap? That's doable. Here's how.",
+  content: [
+    { 
+      type: "h2", 
+      text: "1. Finding a Place: WG Gesucht & ImmobilienScout24" 
+    },
+    {
+      type: "p",
+      text: "Finding housing in Germany is highly competitive, especially in university cities and larger urban areas. You need to act quickly, respond professionally, and understand where to look. [WG-Gesucht.de](https://www.wg-gesucht.de/) is THE main platform for shared flats (WGs) and student housing. 'WG' stands for **Wohngemeinschaft**, which means a shared living community. This is how most young people in Germany live, usually with three to four people sharing one apartment, where everyone has their own private bedroom but shares common spaces like the kitchen and bathroom."
+    },
+    {
+      type: "p",
+      text: "**Why WGs?** WGs are usually much cheaper than renting a full apartment alone, and they are often faster to move into because rooms become available more frequently. Many landlords also prefer WGs because the financial risk is spread across several tenants. However, it is important to understand that a WG is **not** a hotel. Living in a WG means shared responsibility, including cleaning schedules, respecting quiet hours, coordinating bathroom and kitchen use, and being considerate of other people’s routines and working hours."
+    },
+    {
+      type: "p",
+      text: "**How to write a good message:** Landlords and WG members often receive 50 or more messages for a single listing. To stand out, your message should be polite, clear, and professional. Always include your name, what you do (student, trainee, employee), your planned move-in date, and confirmation that you have stable income or financial support. Ask politely if you can view the apartment. Avoid long personal stories unless requested. Keeping the message short, structured, and respectful significantly increases your chances of getting a reply. Always first carefully read the listing details and follow any specific instructions provided by the landlord or WG members."
+    },
+
+    { type: "h2", text: "1.5 The Reality of Foreign Names" },
+
+    {
+      type: "p",
+      text: "The housing market in Germany is extremely competitive, and unfortunately, discrimination does exist. Applicants with non-German names sometimes receive fewer responses. **Strategy:** Write your messages in German (use DeepL for translation), include a friendly but professional profile photo, and clearly mention your scholarship, job, or training status in the *first sentence* to demonstrate financial stability and seriousness."
+    },
+    {
+      type: "p",
+      text: "**Red flags—NEVER do this:** Never send money to foreign bank accounts before seeing the apartment in person. Never pay a so-called 'holding deposit' without a signed contract. Never accept 'video viewings only' without a real visit. If an offer feels too cheap, too fast, or too easy, it is almost certainly a scam."
+    },
+    {
+      type: "p",
+      text: "**For solo apartments:** Use [ImmobilienScout24.de](https://www.immobilienscout24.de/) for the largest number of listings (often more expensive), or [Kleinanzeigen](https://www.kleinanzeigen.de/) for cheaper options, which can be legitimate but sometimes require extra caution."
+    },
+
+    { type: "h2", text: "2. Furnishing for Free or Very Cheap: Kleinanzeigen" },
+
+    {
+      type: "p",
+      text: "This surprises many newcomers: most apartments in Germany are rented **completely empty**. This often means no furniture, no kitchen, no curtains, and sometimes not even light fixtures. Many newcomers panic and assume they must spend thousands of euros at IKEA. This is not necessary."
+    },
+    {
+      type: "p",
+      text: "**The Secret:** Use [Kleinanzeigen.de](https://www.kleinanzeigen.de/), which is Germany’s version of Craigslist. Search specifically for the category **'Zu verschenken'**, which means 'to give away for free'. Germans frequently give away perfectly usable furniture when moving. You can often find sofas, beds, tables, shelves, dishes, and kitchen items at no cost, as long as you can pick them up yourself."
+    },
+    {
+      type: "p",
+      text: "**How it works:** Create a free account on Kleinanzeigen. Search within the furniture category and filter by 'Zu verschenken'. When messaging, clearly state that you can pick up the item **this week**, as Germans value quick and reliable communication. Many people will agree simply because they want the item gone. **Note:** There are also streets or neighborhoods where people leave furniture and other items along streets for free pickup."
+    },
+    {
+      type: "p",
+      text: "**Reality check:** You may still need to spend around 200–500€ on important items like a good bed or mattress, because your health matters. However, for most other items, used or free furniture is more than sufficient. When buying, search for 'Gebraucht' (used) first. Germans tend to take very good care of their belongings, so used furniture is often in excellent condition."
+    },
+
+    { type: "h2", text: "3. The Deposit (Kaution): Your Safety Net" },
+
+    {
+      type: "p",
+      text: "In Germany, landlords usually require a security deposit (**Kaution**) of two to three months’ rent. This is completely normal and legal. **Important:** This deposit remains your money. The landlord is legally required to place it in a separate, interest-bearing account and not mix it with personal funds. Always request and keep a written receipt."
+    },
+    {
+      type: "p",
+      text: "**What 'warm rent' means:** Rent in Germany is divided into 'cold rent' (just the apartment) and 'warm rent' (apartment plus utilities such as heating, electricity, water, and garbage depending on your landlord). Deposits are calculated based on warm rent, meaning utility costs are included in the deposit amount."
+    },
+    {
+      type: "p",
+      text: "**When you move out:** You are entitled to get your deposit back, minus deductions for actual damages beyond normal wear and tear. The landlord must return it within one month after you move out. If this does not happen, or if unfair deductions are made, you can legally challenge it. Taking photos at move-in and keeping receipts protects you."
+    },
+
+    { type: "h2", text: "3.5 Electricity & Internet Setup (Don't Overpay)" },
+
+    {
+      type: "p",
+      text: "If you do not actively choose an electricity provider, you are automatically placed into **Grundversorgung**, which is the default supply and usually the most expensive option. You should choose an electricity contract yourself, often with a 12-month duration, and set a monthly prepayment (**Abschlag**) to avoid large surprise bills later. Electricity bills are often settled quarterly, so budget accordingly. Internet contracts are separate (DSL or cable). Always register the contract in your name and set a reminder to cancel at least one month before the end to avoid automatic renewal. Always ask your landlord first if all this is included in your rent."
+    },
+
+    { type: "h2", text: "4. House Rules: Quiet Hours & Trash Separation" },
+
+    {
+      type: "p",
+      text: "Germany enforces strict rules around noise. **Ruhezeit** (quiet hours) are legally recognized in most residential buildings and must be respected."
+    },
+    {
+      type: "ul",
+      items: [
+        "**Weekdays:** From 22:00 (10 PM) to 06:00 (6 AM), loud music, drilling, vacuuming, or parties are not allowed.",
+        "**Sundays & holidays:** Quiet is required all day. This is both a legal and cultural rule, and Germans take it very seriously.",
+        "**Violation:** If neighbors complain, landlords may issue fines or even terminate your contract. Repeated violations can result in eviction."
+      ]
+    },
+    {
+      type: "p",
+      text: "**Trash separation is not optional.** Recycling is taken very seriously in Germany, and buildings provide multiple color-coded bins. Always check the labels on the bins in your building, as rules can vary slightly by municipality."
+    },
+    {
+      type: "ul",
+      items: [
+        "**Blue:** Paper and cardboard",
+        "**Yellow/Orange:** Packaging (plastics, aluminum, metal cans)",
+        "**Brown/Green:** Organic waste (food scraps, garden waste)",
+        "**Black/Grey:** Residual waste (everything else)",
+        "**Clear glass/Colored glass:** Separate glass collection (not always available)"
+      ]
+    },
+    {
+      type: "p",
+      text: "**Why does this matter?** Incorrect trash separation can lead to fines from building management. Additionally, neighbors notice these things closely. If you are unsure where an item belongs, use [Mülltrennung Wirkt](https://www.muelltrennung-wirkt.de/) for guidance."
+    }
+  ],
+  goldenRule: "Use 'Zu verschenken' on Kleinanzeigen to save thousands of Euros on furniture.",
+  steps: [
+    {
+      title: "Find Housing",
+      text: "Create a profile on WG Gesucht.",
+      action: "Start searching.",
+      readMore: [{ title: "WG Gesucht", url: "https://www.wg-gesucht.de/", source: "tool" }],
+    },
+    {
+      title: "Furnish for Free",
+      text: "Don't buy new. Use the 'Zu verschenken' category. Or check the streets.",
+      action: "Download Kleinanzeigen.",
+      readMore: [
+        { title: "Kleinanzeigen App", url: "https://www.kleinanzeigen.de/", source: "tool" }],
+    },
+    {
+      title: "Check Trash Rules",
+      text: "Look at the bins in your backyard.",
+      action: "Print the sorting guide.",
+      readMore: [{ title: "Mülltrennung Guide (Official)", url: LINKS.trashGuide, source: "official" }],
+    },
+  ],
+  readMore: [{ title: "Rundfunkbeitrag (TV Tax)", url: "https://www.rundfunkbeitrag.de/formulare", source: "official" }],
+  videos: [{ title: "How to register for Rundfunkbeitrag", url: "https://youtu.be/fjv1I2TWXQM?si=sNtuR3ojhAso2TRw" }],
+  tags: ["housing", "rundfunkbeitrag", "rules", "furniture"],
+},
 
   {
-    slug: "housing-neighbors",
-    title: "Housing & Finding a Flat",
-    subtitle: "Finding a place to live and not spending all your money on IKEA",
-    stage: "Housing",
-    readTime: "12 min",
-    icon: <HomeIcon size={24} />,
-    color: "from-orange-500 to-amber-600",
-    shadow: "shadow-orange-500/20",
-    accent: "text-orange-600",
-      backgroundImage: img6,
-    verified: "2026-01-19",
-    summary: "Platform reviews (WG Gesucht), free furniture hacks (Kleinanzeigen), and the house rules that matter.",
-    vibeCheck: "Flats are tight and expensive. But furnishing them cheap? That's doable. Here's how.",
-    content: [
-      { type: "h2", text: "1. Finding a Place: WG Gesucht & ImmobilienScout24" },
-      {
-        type: "p",
-        text: "Finding housing in Germany is competitive. You need to act fast and know the platforms. [WG-Gesucht.de](https://www.wg-gesucht.de/) is THE platform for shared flats (WGs) and student housing. 'WG' means **Wohngemeinschaft** (shared living community). It's how most young people in Germany live—usually 3-4 people sharing an apartment, each with their own room but shared kitchen and bathroom."
-      },
-      {
-        type: "p",
-        text: "**Why WGs?** They're cheaper than solo apartments and faster to move into. Landlords prefer WGs because the risk is spread. But you need to understand: a WG is NOT a hotel. You'll have shared responsibility for cleaning, noise levels, and respecting housemates' schedules."
-      },
-      {
-        type: "p",
-        text: "**How to write a good message:** Landlords receive 50+ inquiries per listing. Stand out by being genuine and professional. Say: your name, your profession/field, your start date, that you have steady income or are employed, and ask to view the apartment. DO NOT include personal stories unless asked. Keep it short."
-      },
-      { type: "h2", text: "1.5 The Reality of Foreign Names" },
-      {
-        type: "p",
-        text: "The housing market is tough, and unfortunately, discrimination happens. It can be harder to get a response with a non-German name. **Strategy:** Write your messages in German (use DeepL), include a friendly, professional photo in your application, and mention your scholarship/job status in the *first sentence* to prove financial stability."
-      },
-      {
-        type: "p",
-        text: "**Red flags—NEVER do this:** No transfers to foreign bank accounts before seeing the apartment. No 'holding deposits' without a contract. No 'Video viewings only'—always visit in person. If it seems too cheap or easy, it's a scam."
-      },
-      {
-        type: "p",
-        text: "**For solo apartments:** Use [ImmobilienScout24.de](https://www.immobilienscout24.de/) (expensive but most listings) or [Kleinanzeigen](https://www.kleinanzeigen.de/) (often cheaper, sometimes sketchy)."
-      },
-      { type: "h2", text: "2. Furnishing for Free or Very Cheap: Kleinanzeigen" },
-      {
-        type: "p",
-        text: "Here's a shock: most German apartments come **completely empty**. No furniture, no kitchen, no curtains, sometimes not even lightbulbs. This terrifies newcomers who think they need to spend 5,000€ on IKEA furniture. You don't."
-      },
-      {
-        type: "p",
-        text: "**The Secret:** Use [Kleinanzeigen.de](https://www.kleinanzeigen.de/). It's Germany's equivalent of Craigslist. But here's the magic: search for the category **'Zu verschenken'** (to give away). Germans constantly throw away perfectly good furniture when moving. Sofas, beds, tables, dishes—all free. Pick-up yourself to save even more."
-      },
-      {
-        type: "p",
-        text: "**How it works:** Create a free account on Kleinanzeigen. Search for furniture category, filter by 'Zu verschenken'. Message the poster saying you'll pick it up THIS WEEK (Germans like speed). Many people will say yes just because they want it gone."
-      },
-      {
-        type: "p",
-        text: "**Reality check:** You might need to spend 200–500€ on a decent bed or sofa—your health matters. But 90% of everything else comes free. And for new items, search 'Gebraucht' (used) first. Germans are meticulous about used stuff; a 'used' sofa often looks brand new."
-      },
-      { type: "h2", text: "3. The Deposit (Kaution): Your Safety Net" },
-      {
-        type: "p",
-        text: "German landlords usually require a deposit of **2–3 months' rent**. This is normal and legal. **Important:** This deposit IS YOUR MONEY. The landlord must place it in a separate, interest-bearing account (not mixed with their personal money). Always get a receipt."
-      },
-      {
-        type: "p",
-        text: "**What 'warm rent' means:** German rent is divided into 'cold' (just the apartment) and 'warm' (apartment + utilities like heating, water, garbage). Deposits are calculated on warm rent, so they include utilities costs."
-      },
-      {
-        type: "p",
-        text: "**When you move out:** You get the deposit back, minus deductions for actual damages (not normal wear and tear). The landlord must return it within 1 month of you moving out. If they don't, or if they make unfair deductions, you can pursue them in small claims court. Keep your receipts and move-in photos."
-      },
-      { type: "h2", text: "3.5 Electricity & Internet Setup (Don't Overpay)" },
-      {
-        type: "p",
-        text: "If you don't pick an electricity provider, you're put in **Grundversorgung** (default supply) at expensive rates. Choose a contract (12 months is common) and set your own monthly prepayment (Abschlag) so there's no surprise back-bill. Bills often settle **quarterly**—budget for it. Internet is separate (DSL/Cable). Set it up in your name, and calendar the cancellation date 1 month before the end to avoid auto-renewal." 
-      },
-      { type: "h2", text: "4. House Rules: Quiet Hours & Trash Separation" },
-      {
-        type: "p",
-        text: "Germany takes noise seriously. **Ruhezeit** (quiet hours) are legally enforced in most apartments:"
-      },
-      {
-        type: "ul",
-        items: [
-          "**Weekdays:** 22:00 (10 PM) to 06:00 (6 AM)—no loud music, drilling, vacuuming, or parties.",
-          "**Sundays & holidays:** Quiet ALL DAY. This is a cultural thing. Germans use Sundays for rest, seriously.",
-          "**Violation:** If neighbors complain, landlord might fine you or terminate your contract. Repeated violations = eviction."
-        ]
-      },
-      {
-        type: "p",
-        text: "**Trash separation is not optional.** Germany is obsessive about recycling. Your building will have color-coded bins:"
-      },
-      {
-        type: "ul",
-        items: [
-          "**Blue:** Paper and cardboard",
-          "**Yellow/Orange:** Packaging (plastics, aluminum, metal cans)",
-          "**Brown/Green:** Organic waste (food scraps, garden waste)",
-          "**Black/Grey:** Residual waste (everything else)",
-          "**Clear glass/Colored glass:** Separate glass collection (not always available)"
-        ]
-      },
-      {
-        type: "p",
-        text: "**Why does this matter?** If you put trash in the wrong bin and it gets reported, the building management can issue fines. Plus, Germans will judge you silently but intensely. Use [Mülltrennung Wirkt](https://www.muelltrennung-wirkt.de/) if you're ever unsure where something goes."
-      }
-    ],
-    goldenRule: "Use 'Zu verschenken' on Kleinanzeigen to save thousands of Euros on furniture.",
-    steps: [
-      {
-        title: "Find Housing",
-        text: "Create a profile on WG Gesucht.",
-        action: "Start searching.",
-        readMore: [{ title: "WG Gesucht", url: "https://www.wg-gesucht.de/", source: "tool" }],
-      },
-      {
-        title: "Furnish for Free",
-        text: "Don't buy new. Use the 'Zu verschenken' category.",
-        action: "Download Kleinanzeigen.",
-        readMore: [
-          { title: "Kleinanzeigen App", url: "https://www.kleinanzeigen.de/", source: "tool" }],
-      },
-      {
-        title: "Check Trash Rules",
-        text: "Look at the bins in your backyard.",
-        action: "Print the sorting guide.",
-        readMore: [{ title: "Mülltrennung Guide (Official)", url: LINKS.trashGuide, source: "official" }],
-      },
-    ],
-    readMore: [{ title: "Rundfunkbeitrag (TV Tax)", url: "https://www.rundfunkbeitrag.de/welcome/index_ger.html", source: "official" }],
-    downloads: [{ title: "Trash cheat sheet (PDF)", url: null }],
-    videos: [{ title: "How to separate trash in Germany", url: "https://youtu.be/KfHrq-8tG-g?si=EFwO0ykE9TdgNO94" }],
-    tags: ["housing", "trash", "rules", "furniture"],
-  },
+  slug: "nursing-language-resources",
+  title: "Professional Development: Field-Specific Learning (Nursing)",
+  subtitle: "Free vocabulary, theory, hygiene, documentation, and exam prep for Pflege Ausbildung",
+  stage: "Career",
+  readTime: "12 min",
+  icon: <Stethoscope size={24} />,
+  color: "from-rose-500 to-pink-600",
+  shadow: "shadow-rose-500/20",
+  accent: "text-rose-600",
+  backgroundImage: img10,
+  verified: "2026-01-27",
+  summary:
+    "A complete free learning library for nursing trainees: German language, medical theory, hygiene standards, documentation, and exam preparation.",
+  vibeCheck:
+    "You do not need expensive courses to succeed in nursing in Germany; you need the right free materials and a clear routine.",
+  content: [
 
-  {
-    slug: "nursing-language-resources",
-    title: "Professional Development: Field-Specific Learning",
-    subtitle: "Reference materials, textbooks, and specialized vocabulary for your Ausbildung",
-    stage: "Career",
-    readTime: "8 min",
-    icon: <Stethoscope size={24} />,
-    color: "from-rose-500 to-pink-600",
-    shadow: "shadow-rose-500/20",
-    accent: "text-rose-600",
-    backgroundImage: img10,
-    verified: "2026-01-19",
-    summary:
-      "Master your field's vocabulary and theory. Resources to pass licensing exams and talk confidently with colleagues.",
-    vibeCheck:
-      "You're competent in your field. Now you just need the German resources and vocabulary.",
-    content: [
-      {
-        type: "p",
-        text: "The 'Ausbildung' demands learning your field's theory in German. Don't rely on memory—use structured resources. Here's what actually works."
-      },
-      { type: "h2", text: "1. Textbooks (Buy Smart, Not New)" },
-      {
-        type: "p",
-        text: "[Thieme 'I Care' series](https://shop.thieme.de/): Gold standard for nursing education in Germany. Covers Anatomy, Physiology, Nursing Practice. Usually provided by school, or find used copies on Kleinanzeigen for €15-40 (vs. €80+ new)."
-      },
-      {
-        type: "p",
-        text: "[Pflege Heute](https://www.elsevier.de/de/buch/pflege-heute): Alternative textbook used by many programs. Both I Care and Pflege Heute cover similar content—ask your trainer which one your school uses."
-      },
-      { type: "h2", text: "2. Free Reference Resources" },
-      {
-        type: "p",
-        text: "[DocCheck Flexikon](https://flexikon.doccheck.com): German medical Wikipedia. Free, reliable, explanations written by professionals. When you hear an unfamiliar medical term, search here first."
-      },
-      {
-        type: "p",
-        text: "[ResearchGate](https://www.researchgate.net): For deeper understanding of concepts. Use when writing papers or researching specific diseases. Most papers available free."
-      },
-      { type: "h2", text: "3. Vocabulary Building" },
-      {
-        type: "p",
-        text: "Don't memorize textbooks. Focus on **the top 100-150 terms** your field uses daily. Make flashcards using [Anki](https://apps.ankiweb.net/) (free app). Add 10 cards daily during your first month."
-      },
-      {
-        type: "ul",
-        items: [
-          "**Example for nursing:** Blutdruck (blood pressure), Fieber (fever), Wunde (wound), Medikament (medication), Infusion, Katheter.",
-          "Use abbreviations healthcare professionals use: RR (blood pressure), HF (heart rate), KG (patient).",
-          "Watch [PflegeTube](https://www.youtube.com/@PflegeTube) on YouTube—real nursing scenarios with German commentary."
-        ]
-      },
-      { type: "h2", text: "4. Shadow Vocabulary on Shift" },
-      {
-        type: "p",
-        text: "Wards use shorthand you won't find in textbooks. Common: RR (blood pressure), SpO2 (oxygen saturation), BZ (blood sugar), AZ (general condition), Z.n. (status post). Keep a small notebook and add every abbreviation you hear." 
-      },
-      { type: "h2", text: "5. Continuing Education Matters" },
-      {
-        type: "p",
-        text: "Supervisors notice trainees who take short courses (wound care, hygiene, documentation). Add certificates to your personnel file; it helps when asking for better rotations or future contracts." 
-      },
-      { type: "h2", text: "6. What if I Fail an Exam?" },
-      {
-        type: "p",
-        text: "Failing a Zwischenprüfung or module exam is stressful but not the end. In the dual training system, contracts usually extend to allow a retake. Speak with your school and employer early, document your study plan, and request extra language support—visa status is not lost because of one failed attempt." 
-      }
-    ],
-    goldenRule:
-      "Buy textbooks used on Kleinanzeigen. Create flashcards for field-specific vocabulary. Your trainer is your best resource.",
-    steps: [
-      {
-        title: "Get Your Textbook",
-        text: "Ask trainer which textbook the school uses.",
-        action: "Search Kleinanzeigen for used copies.",
-        readMore: [
-          {
-            title: "Thieme Webshop",
-            url: "https://shop.thieme.de/",
-            source: "learning",
-          },
-        ],
-      },
-      {
-        title: "Bookmark Medical Reference",
-        text: "Save DocCheck Flexikon.",
-        action: "Create browser bookmark.",
-        readMore: [
-          {
-            title: "DocCheck Flexikon",
-            url: "https://flexikon.doccheck.com",
-            source: "learning",
-          },
-        ],
-      },
-      {
-        title: "Build Vocabulary",
-        text: "Create flashcards of field terms.",
-        action: "Use Anki app (free).",
-        readMore: [
-          {
-            title: "Anki Flashcards",
-            url: "https://apps.ankiweb.net/",
-            source: "tool",
-          },
-        ],
-      },
-    ],
-    readMore: [
-      { title: "PflegeTube (YouTube)", url: "https://www.youtube.com/@PflegeTube", source: "video" }
-    ],
-    downloads: [],
-    videos: [{ title: "Medical German Basics", url: "https://youtu.be/aBc123defgh" }],
-    tags: ["nursing", "learning", "books", "vocabulary", "study"],
-  },
+    {
+      type: "p",
+      text:
+        "Nursing Ausbildung in Germany is demanding because you are expected to understand medical theory, documentation, and professional communication in German from the beginning, even if German is not your first language. This section gives you a carefully selected library of free and official resources so you are never guessing, never lost, and never dependent on random social media explanations."
+    },
+
+    { type: "h2", text: "1) Core nursing-German courses (START HERE)" },
+    {
+      type: "ul",
+      items: [
+        "[vhs Pflege App](https://slb.vhs-lernportal.de/wws/app-pflege.php): The most important free app for nursing German; it teaches real Pflege documents, vocabulary, and workplace language step by step.",
+        "[vhs Hilfskraft Pflege](https://slb.vhs-lernportal.de/wws/hilfskraft-pflege.php): Free course for beginners that explains basic nursing tasks and simple documentation language.",
+        "[vhs Fachkraft Pflege](https://slb.vhs-lernportal.de/wws/fachkraft-pflege.php): More advanced free course focusing on professional documentation and formal nursing language.",
+        "[vhs Lernportal (general)](https://www.vhs-lernportal.de/): The main portal for free German learning (reading, writing, listening) to support your Pflege studies.",
+        "[vhs Pflege App (Google Play)](https://play.google.com/store/apps/details?id=de.digionline.vhs.pflege): Official mobile app version for offline learning on your phone."
+      ]
+    },
+
+    { type: "h2", text: "2) Official curated lists (trusted & updated)" },
+    {
+      type: "ul",
+      items: [
+        "[BAMF Pflege digital tools (PDF)](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Lehrkraefte/digitale-deutschlernangebote-arbeitsmarktorientierung-pflege.pdf): Official government list of free German-learning tools focused on Pflege.",
+        "[BAMF Pflege tools (web page)](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Lehrkraefte/digitale-deutschlernangebote-arbeitsmarktorientierung-pflege.html): Online version of the official Pflege learning list.",
+        "[BAMF Work-oriented German tools (PDF)](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Lehrkraefte/digitale-deutschlernangebote-arbeitsmarktorientierung.pdf): General work-German resources useful for nursing communication.",
+        "[Agentur für Arbeit language resources (PDF)](https://www.arbeitsagentur.de/vor-ort/datei/linksammlung-online-sprachlernangebote-deutsch_ba232254.pdf): Government-curated list of free German language platforms."
+      ]
+    },
+
+    { type: "h2", text: "3) Exam preparation (telc Pflege & B2)" },
+    {
+      type: "ul",
+      items: [
+        "[telc Deutsch B1–B2 Pflege Tipps (PDF)](https://www.telc.net/fileadmin/user_upload/pdfs/Handbuch_und_Tipps_fuer_Pruefungsvorbereitung/Deutsch_b1_b2_pflege_tipps_zur_Pruefungsvorbereitung.pdf): Explains exam structure and expectations clearly.",
+        "[telc Deutsch B2 Tipps (PDF)](https://www.telc.net/fileadmin/user_upload/pdfs/Handbuch_und_Tipps_fuer_Pruefungsvorbereitung/Deutsch_B2_tipps_zur_Pruefungsvorbereitung.pdf): Helps improve writing and speaking performance.",
+        "[telc Pflege Probekapitel (PDF)](https://www.telc.net/fileadmin/user_upload/Downloads_Verlag/Trainingseinheiten_Pflege/Probekapitel/4010-TPF-2101A_Probekapitel.pdf): Sample training tasks showing real exam language.",
+        "[telc Pflege Übungstest (PDF)](https://www.sprachenatelier-berlin.de/kontext/controllers/document.php/715.1/9/c58aff.pdf): Practice test to simulate exam conditions."
+      ]
+    },
+
+    { type: "h2", text: "4) Hygiene & infection control (OFFICIAL standards)" },
+    {
+      type: "ul",
+      items: [
+        "[RKI Hand Hygiene Guideline (PDF)](https://www.rki.de/DE/Themen/Infektionskrankheiten/Krankenhaushygiene/KRINKO/Empfehlungen-der-KRINKO/Basishygiene/Downloads/Haendehyg_Rili.pdf): The national standard for hand hygiene in healthcare.",
+        "[RKI Hand Hygiene Overview](https://www.rki.de/DE/Themen/Infektionskrankheiten/Krankenhaushygiene/Infektionshygiene-A-Z/H/Haendehygiene/haendehygiene-inhalt.html): Explains hygiene rules in simple terms.",
+        "[RKI Surface Disinfection Guideline](https://www.rki.de/DE/Themen/Infektionskrankheiten/Krankenhaushygiene/KRINKO/Empfehlungen-der-KRINKO/Basishygiene/Downloads/Flaeche_Rili.html): Rules for cleaning patient environments.",
+        "[infektionsschutz.de Hygiene Media](https://www.infektionsschutz.de/mediathek/hygiene-materialien/): Posters and visual hygiene materials.",
+        "[Hygiene schützt Poster (PDF)](https://www.infektionsschutz.de/download/4448-Plakat-Hygiene_schuetzt_A4.pdf): Easy visual reminder for hygiene basics."
+      ]
+    },
+
+    { type: "h2", text: "5) Skin protection & work safety (BGW)" },
+    {
+      type: "ul",
+      items: [
+        "[BGW Skin Protection Plan Pflege](https://www.bgw-online.de/bgw-online-de/service/medien-arbeitshilfen/medien-center/hautschutzplan-kranken-und-altenpflege-20186): Official skin protection guide for nursing staff.",
+        "[BGW Skin Protection PDF](https://www.bgw-online.de/resource/blob/20186/2426176672e5d6cc32f4fe70a1786c2b/bgw06-13-110-hautschutzplan-pflegeberufe-data.pdf): Printable version for daily reference.",
+        "[BGW Hygiene & Skin Protection Overview](https://www.bgw-online.de/bgw-online-de/themen/gesund-im-betrieb/gesunde-haut/hautschutz-und-haendehygieneplaene-fuer-26-berufsgruppen-14166): Explains why skin protection matters in Pflege."
+      ]
+    },
+
+    { type: "h2", text: "6) Medical reference & explanations (FAST lookup)" },
+    {
+      type: "ul",
+      items: [
+        "[DocCheck Flexikon](https://flexikon.doccheck.com): Medical encyclopedia in German for quick definitions.",
+        "[Flexikon Pflege Category](https://flexikon.doccheck.com/de/Kategorie:Pflege): Nursing-related terms grouped together.",
+        "[gesund.bund.de Krankheiten A–Z](https://gesund.bund.de/krankheiten-a-bis-z): Official German health information in simple language.",
+        "[gesundheitsinformation.de](https://www.gesundheitsinformation.de/): Evidence-based medical explanations for the public.",
+        "[MSD Manuals (German)](https://www.msdmanuals.com/de): Professional medical reference with structured explanations."
+      ]
+    },
+
+    { type: "h2", text: "7) Documentation & writing practice" },
+    {
+      type: "ul",
+      items: [
+        "[Herr Pfleger – Pflegeplanung Beispiele](https://herrpfleger.de/2010/10/die-pflegeplanung-beispiel-und-formulierungshilfe/): Examples of nursing documentation wording.",
+        "[Medi-Karriere Pflegelexikon](https://www.medi-karriere.de/medizinlexikon/): Medical and nursing terms explained clearly.",
+        "[DeepL Translator](https://www.deepl.com/en/translator): Helps translate drafts, but always read and learn the phrases."
+      ]
+    },
+
+    { type: "h2", text: "8) Dosage & nursing math" },
+    {
+      type: "ul",
+      items: [
+        "[OmniCalculator Dosage Tool](https://www.omnicalculator.com/de/gesundheit/dosierung): Helps check dosage calculations.",
+        "[DocCheck Medikamentenrechnung](https://flexikon.doccheck.com/de/Medikamentenberechnung): Explains medication math concepts."
+      ]
+    },
+
+    { type: "h2", text: "9) Listening & real nursing language" },
+    {
+      type: "ul",
+      items: [
+        "[PflegeTube (YouTube)](https://youtube.com/@pflegetube?si=v9kLLMs6n1Pa9hQe): Realistic nursing scenarios with German explanations.",
+        "[DW Learn German App](https://play.google.com/store/apps/details?id=com.dw.learngerman): Free structured German listening practice."
+      ]
+    },
+
+    { type: "h2", text: "10) Vocabulary system (do not skip this)" },
+    {
+      type: "ul",
+      items: [
+        "[Anki Flashcards](https://apps.ankiweb.net/): Free app to memorize nursing vocabulary long-term.",
+        "[Anki Medical Decks (search)](https://ankiweb.net/shared/decks/medical): Community-made medical vocabulary decks."
+      ]
+    }
+
+  ],
+  goldenRule:
+    "If you feel lost, go back to vhs Pflege, then Flexikon, then hygiene guidelines; repeating basics is how confidence grows.",
+  tags: ["nursing", "pflege", "learning", "free", "german", "documentation", "hygiene"]
+},
 
   {
     slug: "rights-work-culture",

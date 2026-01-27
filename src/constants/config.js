@@ -2,7 +2,7 @@ export const META = {
   siteTitle: "Survival Kit",
   tagline: "Real talk for international students starting vocational training in Germany",
   lastUpdatedLabel: "Last updated",
-  lastUpdatedDate: "2026-01-15",
+  lastUpdatedDate: "2026-01-27",
   disclaimer:
     "I've tested everything here. Rules change though, so always double-check with official sources. When in doubt, trust the official letter over this guide.",
 };
