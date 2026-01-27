@@ -10,6 +10,7 @@ import { RESOURCES } from './data/resources';
 import { STORAGE_KEY } from './constants/config';
 import { pct } from './utils/helpers';
 import { styles } from './styles/globalStyles';
+import { downloadAllGuidesPdf } from './utils/pdfExporter';
 
 export default function App() {
   const [view, setView] = useState("posts"); // "posts" | "library"
@@ -26,6 +27,10 @@ export default function App() {
     }
   });
   const postsSectionRef = useRef(null);
+
+  const handleDownloadGuides = useCallback(() => {
+    downloadAllGuidesPdf(ORDERED_POSTS);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
@@ -204,6 +209,7 @@ export default function App() {
               onShowPosts={handleShowPosts}
               onShowLibrary={handleShowLibrary}
               onOpenEmergency={handleOpenEmergency}
+              onDownloadGuides={handleDownloadGuides}
             />
           </>
         ) : (
@@ -259,6 +265,7 @@ export default function App() {
               onShowPosts={handleShowPosts}
               onShowLibrary={handleShowLibrary}
               onOpenEmergency={handleOpenEmergency}
+              onDownloadGuides={handleDownloadGuides}
             />
           </>
         )}

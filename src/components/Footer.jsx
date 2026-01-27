@@ -1,7 +1,7 @@
 import { META, LINKS } from '../constants/config';
 import { safeOpen } from '../utils/security';
 
-export const Footer = ({ onShowPosts, onShowLibrary, onOpenEmergency, variant = "default", onBackToGuideList }) => (
+export const Footer = ({ onShowPosts, onShowLibrary, onOpenEmergency, variant = "default", onBackToGuideList, onDownloadGuides }) => (
   <footer className="mt-20 border-t border-slate-200 bg-white text-slate-700">
     <div className="max-w-6xl mx-auto px-6 py-14">
       <div className="flex flex-col gap-12">
@@ -60,6 +60,14 @@ export const Footer = ({ onShowPosts, onShowLibrary, onOpenEmergency, variant = 
               <p className="text-sm text-slate-600 leading-relaxed">
                 Help us keep every checklist accurate. Contributions fund translations and quarterly verification.
               </p>
+              {onDownloadGuides && (
+                <button
+                  onClick={onDownloadGuides}
+                  className="inline-flex items-center justify-center rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                >
+                  Download guides (PDF)
+                </button>
+              )}
               <a
                 href={LINKS.buyMeACoffee}
                 target="_blank"
